@@ -96,21 +96,51 @@ export function render(site, { css, js, canonical = "" }) {
   const description = site.hero?.subtitle ?? "";
   const t = site.theme ?? {};
 
+  const o = site.offer ?? {};
+  // Where "Claim this site" goes: the payment link, an email to us, or the
+  // claim section at the bottom of the preview.
+  const claimHref = o.payUrl
+    ? o.payUrl
+    : o.contact
+      ? `mailto:${o.contact}?subject=${encodeURIComponent(`Website for ${site.name}`)}`
+      : "#claim";
+  const sections = [
+    site.services?.length ? ["#services", "Services & prices"] : null,
+    site.steps?.length ? ["#how", "How it works"] : null,
+    site.highlights ? ["#reviews", "Reviews"] : null,
+    site.hours ? ["#hours", "Hours"] : null,
+    ["#contact", "Contact"],
+    site.faq?.length ? ["#faq", "FAQ"] : null,
+  ].filter(Boolean);
+  const banner = site.preview
+    ? `<div class="preview-bar"><div class="wrap preview-in">
+      <p><span class="long"><strong>Preview built for ${esc(site.legalName ?? site.name)}.</strong> This site is not live yet. Make it yours for ${esc(o.price ?? "")}${o.includes ? `, ${esc(o.includes)} included` : ""}.</span><span class="short"><strong>Your new website</strong> · ${esc(o.price ?? "")}, live this week</span></p>
+      <a class="btn btn-light btn-xs" href="${esc(claimHref)}">Claim this site ${icon("arrow")}</a>
+    </div></div>`
+    : "";
+
   const nav = `
-  <header class="nav" id="top">
+  <div class="top" id="top">
+  ${banner}
+  <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="#top" aria-label="${esc(site.name)}">
         ${site.logo ? `<img src="${esc(site.logo)}" alt="${esc(site.name)}" height="40">` : `<span>${esc(site.name)}</span>`}
       </a>
       <nav class="links" aria-label="Sections">
-        ${site.services?.length ? `<a href="#services">Services</a>` : ""}
-        ${site.highlights ? `<a href="#reviews">Reviews</a>` : ""}
-        ${site.hours ? `<a href="#hours">Hours</a>` : ""}
-        <a href="#contact">Contact</a>
+        ${sections.filter(([h]) => h !== "#how" && h !== "#faq").map(([h, label]) => `<a href="${h}">${label}</a>`).join("")}
       </nav>
-      ${phone ? `<a class="btn btn-dark btn-sm" href="${telHref(c.phone)}">${icon("phone")}<span>${esc(phone)}</span></a>` : ""}
+      ${phone ? `<a class="btn btn-dark btn-sm call-top" href="${telHref(c.phone)}">${icon("phone")}<span>${esc(phone)}</span></a>` : ""}
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
-  </header>`;
+    <nav class="menu" id="menu" aria-label="Menu">
+      <div class="wrap">
+        ${sections.map(([h, label]) => `<a href="${h}">${label}${icon("arrow")}</a>`).join("")}
+        ${phone ? `<a class="btn btn-dark" href="${telHref(c.phone)}">${icon("phone")}Call ${esc(phone)}</a>` : ""}
+      </div>
+    </nav>
+  </header>
+  </div>`;
 
   const chips = [
     site.mobile ? ["van", "We come to you"] : null,
@@ -158,7 +188,7 @@ export function render(site, { css, js, canonical = "" }) {
   const services = site.services?.length
     ? `
   <section class="wrap section" id="services">
-    <p class="kicker">Services</p>
+    <p class="kicker">Services & prices</p>
     <h2>Everything your pet needs${site.mobile ? ", at home" : ""}.</h2>
     <div class="grid services">
       ${site.services
@@ -167,17 +197,21 @@ export function render(site, { css, js, canonical = "" }) {
         <div class="ic">${icon(s.icon)}</div>
         <h3>${esc(s.name)}</h3>
         <p>${esc(s.text)}</p>
-        ${s.price ? `<p class="price">${esc(s.price)}</p>` : ""}
+        ${s.price ? `<p class="price">${esc(s.price)}</p>` : phone ? `<a class="ask" href="${telHref(c.phone)}">Call for a price ${icon("arrow")}</a>` : ""}
       </article>`,
         )
         .join("")}
     </div>
+    ${phone ? `<div class="price-cta">
+      <p><strong>${site.services.some((s) => s.price) ? "Not sure what your pet needs?" : "Every pet is different."}</strong> Call now and get an exact price for your pet.</p>
+      <a class="btn btn-dark" href="${telHref(c.phone)}">${icon("phone")}Call now</a>
+    </div>` : ""}
   </section>`
     : "";
 
   const steps = site.steps?.length
     ? `
-  <section class="wrap section">
+  <section class="wrap section" id="how">
     <p class="kicker">How it works</p>
     <h2>Three easy steps.</h2>
     <ol class="steps">
@@ -227,10 +261,10 @@ export function render(site, { css, js, canonical = "" }) {
     <h2>Book your pet's next visit.</h2>
     <div class="grid contact">
       <div class="card contact-card">
-        ${phone ? `<a class="line" href="${telHref(c.phone)}">${icon("phone")}<span><small>Call or text</small>${esc(phone)}</span></a>` : ""}
-        ${c.email ? `<a class="line" href="mailto:${esc(c.email)}">${icon("mail")}<span><small>Email</small>${esc(c.email)}</span></a>` : ""}
-        ${c.address && c.showAddress !== false ? `<div class="line">${icon("pin")}<span><small>Address</small>${esc(c.address)}</span></div>` : ""}
-        ${c.areaServed ? `<div class="line">${icon(site.mobile ? "van" : "home")}<span><small>${site.mobile ? "We visit" : "Serving"}</small>${esc(c.areaServed)}</span></div>` : ""}
+        ${phone ? `<a class="line" href="${telHref(c.phone)}">${icon("phone")}<span><small>Call or text</small><b class="v">${esc(phone)}</b></span></a>` : ""}
+        ${c.email ? `<a class="line" href="mailto:${esc(c.email)}" title="${esc(c.email)}">${icon("mail")}<span><small>Email</small><b class="v email"><span class="full">${esc(c.email)}</span><span class="short">Send us an email</span></b></span></a>` : ""}
+        ${c.address && c.showAddress !== false ? `<div class="line">${icon("pin")}<span><small>Address</small><b class="v">${esc(c.address)}</b></span></div>` : ""}
+        ${c.areaServed ? `<div class="line">${icon(site.mobile ? "van" : "home")}<span><small>${site.mobile ? "We visit" : "Serving"}</small><b class="v">${esc(c.areaServed)}</b></span></div>` : ""}
         <div class="social">
           ${site.social?.instagram ? `<a href="${esc(site.social.instagram)}" target="_blank" rel="noopener" aria-label="Instagram">${icon("instagram")}</a>` : ""}
           ${site.social?.facebook ? `<a href="${esc(site.social.facebook)}" target="_blank" rel="noopener" aria-label="Facebook">${icon("facebook")}</a>` : ""}
@@ -243,7 +277,7 @@ export function render(site, { css, js, canonical = "" }) {
 
   const faq = site.faq?.length
     ? `
-  <section class="wrap section narrow">
+  <section class="wrap section narrow" id="faq">
     <p class="kicker">FAQ</p>
     <h2>Good to know.</h2>
     <div class="faq">
@@ -265,12 +299,22 @@ export function render(site, { css, js, canonical = "" }) {
   </section>`
     : "";
 
-  const o = site.offer ?? {};
-  const banner = site.preview
-    ? `<div class="preview-bar"><div class="wrap preview-in">
-      <p><strong>Preview built for ${esc(site.legalName ?? site.name)}.</strong> This site is not live yet. Make it yours for ${esc(o.price ?? "")}${o.includes ? `, ${esc(o.includes)} included` : ""}.</p>
-      ${o.payUrl ? `<a class="btn btn-light btn-sm" href="${esc(o.payUrl)}">Claim this site ${icon("arrow")}</a>` : o.contact ? `<a class="btn btn-light btn-sm" href="mailto:${esc(o.contact)}?subject=${encodeURIComponent(`Website for ${site.name}`)}">Claim this site ${icon("arrow")}</a>` : ""}
-    </div></div>`
+  const claim = site.preview
+    ? `
+  <section class="wrap" id="claim">
+    <div class="claim">
+      <p class="kicker">This is a preview</p>
+      <h2>Like it? Make it yours.</h2>
+      <ul>
+        <li>${icon("check")}This site, live on your own domain within 48 hours</li>
+        ${o.includes ? `<li>${icon("check")}${esc(o.includes.charAt(0).toUpperCase() + o.includes.slice(1))}</li>` : ""}
+        <li>${icon("check")}Changes to texts, photos and prices before launch</li>
+        <li>${icon("check")}You pay only once it is live and you are happy</li>
+      </ul>
+      <p class="claim-price"><strong>${esc(o.price ?? "")}</strong> one-time</p>
+      ${claimHref !== "#claim" ? `<a class="btn btn-dark" href="${esc(claimHref)}">Claim this site ${icon("arrow")}</a>` : `<p class="claim-how">Just reply "yes" to the message we sent you.</p>`}
+    </div>
+  </section>`
     : "";
 
   const mobileBar = phone
@@ -297,7 +341,6 @@ ${css}</style>
 <script type="application/ld+json">${jsonLd(site, canonical)}</script>
 </head>
 <body>
-${banner}
 ${nav}
 <main>
 ${hero}
@@ -308,6 +351,7 @@ ${highlights}
 ${contact}
 ${faq}
 ${finalCta}
+${claim}
 </main>
 <footer class="footer">
   <div class="wrap foot-in">

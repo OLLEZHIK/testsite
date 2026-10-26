@@ -1,3 +1,12 @@
+// Phone menu: the burger opens the section list; a tap on a section closes it.
+(function () {
+  var top = document.querySelector(".top"), burger = document.querySelector(".burger");
+  if (!top || !burger) return;
+  var set = function (open) { top.classList.toggle("open", open); burger.setAttribute("aria-expanded", open ? "true" : "false"); };
+  burger.addEventListener("click", function () { set(!top.classList.contains("open")); });
+  document.querySelectorAll(".menu a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+})();
+
 // Phone: the Call/Text bar appears once the hero's own buttons scroll away.
 (function () {
   var bar = document.querySelector(".mobile-bar");
