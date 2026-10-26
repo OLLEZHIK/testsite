@@ -2,9 +2,8 @@
 
 From: Vitalii, vitaliizheliezohlo@gmail.com. Send one by one, by hand.
 
-**Before sending any email:** put a real postal address instead of
-`Veskiposti tn 2-1002, 10138 Tallinn, Estonia` (US law, CAN-SPAM). Instagram and Facebook messages and
-calls do not need it.
+Emails end with the sender's postal address (US law, CAN-SPAM). Instagram and
+Facebook messages and calls do not need it.
 
 Every site was checked on 2026-10-26: no own website found by web search;
 the suggested `.com` domains were free on that day.
