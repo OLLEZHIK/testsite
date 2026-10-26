@@ -15,7 +15,7 @@ build.mjs       sites -> dist/
 ## Build and look
 
 ```bash
-node build.mjs                 # every site -> dist/<slug>/ (previews) + dist/index.html
+node build.mjs                 # every site -> dist/<slug>/ (previews); the root lists none
 node build.mjs <slug>          # one site -> dist/<slug>/
 SITE=<slug> node build.mjs     # one site at the root of dist/ (a client's live site)
 cd dist && python3 -m http.server 4000   # open http://localhost:4000/<slug>/

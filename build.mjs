@@ -40,14 +40,11 @@ for (const slug of wanted) {
   console.log(`built ${slug} -> ${path.relative(root, out) || "dist"}/`);
 }
 
-// Index of previews (not for search engines).
+// The root of the previews deployment lists nothing: every prospect gets
+// only their own link and must not see who else got one.
 if (!single) {
-  const items = wanted
-    .map((s) => JSON.parse(fs.readFileSync(path.join(sitesDir, s, "site.json"), "utf8")))
-    .map((s) => `<li><a href="${s.slug}/">${s.name}</a></li>`)
-    .join("");
   fs.writeFileSync(
     path.join(dist, "index.html"),
-    `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Previews</title><body style="font-family:system-ui;padding:40px"><h1>Previews</h1><ul>${items}</ul>`,
+    `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Website previews</title><body style="font-family:system-ui;padding:40px;color:#333">Website previews for local pet businesses.</body>`,
   );
 }
