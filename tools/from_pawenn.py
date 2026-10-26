@@ -142,12 +142,22 @@ CATEGORY = {
     },
 }
 GENERIC = {"bath", "scissors"}
-NEGATIVE = re.compile(r"\b(while|although|aside from|except|complain|critic|grievance|dissatisf|negative|isolated|however)\b", re.I)
+NEGATIVE = re.compile(r"\b(while|although|though|aside from|except|however|on the other hand|but|complain\w*|critic\w*|grievance\w*|dissatisf\w*|disput\w*|negative\w*|isolated|injur\w*|unhappy|frustrat\w*|rude\w*|a few|a small number|a couple|one (?:client|owner|reviewer))\b", re.I)
 DAYS = ["mo", "tu", "we", "th", "fr", "sa", "su"]
 US_TZ = {"new-york": "America/New_York", "miami": "America/New_York", "philadelphia": "America/New_York",
          "chicago": "America/Chicago", "houston": "America/Chicago", "dallas": "America/Chicago",
          "san-antonio": "America/Chicago", "phoenix": "America/Phoenix", "los-angeles": "America/Los_Angeles",
          "san-diego": "America/Los_Angeles"}
+
+
+# Without brand colours from a logo: one of these, picked by the slug, so
+# neighbouring previews do not all look the same.
+PALETTES = [("#E8577E", "#C23B62"), ("#7C5CE0", "#5B3FC4"), ("#0F9D8A", "#0B7A6B"), ("#F2994A", "#C46F1F"), ("#2F80ED", "#1C5FBF"), ("#27AE60", "#1E8449")]
+
+
+def palette(slug, cat):
+    accent, deep = PALETTES[sum(map(ord, slug)) % len(PALETTES)]
+    return {"accent": accent, "accentDeep": deep}
 
 
 def read_place(repo, city, slug):
@@ -169,6 +179,11 @@ def hours(value):
         if day in DAYS:
             out[day] = spans.strip()
     return out if len(out) == 7 else None
+
+
+def clean_title(title):
+    """'Welcoming staff alongside customer service disputes' -> 'Welcoming staff'."""
+    return re.split(r"\s+(?:with|alongside|despite|but|amid|mixed with)\s+(?=.*(?:complain|disput|concern|issue|critic|isolated|mixed))", title, maxsplit=1, flags=re.I)[0].strip()
 
 
 def clean(text):
@@ -218,6 +233,9 @@ def main():
         sys.exit(__doc__)
     repo, city, slug = sys.argv[1:]
     r = read_place(repo, city, slug)
+    # who signs the offer: outreach/sender.json (name, email, postal address)
+    sender_path = os.path.join(ROOT, "outreach", "sender.json")
+    sender = json.load(open(sender_path, encoding="utf-8")) if os.path.exists(sender_path) else {}
     cat = CATEGORY.get(r["category"], CATEGORY["GROOMING"])
     mobile = bool(re.search(r"\bmobile\b", r["name"] + " " + r.get("description", ""), re.I))
     with open(os.path.join(repo, "data", "cities", city, "city.json"), encoding="utf-8") as fh:
@@ -246,7 +264,7 @@ def main():
     faq = []
     if insights:
         items = [
-            {"title": c["title"]["en"], "text": clean(c["text"]["en"])}
+            {"title": clean_title(c["title"]["en"]), "text": clean(c["text"]["en"])}
             for c in insights.get("cards", [])
             if c.get("sentiment") == "positive" and clean(c["text"]["en"])
         ][:3]
@@ -272,7 +290,7 @@ def main():
         "mobile": mobile,
         "domain": "",
         "preview": True,
-        "theme": {"accent": cat["accent"], "accentDeep": cat["accent"], "ink": "#1F2430", "surface": "#FBFAF7", **colours},
+        "theme": {**palette(slug, cat), "ink": "#1F2430", "surface": "#FBFAF7", **colours},
         "logo": "logo.png" if os.path.exists(os.path.join(out_dir, "logo.png")) else "",
         "hero": {
             "eyebrow": f"{'Mobile ' + cat['label'].lower() if mobile else cat['label']} · {city_name}",
@@ -302,7 +320,7 @@ def main():
         "highlights": highlights,
         "faq": faq,
         "social": social,
-        "offer": {"price": "$100", "includes": "your own domain and hosting for the first year", "contact": "", "payUrl": ""},
+        "offer": {"price": "$100", "includes": "your own domain and hosting for the first year", "contact": sender.get("email", ""), "payUrl": ""},
     }
     site = {k: v for k, v in site.items() if v not in (None, [], {})}
     with open(os.path.join(out_dir, "site.json"), "w", encoding="utf-8") as fh:

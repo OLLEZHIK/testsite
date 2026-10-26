@@ -1,0 +1,125 @@
+{
+  "slug": "jackelyn-home-grooming",
+  "name": "Jackelyn Home Grooming",
+  "legalName": "Jackelyn Home Grooming LLC",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#7C5CE0",
+    "accentDeep": "#5B3FC4",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Pet grooming · New York",
+    "title": "Groomed with love in the Bronx.",
+    "subtitle": "Bathing, de-shedding, nail care and full grooms for dogs and cats, trusted by 681 Google reviewers."
+  },
+  "contact": {
+    "phone": "+1 914-346-1947",
+    "email": "",
+    "address": "Bronx, NY 10467",
+    "showAddress": true,
+    "areaServed": "New York and nearby neighborhoods",
+    "geo": {
+      "lat": 40.8590738,
+      "lng": -73.8684552
+    }
+  },
+  "rating": {
+    "value": 4.9,
+    "count": 681,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/Jackelyn+Home+Grooming+LLC/@40.8590738,-73.8684552,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2f5d8f96f3a65:0x926415728461267a!8m2!3d40.8590738!4d-73.8684552!16s%2Fg%2F11fcpq9z5_?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "hours": {
+    "mo": "closed",
+    "tu": "closed",
+    "we": "09:00-14:00",
+    "th": "09:00-14:00",
+    "fr": "09:00-14:00",
+    "sa": "09:00-15:00",
+    "su": "09:00-12:00"
+  },
+  "timezone": "America/New_York",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath, blow-dry and brush-out with gentle shampoo."
+    },
+    {
+      "icon": "scissors",
+      "name": "Haircuts & styling",
+      "text": "Neat cuts for every breed, from a quick tidy-up to a full style."
+    },
+    {
+      "icon": "paw",
+      "name": "Nail trims",
+      "text": "Quick, careful nail trims."
+    },
+    {
+      "icon": "sparkles",
+      "name": "De-shedding",
+      "text": "Less loose fur at home after every visit."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 19,
+    "items": [
+      {
+        "title": "Excellent grooming results every visit",
+        "text": "Nearly every owner praises the quality of cuts and styling — dogs and cats leave looking clean, trimmed, and beautifully presented. Several reviewers highlight successful de-matting on difficult coats. Even anxious or notoriously difficult animals reportedly receive thorough, careful grooming that earns repeat business."
+      },
+      {
+        "title": "Calm, gentle handling of nervous pets",
+        "text": "Owners of cats and dogs that are typically difficult at groomers report their pets leave calm and happy. Reviewers note that even older, somewhat aggressive cats were handled without issue. The home-based, quieter environment appears to reduce stress compared to busy salon settings."
+      },
+      {
+        "title": "Easy pickup and drop-off",
+        "text": "Pickup and drop-off logistics are described as smooth and easy to coordinate, making the whole experience feel personal."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Does Jackelyn Home Grooming also groom cats?",
+      "a": "Yes, multiple reviewers bring cats — including those with matting and long coats — and report great results."
+    },
+    {
+      "q": "Will I get updates while my pet is being groomed?",
+      "a": "Yes, Jackelyn sends photo updates throughout the session so owners can follow along."
+    },
+    {
+      "q": "Is this a home-based grooming service?",
+      "a": "Yes, grooming takes place at Jackelyn's home, which reviewers say creates a calmer, less stressful setting for pets."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/jackelynhomegroomingllc/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

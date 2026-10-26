@@ -53,6 +53,16 @@ function prettyHours(value) {
 
 const fmtRating = (v) => Number(v).toFixed(1);
 
+/** "Ju Ju's Pet Grooming & Day Spa" -> "JJ"; "Dee's Grooming" -> "DG" */
+function initials(name) {
+  const words = name
+    .replace(/['’]s\b/gi, "")
+    .replace(/[^A-Za-z0-9 ]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w && !/^(and|the|of|on|a|an|at|by|for|llc|inc)$/i.test(w));
+  return (words.slice(0, 2).map((w) => w[0]).join("") || name[0] || "").toUpperCase();
+}
+
 function stars(value) {
   const full = Math.round(value);
   return Array.from({ length: 5 }, (_, i) => icon("star", i < full ? "star on" : "star")).join("");
@@ -167,7 +177,7 @@ export function render(site, { css, js, canonical = "" }) {
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="logo-card">
-          ${site.logo ? `<img src="${esc(site.logo)}" alt="">` : `<span class="logo-text">${esc(site.name)}</span>`}
+          ${site.logo ? `<img src="${esc(site.logo)}" alt="">` : `<div class="emblem"><span class="mono">${esc(initials(site.name))}</span><span class="logo-text">${esc(site.name)}</span></div>`}
           <div class="paws">${icon("paw")}${icon("heart")}${icon("sparkles")}</div>
         </div>
         ${chips.map(([ic, text], i) => `<div class="chip chip-${i + 1}">${icon(ic)}<span>${esc(text)}</span></div>`).join("")}
@@ -227,7 +237,7 @@ export function render(site, { css, js, canonical = "" }) {
     <div class="wrap section">
       <p class="kicker">Reviews</p>
       <h2>${esc(h.title)}</h2>
-      <div class="grid quotes">
+      <div class="grid quotes" style="grid-template-columns:repeat(${Math.min(h.items.length, 3)},1fr)">
         ${h.items
           .map(
             (q) => `<figure class="quote">

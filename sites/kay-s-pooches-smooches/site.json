@@ -1,0 +1,125 @@
+{
+  "slug": "kay-s-pooches-smooches",
+  "name": "Kay's Pooches & Smooches",
+  "legalName": "Kay’s Pooches & Smooches",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#E8577E",
+    "accentDeep": "#C23B62",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "logo.png",
+  "hero": {
+    "eyebrow": "Pet grooming · Chicago",
+    "title": "Fresh, happy pets in Irving Park.",
+    "subtitle": "Dog and cat grooming with full baths, tidy-ups and coat styling. Book online or give us a call."
+  },
+  "contact": {
+    "phone": "+1 312-826-8794",
+    "email": "",
+    "address": "4021 W Irving Park Rd, Chicago, IL 60641",
+    "showAddress": true,
+    "areaServed": "Chicago and nearby neighborhoods",
+    "geo": {
+      "lat": 41.9533691,
+      "lng": -87.728511
+    }
+  },
+  "rating": {
+    "value": 5.0,
+    "count": 138,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/Kay%E2%80%99s+Pooches+%26+Smooches/@41.9533691,-87.728511,17z/data=!3m1!4b1!4m6!3m5!1s0x880fcd0003548031:0x23a67ce4dd92c364!8m2!3d41.9533691!4d-87.728511!16s%2Fg%2F11lchg6s7q?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "hours": {
+    "mo": "closed",
+    "tu": "09:00-18:00",
+    "we": "09:00-18:00",
+    "th": "09:00-18:00",
+    "fr": "09:00-18:00",
+    "sa": "08:00-17:00",
+    "su": "closed"
+  },
+  "timezone": "America/Chicago",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Full bath",
+      "text": "A full bath, blow-dry and brush-out."
+    },
+    {
+      "icon": "sparkles",
+      "name": "Tidy-up",
+      "text": "A quick tidy-up between full grooms."
+    },
+    {
+      "icon": "scissors",
+      "name": "Coat styling",
+      "text": "Neat cuts for every breed."
+    },
+    {
+      "icon": "heart",
+      "name": "Cat grooming",
+      "text": "Calm, careful grooming for cats."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 8,
+    "items": [
+      {
+        "title": "Warm and attentive grooming staff",
+        "text": "Groomers Kay and Larissa receive enthusiastic feedback for their warmth, patience, and dedicated customer care. Pet parents describe Kay as remarkably affectionate and attentive to owner preferences. Reviewers appreciate that the team takes time to share grooming advice and provides reassurance to clients bringing young or sensitive pets for their initial salon visit."
+      },
+      {
+        "title": "Gentle care for nervous pets",
+        "text": "Handling of pets receives outstanding acclaim from dog and cat owners alike. Reviewers note that anxious rescue dogs, puppies, and felines remain remarkably calm and relaxed throughout styling, with one pet even napping on the table. Clients emphasize the gentle demeanor and positive energy that help pets feel secure rather than stressed during grooming."
+      },
+      {
+        "title": "High satisfaction with coat styling",
+        "text": "Grooming results earn high marks across breeds including doodles, cavapoos, and terriers. Clients commend thorough de-shedding treatments, pleasant coat scents, and breed-accurate cuts that preserve their pets charm. Owners appreciate that styling aligns precisely with their instructions and leaves coats neatly trimmed and easy to manage at home."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Does the salon groom cats as well as dogs?",
+      "a": "Yes, client reviews confirm that groomer Larissa provides baths and haircut services for cats in a calm environment."
+    },
+    {
+      "q": "How does the team handle nervous rescue pets or puppies?",
+      "a": "Reviewers report that groomers use gentle, calming techniques that keep anxious rescue dogs and first-time puppies comfortable."
+    },
+    {
+      "q": "Are recurring grooming appointments available?",
+      "a": "Yes, clients note that online scheduling is straightforward and the salon prioritizes patrons with recurring bookings."
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/kayspoochessmooches/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

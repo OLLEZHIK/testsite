@@ -1,0 +1,108 @@
+{
+  "slug": "maria-s-pet-grooming-and-daycare",
+  "name": "Maria's Pet Grooming & Daycare",
+  "legalName": "Maria's Pet Grooming and Daycare",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#27AE60",
+    "accentDeep": "#1E8449",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Pet grooming & daycare · Miami",
+    "title": "Grooming and daycare your pet will love.",
+    "subtitle": "Pet grooming and daytime care in Miami, open Monday to Saturday from 8:30 AM."
+  },
+  "contact": {
+    "phone": "+1 786-395-0278",
+    "email": "",
+    "address": "1766 NW 36th St, Miami, FL 33142",
+    "showAddress": true,
+    "areaServed": "Miami and nearby neighborhoods",
+    "geo": {
+      "lat": 25.8093709,
+      "lng": -80.2253303
+    }
+  },
+  "rating": {
+    "value": 4.7,
+    "count": 188,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ53XVYCyx2YgRLyuxDmrC5hA"
+  },
+  "hours": {
+    "mo": "08:30-18:00",
+    "tu": "08:30-18:00",
+    "we": "08:30-18:00",
+    "th": "08:30-18:00",
+    "fr": "08:30-18:00",
+    "sa": "08:30-18:00",
+    "su": "closed"
+  },
+  "timezone": "America/New_York",
+  "services": [
+    {
+      "icon": "scissors",
+      "name": "Grooming",
+      "text": "Baths, cuts and styling for a clean, happy pet."
+    },
+    {
+      "icon": "sparkles",
+      "name": "Daycare",
+      "text": "Daytime care and company while you work."
+    },
+    {
+      "icon": "tooth",
+      "name": "Teeth cleaning",
+      "text": "Anesthesia-free teeth cleaning for fresher breath."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and what you need."
+    },
+    {
+      "title": "Drop off",
+      "text": "We take care of your pet during the day."
+    },
+    {
+      "title": "Pick up",
+      "text": "A clean, happy pet ready to go home."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 7,
+    "items": [
+      {
+        "title": "Gentle care for anxious dogs",
+        "text": "Pet owners value how patiently the salon handles four-legged guests, particularly rescue pets or dogs with nervousness and anxiety. Reviewers emphasize that animals are treated with affection and warmth, allowing even timid companions to feel secure throughout their grooming appointments."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Does the salon work with nervous or anxious pets?",
+      "a": "Yes, reviewers highlight that staff members handle timid and rescue dogs with patience and gentle attention."
+    },
+    {
+      "q": "Are non-anesthetic teeth cleanings offered?",
+      "a": "Yes, clients mention that the facility provides anesthesia-free teeth cleaning services for pets."
+    }
+  ],
+  "social": {
+    "instagram": "https://instagram.com/mariapetsgrooming"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

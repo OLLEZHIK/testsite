@@ -1,0 +1,125 @@
+{
+  "slug": "love-on-a-leash-pet-supplies-grooming",
+  "name": "Love On A Leash",
+  "legalName": "Love On A Leash Pet Supplies & Grooming",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#E8577E",
+    "accentDeep": "#C23B62",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Grooming & pet supplies · Harbor City",
+    "title": "Fresh, happy pets. Every visit.",
+    "subtitle": "Dog and cat bathing, haircuts and hygiene care, plus pet food and accessories. Open every day on Palos Verdes Drive North."
+  },
+  "contact": {
+    "phone": "+1 424-535-7877",
+    "email": "",
+    "address": "1724 Palos Verdes Dr N, Harbor City, CA 90710",
+    "showAddress": true,
+    "areaServed": "Los Angeles and nearby neighborhoods",
+    "geo": {
+      "lat": 33.7788464,
+      "lng": -118.3085913
+    }
+  },
+  "rating": {
+    "value": 4.9,
+    "count": 162,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJBSUeYQ5K3YARJwuYdfNmRO8"
+  },
+  "hours": {
+    "mo": "08:00-18:00",
+    "tu": "08:00-18:00",
+    "we": "08:00-18:00",
+    "th": "08:00-18:00",
+    "fr": "08:00-18:00",
+    "sa": "08:00-18:00",
+    "su": "08:00-18:00"
+  },
+  "timezone": "America/Los_Angeles",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath, blow-dry and brush-out with gentle shampoo."
+    },
+    {
+      "icon": "scissors",
+      "name": "Haircuts & styling",
+      "text": "Neat cuts for every breed, from a quick tidy-up to a full style."
+    },
+    {
+      "icon": "heart",
+      "name": "Cat grooming",
+      "text": "Calm, careful grooming for cats."
+    },
+    {
+      "icon": "heart",
+      "name": "Food & supplies",
+      "text": "Pet food, treats and everyday accessories in store."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 22,
+    "items": [
+      {
+        "title": "Attentive and gentle salon groomers",
+        "text": "Clients consistently commend the grooming team, frequently highlighting groomers Paulina, Vanessa, Samantha, Keyma, and Jovan for their patient and accommodating approach. Reviewers note that staff members listen carefully to specific styling instructions, maintain clear communication, and create a calm atmosphere that puts both pets and owners at ease during visits."
+      },
+      {
+        "title": "Quality haircuts and coat maintenance",
+        "text": "The vast majority of pet owners praise the quality and styling of haircuts, noting that dogs return home looking even, neatly trimmed, and remarkably soft."
+      },
+      {
+        "title": "Dedicated handling for senior dogs",
+        "text": "Pet owners frequently emphasize the groomers gentle touch and attentiveness with challenging, nervous, and senior pets. Multiple reviews describe successful grooming sessions for elderly dogs with age-related limitations, noting that the team takes extra time, uses gentle handling techniques, and never rushes through difficult appointments."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Do the groomers accommodate senior dogs with special needs?",
+      "a": "Yes, reviewers frequently report gentle and patient grooming for senior dogs, including older pets with mobility limitations or vision issues."
+    },
+    {
+      "q": "Can I book multiple pets for the same appointment?",
+      "a": "Yes, clients mention easily booking concurrent appointments to have multiple dogs groomed together in a single visit."
+    },
+    {
+      "q": "Are specialty haircut styles like teddy bear cuts offered?",
+      "a": "Yes, reviewers appreciate customized haircuts including teddy bear cuts and tailored trims tailored to each dog breed and coat."
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/loveonaleashlomita/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

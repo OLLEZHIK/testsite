@@ -1,0 +1,103 @@
+{
+  "slug": "essntl-dog-groomers",
+  "name": "Essntl Dog Groomers",
+  "legalName": "Essntl Dog Groomers",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#4A8FCC",
+    "accentDeep": "#2F6A9E",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "logo.png",
+  "hero": {
+    "eyebrow": "Pet grooming · Chicago",
+    "title": "Fresh, happy pets. Every visit.",
+    "subtitle": "Dog bathing, brushing and coat grooming on West 79th Street in Ashburn. By appointment only, open early from 7 AM."
+  },
+  "contact": {
+    "phone": "+1 312-687-3309",
+    "email": "",
+    "address": "2621 1/2 W 79th St, Chicago, IL 60652",
+    "showAddress": true,
+    "areaServed": "Chicago and nearby neighborhoods",
+    "geo": {
+      "lat": 41.7497957,
+      "lng": -87.6887229
+    }
+  },
+  "rating": {
+    "value": 4.8,
+    "count": 139,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/Essntl+Dog+Groomers/@41.7497957,-87.6887229,17z/data=!3m1!4b1!4m6!3m5!1s0x880e2f49a6039bd3:0xbbd9f6d0e2b6a966!8m2!3d41.7497957!4d-87.6887229!16s%2Fg%2F11y92t0lll?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "hours": {
+    "mo": "closed",
+    "tu": "07:00-15:00",
+    "we": "07:00-15:00",
+    "th": "07:00-15:00",
+    "fr": "07:00-15:00",
+    "sa": "07:00-16:00",
+    "su": "07:00-16:00"
+  },
+  "timezone": "America/Chicago",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath and brush-out for a clean, soft coat."
+    },
+    {
+      "icon": "scissors",
+      "name": "Coat grooming",
+      "text": "Neat trims and styling for every breed."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 16,
+    "items": [
+      {
+        "title": "Gentle approach for anxious dogs",
+        "text": "Owners frequently praise how calm and content their dogs remain during visits. Multiple clients note that anxious or matted pups were quickly put at ease and showed no signs of stress upon pickup."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "How are owners notified when grooming is finished?",
+      "a": "Reviewers note that the groomer sends convenient text alerts as soon as dogs are ready for collection."
+    },
+    {
+      "q": "How does the salon accommodate nervous or first-time pets?",
+      "a": "Clients share that the groomer works gently with anxious and first-time dogs, helping them become comfortable with the grooming routine."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/essntl_dog_groomers/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

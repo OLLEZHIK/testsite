@@ -39,7 +39,8 @@ p{margin:0}
 .nav{position:relative;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;gap:28px;height:76px}
 .brand img{height:40px;width:auto}
-.brand span{font-weight:800;font-size:20px}
+.brand{text-decoration:none}
+.brand span{font-weight:800;font-size:20px;letter-spacing:-.02em}
 .links{display:flex;gap:28px;margin-left:auto;font-weight:600;font-size:15.5px}
 .links a{text-decoration:none;color:var(--muted)}
 .links a:hover{color:var(--ink)}
@@ -79,7 +80,9 @@ h1{font-size:clamp(44px,6.6vw,84px);font-weight:800;letter-spacing:-.045em;line-
 .hero-art{position:relative;min-height:440px;display:grid;place-items:center}
 .logo-card{position:relative;width:min(400px,100%);aspect-ratio:1/1;border-radius:40px;background:var(--card);box-shadow:0 30px 80px -30px color-mix(in srgb,var(--ink) 45%,transparent),inset 0 0 0 1px var(--line);display:grid;place-items:center;padding:56px;transform:rotate(-2deg)}
 .logo-card img{width:100%;height:auto}
-.logo-text{font-size:40px;font-weight:800;text-align:center}
+.emblem{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.mono{display:grid;place-items:center;width:132px;height:132px;border-radius:40px;background:linear-gradient(140deg,var(--accent),var(--accent-deep));color:#fff;font-size:52px;font-weight:800;letter-spacing:-.04em;box-shadow:0 18px 40px -16px var(--accent-deep);transform:rotate(2deg)}
+.logo-text{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.1;max-width:12ch}
 .paws{position:absolute;left:34px;bottom:30px;display:flex;gap:14px;color:var(--accent)}
 .paws .icon{width:22px;height:22px}
 .chip{position:absolute;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:18px;background:var(--card);box-shadow:var(--shadow);font-weight:700;font-size:15px;animation:float 6s ease-in-out infinite}
@@ -195,7 +198,7 @@ details p{padding:0 0 22px;color:var(--muted)}
   .hero-in{grid-template-columns:1fr;gap:40px}
   .hero-art{min-height:380px}
   .services{grid-template-columns:repeat(2,1fr)}
-  .quotes,.steps{grid-template-columns:1fr}
+  .quotes,.steps{grid-template-columns:1fr!important}
   .facts{grid-template-columns:repeat(2,1fr)!important}
   .facts div:nth-child(3){border-left:0}
   .facts div:nth-child(n+3){border-top:1px solid var(--line)}
@@ -229,6 +232,8 @@ details p{padding:0 0 22px;color:var(--muted)}
   .cta .btn{flex:1 1 100%}
   .hero-art{min-height:320px}
   .logo-card{width:78%;padding:36px;border-radius:30px}
+  .mono{width:96px;height:96px;font-size:38px;border-radius:30px}
+  .logo-text{font-size:22px}
   .chip{font-size:13.5px;padding:10px 14px}
   .chip-1{left:0;top:1%}.chip-2{right:0;top:15%}.chip-3{right:2%;bottom:1%}
   .paws{left:24px;bottom:22px}

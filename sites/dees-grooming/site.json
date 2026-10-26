@@ -1,0 +1,116 @@
+{
+  "slug": "dees-grooming",
+  "name": "Dee's Grooming",
+  "legalName": "Dee's Grooming",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#F2994A",
+    "accentDeep": "#C46F1F",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Pet grooming · San Antonio",
+    "title": "Fresh, happy pets. Every visit.",
+    "subtitle": "Baths, haircuts and nail trims on Basse Road in central San Antonio. Open Tuesday to Saturday, call to book."
+  },
+  "contact": {
+    "phone": "+1 210-341-3694",
+    "email": "",
+    "address": "1359 Basse Rd, San Antonio, TX 78212",
+    "showAddress": true,
+    "areaServed": "San Antonio and nearby neighborhoods",
+    "geo": {
+      "lat": 29.4884098,
+      "lng": -98.5070321
+    }
+  },
+  "rating": {
+    "value": 4.6,
+    "count": 272,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJcSG1Eb5fXIYREck7DN1htBk"
+  },
+  "hours": {
+    "mo": "closed",
+    "tu": "08:00-18:00",
+    "we": "08:00-18:00",
+    "th": "08:00-18:00",
+    "fr": "08:00-18:00",
+    "sa": "08:00-18:00",
+    "su": "closed"
+  },
+  "timezone": "America/Chicago",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath, blow-dry and brush-out with gentle shampoo."
+    },
+    {
+      "icon": "scissors",
+      "name": "Haircuts & styling",
+      "text": "Neat cuts for every breed, from a quick tidy-up to a full style."
+    },
+    {
+      "icon": "paw",
+      "name": "Nail trims",
+      "text": "Quick, careful nail trims."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 12,
+    "items": [
+      {
+        "title": "Gentle approach for anxious dogs",
+        "text": "Most pet owners share that the groomers handle their dogs with patience and affection, helping nervous animals feel settled and relaxed during their appointments."
+      },
+      {
+        "title": "Helpful and welcoming grooming staff",
+        "text": "Clients praise Jennifer and her colleagues for their friendly demeanour, helpful guidance, and dedication to customer care. Reviewers note that the team speaks in calm, comforting tones to pets throughout bathing and clipping."
+      },
+      {
+        "title": "Neat haircuts and refreshing baths",
+        "text": "Pet parents express satisfaction with the styling, hygiene baths, and nail trimming delivered by the team. Reviews highlight that dogs emerge looking tidy, cleanly brushed, and well cared for. Clients appreciate the groomers' practical advice regarding matting and coat maintenance, noting that the styling results leave their pets looking and feeling great."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "How are appointments arranged at Dee's Grooming?",
+      "a": "Appointments are typically scheduled over the phone with the salon team."
+    },
+    {
+      "q": "Are nail trims provided for visiting pets?",
+      "a": "Yes, the salon performs nail trims alongside full baths and coat styling sessions."
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/p/Dees-Grooming-100057117367809/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}

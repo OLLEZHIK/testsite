@@ -1,0 +1,116 @@
+{
+  "slug": "ju-ju-s-pet-grooming-day-spa",
+  "name": "Ju Ju's Pet Grooming & Day Spa",
+  "legalName": "Ju Ju's Pet Grooming & Day Spa",
+  "category": "grooming",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#0F9D8A",
+    "accentDeep": "#0B7A6B",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Pet grooming · Houston",
+    "title": "A spa day your dog will love.",
+    "subtitle": "Dog washes, clipping and day spa care on Briar Forest Drive in West Houston."
+  },
+  "contact": {
+    "phone": "+1 281-496-7878",
+    "email": "",
+    "address": "12624 Briar Forest Dr, Houston, TX 77077",
+    "showAddress": true,
+    "areaServed": "Houston and nearby neighborhoods",
+    "geo": {
+      "lat": 29.7543093,
+      "lng": -95.6073273
+    }
+  },
+  "rating": {
+    "value": 4.5,
+    "count": 323,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJPeRmmXvcQIYRqQz7E3sJLvs"
+  },
+  "hours": {
+    "mo": "08:00-17:00",
+    "tu": "08:00-17:00",
+    "we": "08:00-17:00",
+    "th": "08:00-17:00",
+    "fr": "08:00-17:00",
+    "sa": "08:00-16:00",
+    "su": "closed"
+  },
+  "timezone": "America/Chicago",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Dog wash",
+      "text": "A thorough wash, dry and brush-out."
+    },
+    {
+      "icon": "scissors",
+      "name": "Clipping & styling",
+      "text": "Clean clips and neat styles for every breed."
+    },
+    {
+      "icon": "sparkles",
+      "name": "Day spa",
+      "text": "A relaxing spa day while you get on with yours."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We get to work",
+      "text": "A careful groom, done the way you asked."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet goes home clean, comfortable and looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 32,
+    "items": [
+      {
+        "title": "Long-standing care from salon crew",
+        "text": "Reviewers warmly praise salon owner Cindy and her assistants for their welcoming demeanor and personal connection with pets. Many clients highlight that staff remember animals by name and treat recurring visitors like family."
+      },
+      {
+        "title": "Gentle handling for sensitive dogs",
+        "text": "Pet parents appreciate how gently the groomers handle nervous dogs, senior animals, and pets that dislike clipper noise or paw touches. Multiple reviews note that dogs arrive excited and remain calm throughout baths and nail trims. Clients value the patient atmosphere maintained during delicate grooming procedures."
+      },
+      {
+        "title": "Thorough haircuts and de-shedding treatments",
+        "text": "Most customers express satisfaction with the styling outcomes, praising neat cuts, smooth nail trims, and thorough de-shedding treatments for German Shepherds and mixed breeds. Pets return home looking tidy and smelling clean."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Can Ju Ju's accommodate same-day grooming appointments?",
+      "a": "Yes, several reviewers report successfully booking same-day appointments or getting pets worked into the daily schedule on short notice."
+    },
+    {
+      "q": "Are groomers equipped to work with pets sensitive to clipper noise?",
+      "a": "Yes, pet parents report that staff successfully groom noise-sensitive dogs without sedation through gentle handling techniques."
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/people/Ju-Jus-Pet-Grooming-Day-Spa/100063644026367/"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "vitaliizheliezohlo@gmail.com",
+    "payUrl": ""
+  }
+}
