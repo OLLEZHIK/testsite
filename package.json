@@ -1,0 +1,11 @@
+{
+  "name": "pawenn-sites",
+  "private": true,
+  "type": "module",
+  "description": "One template, many small-business sites: sites/<slug>/site.json -> static site.",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node build.mjs && npx --yes serve dist -l 4000"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,130 @@
+{
+  "slug": "yofren-master-mobile-pet-grooming",
+  "name": "Yofren Master Pet Grooming",
+  "legalName": "Yofren Master - Mobile Pet Grooming",
+  "category": "grooming",
+  "mobile": true,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#74BC0A",
+    "accentDeep": "#5A9406",
+    "ink": "#3A1C0C",
+    "surface": "#FBFAF5"
+  },
+  "logo": "logo.png",
+  "hero": {
+    "eyebrow": "Mobile pet grooming · Miami",
+    "title": "Grooming that comes to your door.",
+    "subtitle": "Baths, haircuts, ear and teeth cleaning for dogs and cats, done at your home. No car rides, no crates, no waiting room."
+  },
+  "contact": {
+    "phone": "+1 786-320-0218",
+    "email": "yofrenmasterpetgroomingfl@gmail.com",
+    "address": "11883 SW 37th Terrace, Miami, FL 33175",
+    "showAddress": false,
+    "areaServed": "Miami and nearby neighborhoods",
+    "geo": {
+      "lat": 25.734069,
+      "lng": -80.387677
+    }
+  },
+  "rating": {
+    "value": 4.8,
+    "count": 230,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJy6wYEipJ5GsRKe6QellrNFU"
+  },
+  "hours": {
+    "mo": "08:00-19:00",
+    "tu": "08:00-19:00",
+    "we": "08:00-19:00",
+    "th": "08:00-19:00",
+    "fr": "08:00-19:00",
+    "sa": "08:00-19:00",
+    "su": "09:00-17:00"
+  },
+  "timezone": "America/New_York",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath with a fresh-smelling shampoo, blow-dry and brush-out."
+    },
+    {
+      "icon": "scissors",
+      "name": "Haircuts & breed styling",
+      "text": "Neat cuts for every breed, from a quick trim to a full style."
+    },
+    {
+      "icon": "ear",
+      "name": "Ear cleaning",
+      "text": "Gentle ear cleaning as part of every groom."
+    },
+    {
+      "icon": "tooth",
+      "name": "Teeth cleaning",
+      "text": "Brushing for fresher breath and healthier teeth."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We come to you",
+      "text": "Your groomer arrives at your home, ready to work."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet stays relaxed at home and comes back looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 106,
+    "items": [
+      {
+        "title": "Courteous, reliable groomers",
+        "text": "Clients keep praising our friendly, punctual groomers. Miguel, Carlos, Victor and Pablo are named again and again."
+      },
+      {
+        "title": "Fresh cuts, clean finish",
+        "text": "Spotless coats, a pleasant shampoo scent, neat breed haircuts and thorough teeth cleaning."
+      },
+      {
+        "title": "Gentle with nervous pets",
+        "text": "Dogs, puppies and cats are handled with patience at home, so nervous pets stay calm."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "How does mobile grooming work?",
+      "a": "We come to your home and groom your pet there, so there is no travel and no waiting in a salon crate."
+    },
+    {
+      "q": "Which pets do you groom?",
+      "a": "Dogs of all sizes, puppies and cats."
+    },
+    {
+      "q": "Where are you based?",
+      "a": "We are based in southwest Miami and visit homes across Miami and nearby neighborhoods."
+    },
+    {
+      "q": "How do I book?",
+      "a": "Call or text us at (786) 320-0218. We are available every day of the week."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/yofrenmpg1",
+    "facebook": "https://www.facebook.com/profile.php?id=100090346147290"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "hello@example.com",
+    "payUrl": ""
+  }
+}
