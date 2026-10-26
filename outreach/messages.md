@@ -3,7 +3,7 @@
 From: Vitalii, vitaliizheliezohlo@gmail.com. Send one by one, by hand.
 
 **Before sending any email:** put a real postal address instead of
-`[POSTAL ADDRESS]` (US law, CAN-SPAM). Instagram and Facebook messages and
+`Veskiposti tn 2-1002, 10138 Tallinn, Estonia` (US law, CAN-SPAM). Instagram and Facebook messages and
 calls do not need it.
 
 Every site was checked on 2026-10-26: no own website found by web search;
@@ -32,7 +32,7 @@ Just reply "yes" and I'll set it up.
 
 Vitalii
 pawenn.com
-[POSTAL ADDRESS]
+Veskiposti tn 2-1002, 10138 Tallinn, Estonia
 Not interested? Reply "stop" and I won't write again.
 
 ---
@@ -56,7 +56,7 @@ Just reply "yes" and I'll set it up.
 
 Vitalii
 pawenn.com
-[POSTAL ADDRESS]
+Veskiposti tn 2-1002, 10138 Tallinn, Estonia
 Not interested? Reply "stop" and I won't write again.
 
 ---
