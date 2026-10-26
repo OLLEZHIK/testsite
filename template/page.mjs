@@ -53,6 +53,36 @@ function prettyHours(value) {
 
 const fmtRating = (v) => Number(v).toFixed(1);
 
+/** No logo: a round stamp - the name along the top, "<category> · <city>"
+ *  along the bottom, a paw in the middle - in the site's colours. */
+function badge(site) {
+  const name = site.name.toUpperCase();
+  // the city: the part of the eyebrow after "·" ("Pet grooming · Houston")
+  const city = (site.hero?.eyebrow ?? "").split("·").pop().trim().toUpperCase();
+  // letters fit the arc: the top arc is ~410px long, the bottom ~215px
+  const fit = (text, max, arc, spacing) => Math.max(9, Math.min(max, Math.floor((arc / Math.max(text.length, 1) - spacing) / 0.68)));
+  const top = fit(name, 24, 405, 2.5);
+  const bottom = fit(city, 15, 210, 3);
+  const id = `b-${site.slug}`;
+  return `<svg class="badge" viewBox="0 0 300 300" role="img" aria-label="${esc(site.name)}">
+  <defs>
+    <linearGradient id="${id}-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent-deep)"/></linearGradient>
+    <path id="${id}-top" d="M 41.8 179.0 A 112 112 0 1 1 258.2 179.0"/>
+    <path id="${id}-bottom" d="M 61.7 196.9 A 100 100 0 0 0 238.3 196.9"/>
+  </defs>
+  <circle cx="150" cy="150" r="146" fill="url(#${id}-g)"/>
+  <circle cx="150" cy="150" r="136" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="74" fill="#fff" fill-opacity=".14"/>
+  <text fill="#fff" font-weight="800" font-size="${top}" letter-spacing="2.5" text-anchor="middle" dominant-baseline="central"><textPath href="#${id}-top" startOffset="50%">${esc(name)}</textPath></text>
+  <text fill="#fff" fill-opacity=".92" font-weight="700" font-size="${bottom}" letter-spacing="3" text-anchor="middle" dominant-baseline="central"><textPath href="#${id}-bottom" startOffset="50%">${esc(city)}</textPath></text>
+  <circle cx="45.4" cy="190.1" r="3.5" fill="#fff"/><circle cx="254.6" cy="190.1" r="3.5" fill="#fff"/>
+  <g transform="translate(108 108) scale(3.5)" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/>
+    <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.8 1.1 3.3 3.3 0 0 0-2.1-2.1A3.5 3.5 0 0 1 6.2 11 5 5 0 0 1 9 10z"/>
+  </g>
+</svg>`;
+}
+
 /** "Ju Ju's Pet Grooming & Day Spa" -> "JJ"; "Dee's Grooming" -> "DG" */
 function initials(name) {
   const words = name
@@ -177,7 +207,7 @@ export function render(site, { css, js, canonical = "" }) {
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="logo-card">
-          ${site.logo ? `<img src="${esc(site.logo)}" alt="">` : `<div class="emblem"><span class="mono">${esc(initials(site.name))}</span><span class="logo-text">${esc(site.name)}</span></div>`}
+          ${site.logo ? `<img src="${esc(site.logo)}" alt="">` : badge(site)}
           <div class="paws">${icon("paw")}${icon("heart")}${icon("sparkles")}</div>
         </div>
         ${chips.map(([ic, text], i) => `<div class="chip chip-${i + 1}">${icon(ic)}<span>${esc(text)}</span></div>`).join("")}
