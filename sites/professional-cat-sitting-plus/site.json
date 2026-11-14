@@ -1,0 +1,81 @@
+{
+  "slug": "professional-cat-sitting-plus",
+  "name": "Professional Cat Sitting PLUS!",
+  "legalName": "Professional Cat Sitting PLUS!",
+  "category": "sitting",
+  "mobile": false,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#E8577E",
+    "accentDeep": "#C23B62",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Pet sitting · Philadelphia",
+    "title": "Loving care while you're away.",
+    "subtitle": "In-home cat sitting service providing feeding, litter care, and medication administration."
+  },
+  "contact": {
+    "phone": "+1 267-257-0562",
+    "email": "professionalcatsittingplus@gmail.com",
+    "address": "833 S 48th St, Philadelphia, PA 19143",
+    "showAddress": false,
+    "areaServed": "West Philadelphia and nearby neighborhoods",
+    "geo": {
+      "lat": 39.9411758,
+      "lng": -75.2186757
+    }
+  },
+  "rating": {
+    "value": 5.0,
+    "count": 47,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2yVPusnGxokRAsyRKNlMjhI"
+  },
+  "timezone": "America/New_York",
+  "services": [
+    {
+      "icon": "heart",
+      "name": "Cats only",
+      "text": "Care for cats and nothing else, from a sitter who knows them well."
+    },
+    {
+      "icon": "home",
+      "name": "Visits at your home",
+      "text": "Your cat stays in familiar surroundings while you are away."
+    },
+    {
+      "icon": "paw",
+      "name": "Feeding and litter care",
+      "text": "Fresh food and water, a clean litter box, every visit."
+    },
+    {
+      "icon": "sparkles",
+      "name": "Medication",
+      "text": "Medication given as your vet prescribed."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and the dates you need."
+    },
+    {
+      "title": "Meet & greet",
+      "text": "We get to know your pet and routine."
+    },
+    {
+      "title": "Relax",
+      "text": "Your pet is cared for while you are away."
+    }
+  ],
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "pawenn.info@gmail.com",
+    "payUrl": ""
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "slug": "uptown-clippers-pet-mobile-grooming-l-l-c",
+  "name": "Uptown Clippers",
+  "legalName": "Uptown Clippers Pet Mobile Grooming LLC",
+  "category": "grooming",
+  "mobile": true,
+  "domain": "",
+  "preview": true,
+  "theme": {
+    "accent": "#E8577E",
+    "accentDeep": "#C23B62",
+    "ink": "#1F2430",
+    "surface": "#FBFAF7"
+  },
+  "logo": "",
+  "hero": {
+    "eyebrow": "Mobile pet grooming · Dallas",
+    "title": "Grooming that comes to your door.",
+    "subtitle": "Mobile pet grooming service in Dallas providing one-on-one baths and haircuts at home."
+  },
+  "contact": {
+    "phone": "+1 945-214-7080",
+    "email": "uptownclippers@gmail.com",
+    "address": "2728 Hood St, Dallas, TX 75219",
+    "showAddress": false,
+    "areaServed": "Dallas and nearby neighborhoods",
+    "geo": {
+      "lat": 32.8045256,
+      "lng": -96.8092807
+    }
+  },
+  "rating": {
+    "value": 5.0,
+    "count": 95,
+    "source": "Google",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJ92U4L3uaPYQRjVPq6hEtZQ4"
+  },
+  "hours": {
+    "mo": "10:00-22:00",
+    "tu": "10:00-22:00",
+    "we": "10:00-22:00",
+    "th": "10:00-22:00",
+    "fr": "10:00-22:00",
+    "sa": "10:00-22:00",
+    "su": "10:00-22:00"
+  },
+  "timezone": "America/Chicago",
+  "services": [
+    {
+      "icon": "bath",
+      "name": "Bath & brush",
+      "text": "A full bath, blow-dry and brush-out with gentle shampoo."
+    },
+    {
+      "icon": "scissors",
+      "name": "Haircuts & styling",
+      "text": "Neat cuts for every breed, from a quick tidy-up to a full style."
+    },
+    {
+      "icon": "paw",
+      "name": "Nail trims",
+      "text": "Quick, careful nail trims."
+    },
+    {
+      "icon": "ear",
+      "name": "Ear cleaning",
+      "text": "Gentle ear cleaning as part of the groom."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Call or text",
+      "text": "Tell us about your pet and pick a time that suits you."
+    },
+    {
+      "title": "We come to you",
+      "text": "Your groomer arrives at your home, ready to work."
+    },
+    {
+      "title": "Fresh and happy",
+      "text": "Your pet stays relaxed at home and comes back looking great."
+    }
+  ],
+  "highlights": {
+    "title": "Why pet parents choose us",
+    "basedOn": 6,
+    "items": [
+      {
+        "title": "Neat haircuts and fresh-smelling coats",
+        "text": "Clients are delighted with the grooming results, noting that dogs look fluffy, clean, and neatly styled following their mobile appointments. Owners of puppies and various dog breeds, including Bernedoodles and Dachshunds, praise the attention to detail and mention that coats smell great for days after styling."
+      },
+      {
+        "title": "Calm and gentle mobile handling",
+        "text": "Pet owners frequently mention how gentle and patient the groomers are, especially with first-time puppies or dogs that previously feared salons. Reviewers appreciate that pets remain relaxed and calm when the mobile grooming van arrives directly outside their residence."
+      },
+      {
+        "title": "Courteous and caring grooming team",
+        "text": "Reviewers describe the mobile groomers as polite, attentive, and deeply affectionate towards pets throughout appointments. Clients highlight that the staff listen closely to specific styling requests and take the time to ensure both owners and dogs feel comfortable."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Does Uptown Clippers travel directly to clients' homes in Dallas?",
+      "a": "Yes, reviewers confirm that Uptown Clippers operates a mobile grooming service that parks and grooms pets right in front of client residences."
+    },
+    {
+      "q": "How easy is scheduling an appointment with Uptown Clippers?",
+      "a": "Clients report that booking appointments is straightforward, noting that the business communicates promptly via text messages."
+    },
+    {
+      "q": "Do they groom young puppies for their first haircut?",
+      "a": "Yes, several reviewers note bringing puppies for their very first grooming sessions, praising the staff's gentleness and patience."
+    },
+    {
+      "q": "Do owners receive updates while pets are being groomed in the van?",
+      "a": "Yes, pet owners mention receiving video clips and messages showing their dogs relaxed and enjoying the grooming process."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/uptownclippers/",
+    "facebook": "https://www.facebook.com/profile.php?id=61550126944035"
+  },
+  "offer": {
+    "price": "$100",
+    "includes": "your own domain and hosting for the first year",
+    "contact": "pawenn.info@gmail.com",
+    "payUrl": ""
+  }
+}

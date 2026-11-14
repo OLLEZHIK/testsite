@@ -127,6 +127,16 @@ function jsonLd(site, url) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
+// Closing band headline per category; "ctaTitle" in site.json overrides it.
+const CTA_TITLE = {
+  grooming: "Ready for a fresh, happy pet?",
+  vet: "Time for a check-up?",
+  training: "Ready for a calmer, happier dog?",
+  sitting: "Going away soon?",
+  hotel: "Planning a trip?",
+  shop: "Need something for your pet?",
+};
+
 export function render(site, { css, js, canonical = "" }) {
   const c = site.contact ?? {};
   const phone = c.phone ? prettyPhone(c.phone) : "";
@@ -331,7 +341,7 @@ export function render(site, { css, js, canonical = "" }) {
   <section class="wrap">
     <div class="band">
       <div>
-        <h2>Ready for a fresh, happy pet?</h2>
+        <h2>${esc(site.ctaTitle ?? CTA_TITLE[site.category] ?? CTA_TITLE.grooming)}</h2>
         <p>${open7 ? "We are available every day of the week." : "Call us to book a time that suits you."}</p>
       </div>
       <a class="btn btn-dark" href="${telHref(c.phone)}">${icon("phone")}Call ${esc(phone)}</a>
