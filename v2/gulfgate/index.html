@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gulfgate Animal Hospital | Bilingual vet in Southeast Houston</title>
+<meta name="description" content="Family-owned veterinary hospital for dogs and cats in Southeast Houston. Walk-ins and appointments, on-site pharmacy, surgery and dental care. Hablamos español.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VeterinaryCare","name":"Gulfgate Animal Hospital","telephone":"+1-713-643-5723","email":"gulfgateanimalhospital@yahoo.com","address":{"@type":"PostalAddress","streetAddress":"216 Winkler Dr","addressLocality":"Houston","addressRegion":"TX","postalCode":"77087","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":29.701259,"longitude":-95.2988481},"knowsLanguage":["en","es"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"1199"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}],"sameAs":["https://www.facebook.com/gulfgateanimalhospital/","https://www.instagram.com/gulfgateah/"]}
+</script>
+</head>
+<body>
+
+<div class="preview-bar">
+  <p><strong><span lang="en">Preview</span><span lang="es">Vista previa</span></strong>
+    <span lang="en">An example website made for Gulfgate Animal Hospital by Pawenn. It is not live and not the clinic's official site.</span>
+    <span lang="es">Un sitio de ejemplo hecho para Gulfgate Animal Hospital por Pawenn. No está publicado y no es el sitio oficial de la clínica.</span>
+  </p>
+  <a href="#make-it-yours"><span lang="en">See the offer</span><span lang="es">Ver la oferta</span></a>
+</div>
+
+<header class="nav">
+  <a class="wordmark" href="#top" aria-label="Gulfgate Animal Hospital">
+    <span class="wm-name">Gulfgate</span>
+    <span class="wm-sub">Animal Hospital</span>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#visit"><span lang="en">Plan a visit</span><span lang="es">Planear visita</span></a>
+    <a href="#fees"><span lang="en">Fees</span><span lang="es">Precios</span></a>
+    <a href="#services"><span lang="en">Services</span><span lang="es">Servicios</span></a>
+    <a href="#team"><span lang="en">Our vets</span><span lang="es">Veterinarias</span></a>
+    <a href="#find-us"><span lang="en">Hours &amp; map</span><span lang="es">Horario y mapa</span></a>
+  </nav>
+  <div class="nav-actions">
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn btn-solid btn-call" href="tel:+17136435723"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>713-643-5723</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker"><span lang="en">Dogs and cats, Southeast Houston</span><span lang="es">Perros y gatos, sureste de Houston</span></p>
+    <h1 id="hero-title">
+      <span lang="en">Your neighborhood vet. <em>Walk in, or book ahead.</em></span>
+      <span lang="es">Su veterinario del barrio. <em>Venga sin cita o reserve.</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span lang="en">A family-owned hospital led by Dr. Kathy Palmer: wellness visits, urgent care, surgery, dentistry and an on-site pharmacy. Hablamos español.</span>
+      <span lang="es">Un hospital familiar dirigido por la Dra. Kathy Palmer: chequeos, atención urgente, cirugía, odontología y farmacia propia. We speak English, too.</span>
+    </p>
+    <div class="status" id="status" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div><p class="status-main" id="status-main"></p><p class="status-sub" id="status-sub"></p></div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#visit"><span lang="en">Plan your visit</span><span lang="es">Planee su visita</span></a>
+      <a class="btn btn-line" href="tel:+17136435723"><span lang="en">Call or text</span><span lang="es">Llame o escriba</span></a>
+    </div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★☆</span> <span lang="en">4.3 on Google from 1,199 reviews</span><span lang="es">4.3 en Google, 1,199 reseñas</span></p>
+  </div>
+  <figure class="hero-photo">
+    <img src="../assets/vet-exam.jpg" alt="" width="1000" height="1250">
+    <figcaption><span lang="en">Illustration</span><span lang="es">Ilustración</span></figcaption>
+  </figure>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="visit-inner">
+    <div class="visit-head">
+      <h2 id="visit-title"><span lang="en">What brings you in?</span><span lang="es">¿Por qué nos visita?</span></h2>
+      <p><span lang="en">Pick one. We'll tell you the best way to come in today, what the exam costs, and what to bring.</span><span lang="es">Elija una opción. Le decimos la mejor forma de venir hoy, cuánto cuesta el examen y qué traer.</span></p>
+    </div>
+    <div class="visit-grid">
+      <fieldset class="reasons">
+        <legend class="sr-only"><span lang="en">Reason for the visit</span><span lang="es">Motivo de la visita</span></legend>
+        <label class="reason"><input type="radio" name="reason" value="sick" checked><span><strong><span lang="en">Sick or hurt today</span><span lang="es">Enfermo o lastimado hoy</span></strong><small><span lang="en">Vomiting, limping, not eating</span><span lang="es">Vómito, cojera, no come</span></small></span></label>
+        <label class="reason"><input type="radio" name="reason" value="checkup"><span><strong><span lang="en">Checkup or vaccines</span><span lang="es">Chequeo o vacunas</span></strong><small><span lang="en">Yearly exam, shots, new pet</span><span lang="es">Examen anual, vacunas, mascota nueva</span></small></span></label>
+        <label class="reason"><input type="radio" name="reason" value="followup"><span><strong><span lang="en">Follow-up visit</span><span lang="es">Visita de seguimiento</span></strong><small><span lang="en">Recheck after treatment</span><span lang="es">Revisión después de un tratamiento</span></small></span></label>
+        <label class="reason"><input type="radio" name="reason" value="refill"><span><strong><span lang="en">Refill, preventatives or food</span><span lang="es">Receta, preventivos o comida</span></strong><small><span lang="en">Pick up at our pharmacy</span><span lang="es">Recoger en nuestra farmacia</span></small></span></label>
+        <label class="reason reason-urgent"><input type="radio" name="reason" value="emergency"><span><strong><span lang="en">It's an emergency</span><span lang="es">Es una emergencia</span></strong><small><span lang="en">Can't breathe, hit by a car, poisoning</span><span lang="es">No respira bien, atropellado, envenenado</span></small></span></label>
+      </fieldset>
+      <article class="ticket" id="ticket" aria-live="polite"></article>
+    </div>
+  </div>
+</section>
+
+<section class="fees" id="fees" aria-labelledby="fees-title">
+  <div class="fees-copy">
+    <h2 id="fees-title"><span lang="en">What an exam costs</span><span lang="es">Cuánto cuesta el examen</span></h2>
+    <p><span lang="en">Exam fees, effective 2026. Booking ahead costs less and means a shorter wait.</span><span lang="es">Precios del examen desde 2026. Con cita cuesta menos y espera menos.</span></p>
+  </div>
+  <ul class="fee-list">
+    <li><span class="fee-amount">$41</span><span class="fee-what"><strong><span lang="en">Scheduled appointment</span><span lang="es">Cita programada</span></strong><span lang="en">Monday to Friday, 8 am to 4 pm</span><span lang="es">Lunes a viernes, de 8 a. m. a 4 p. m.</span></span></li>
+    <li><span class="fee-amount">$35</span><span class="fee-what"><strong><span lang="en">Scheduled progress exam</span><span lang="es">Revisión de seguimiento con cita</span></strong><span lang="en">A recheck you book ahead</span><span lang="es">Una revisión que reserva con anticipación</span></span></li>
+    <li><span class="fee-amount">$51</span><span class="fee-what"><strong><span lang="en">Walk-in or follow-up without appointment</span><span lang="es">Sin cita o seguimiento sin cita</span></strong><span lang="en">Counted as urgent care, seen in order of arrival</span><span lang="es">Se considera atención urgente, por orden de llegada</span></span></li>
+  </ul>
+  <p class="fees-note"><span lang="en">Surgery and dental cleanings are done by appointment only. Please call us for information.</span><span lang="es">Las cirugías y limpiezas dentales son solo con cita. Llámenos para más información.</span></p>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <h2 id="services-title"><span lang="en">Full-service care for dogs and cats</span><span lang="es">Atención completa para perros y gatos</span></h2>
+  <div class="services-grid">
+    <div>
+      <h3><span lang="en">What we do</span><span lang="es">Lo que hacemos</span></h3>
+      <ul class="tick-list">
+        <li><span lang="en">Routine vaccinations</span><span lang="es">Vacunas de rutina</span></li>
+        <li><span lang="en">Intestinal parasite testing and control</span><span lang="es">Pruebas y control de parásitos intestinales</span></li>
+        <li><span lang="en">Heartworm testing and treatment</span><span lang="es">Prueba y tratamiento del gusano del corazón</span></li>
+        <li><span lang="en">Diagnosis and treatment of illness</span><span lang="es">Diagnóstico y tratamiento de enfermedades</span></li>
+        <li><span lang="en">Inpatient hospitalization</span><span lang="es">Hospitalización</span></li>
+        <li><span lang="en">Digital X-rays</span><span lang="es">Radiografía digital</span></li>
+        <li><span lang="en">In-house bloodwork and urine tests</span><span lang="es">Análisis de sangre y orina en la clínica</span></li>
+        <li><span lang="en">Dental scaling and polishing under anesthesia</span><span lang="es">Limpieza y pulido dental con anestesia</span></li>
+        <li><span lang="en">General surgery</span><span lang="es">Cirugía general</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3><span lang="en">Every wellness exam checks</span><span lang="es">Cada chequeo revisa</span></h3>
+      <dl class="exam-list">
+        <div><dt><span lang="en">Eyes</span><span lang="es">Ojos</span></dt><dd><span lang="en">Infections treated early, before they affect vision</span><span lang="es">Infecciones tratadas a tiempo, antes de afectar la vista</span></dd></div>
+        <div><dt><span lang="en">Ears</span><span lang="es">Oídos</span></dt><dd><span lang="en">Infections that can turn chronic and painful</span><span lang="es">Infecciones que pueden volverse crónicas y dolorosas</span></dd></div>
+        <div><dt><span lang="en">Teeth</span><span lang="es">Dientes</span></dt><dd><span lang="en">Signs of dental disease and mouth infection</span><span lang="es">Señales de enfermedad dental e infección</span></dd></div>
+        <div><dt><span lang="en">Heart and lungs</span><span lang="es">Corazón y pulmones</span></dt><dd><span lang="en">Every patient is listened to for murmurs and lung changes</span><span lang="es">Escuchamos a cada paciente para detectar soplos y cambios</span></dd></div>
+        <div><dt><span lang="en">Belly</span><span lang="es">Abdomen</span></dt><dd><span lang="en">Gentle palpation for pain or changes in the organs</span><span lang="es">Palpación suave para detectar dolor o cambios</span></dd></div>
+        <div><dt><span lang="en">Joints</span><span lang="es">Articulaciones</span></dt><dd><span lang="en">Arthritis caught early can be managed</span><span lang="es">La artritis detectada a tiempo se puede controlar</span></dd></div>
+        <div><dt><span lang="en">Skin and coat</span><span lang="es">Piel y pelaje</span></dt><dd><span lang="en">Fleas, mites, allergies and infections</span><span lang="es">Pulgas, ácaros, alergias e infecciones</span></dd></div>
+        <div><dt><span lang="en">Urogenital</span><span lang="es">Urogenital</span></dt><dd><span lang="en">Checked for infection and early changes</span><span lang="es">Revisión de infecciones y cambios tempranos</span></dd></div>
+      </dl>
+    </div>
+  </div>
+  <p class="services-note"><span lang="en">We see dogs and cats. We are no longer accepting exotic pets.</span><span lang="es">Atendemos perros y gatos. Ya no aceptamos mascotas exóticas.</span></p>
+</section>
+
+<section class="team" id="team" aria-labelledby="team-title">
+  <h2 id="team-title"><span lang="en">Our veterinarians</span><span lang="es">Nuestras veterinarias</span></h2>
+  <div class="team-grid">
+    <article class="vet">
+      <div class="vet-mono" aria-hidden="true">KP</div>
+      <h3>Dr. Kathy Palmer</h3>
+      <p class="vet-role"><span lang="en">Owner, full-time veterinarian</span><span lang="es">Dueña y veterinaria de tiempo completo</span></p>
+      <p><span lang="en">DVM from LSU, practicing in Houston for over 15 years. Sings in her church choir, plays piano, and bakes desserts the staff talks about.</span><span lang="es">Doctora en veterinaria por LSU, con más de 15 años de práctica en Houston. Canta en el coro de su iglesia, toca el piano y hornea postres famosos entre el equipo.</span></p>
+    </article>
+    <article class="vet">
+      <div class="vet-mono" aria-hidden="true">MR</div>
+      <h3>Dr. Meagan Rennie</h3>
+      <p class="vet-role"><span lang="en">Veterinarian</span><span lang="es">Veterinaria</span></p>
+      <p><span lang="en">Texas A&amp;M graduate from Richmond, TX. At home: a mini-pig, two cats and two husky mixes, plus a growing houseplant collection.</span><span lang="es">Graduada de Texas A&amp;M, de Richmond, TX. En casa: una minicerda, dos gatos y dos perros cruza de husky, y una colección de plantas que no para de crecer.</span></p>
+    </article>
+    <article class="vet">
+      <div class="vet-mono" aria-hidden="true">EB</div>
+      <h3>Dr. Emily Basa</h3>
+      <p class="vet-role"><span lang="en">Veterinarian</span><span lang="es">Veterinaria</span></p>
+      <p><span lang="en">Kansas State graduate, originally from Minnesota, and happy to be back at Gulfgate. Loves getting to know clients and their pets.</span><span lang="es">Graduada de Kansas State, originaria de Minnesota y feliz de volver a Gulfgate. Le encanta conocer a los clientes y sus mascotas.</span></p>
+    </article>
+  </div>
+  <p class="team-note"><span lang="en">Team photos go here once you send them.</span><span lang="es">Aquí irán las fotos del equipo cuando nos las envíe.</span></p>
+</section>
+
+<section class="voices" aria-labelledby="voices-title">
+  <h2 id="voices-title"><span lang="en">What long-time clients say</span><span lang="es">Lo que dicen los clientes de siempre</span></h2>
+  <div class="voices-grid">
+    <blockquote><p><span lang="en">Doctors who listen. Clients mention Dr. Palmer and Dr. Basa by name: they listen carefully, are warm, and explain medical choices.</span><span lang="es">Doctoras que escuchan. Los clientes mencionan a la Dra. Palmer y a la Dra. Basa por su nombre: escuchan con atención, son cálidas y explican cada decisión.</span></p></blockquote>
+    <blockquote><p><span lang="en">Patience with every kind of pet. Sensitive dogs, temperamental cats, feral rescues and senior pets near the end of life.</span><span lang="es">Paciencia con todo tipo de mascota. Perros sensibles, gatos de mal genio, gatos rescatados de la calle y mascotas mayores al final de su vida.</span></p></blockquote>
+    <blockquote><p><span lang="en">Seen when it can't wait. Reviewers note both scheduled visits and walk-in care for urgent problems.</span><span lang="es">Atención cuando no puede esperar. Las reseñas mencionan citas programadas y atención sin cita para problemas urgentes.</span></p></blockquote>
+  </div>
+  <p class="voices-src"><span lang="en">Themes from Google reviews, April to October 2026.</span><span lang="es">Temas de reseñas de Google, de abril a octubre de 2026.</span></p>
+</section>
+
+<section class="prepare" aria-labelledby="prepare-title">
+  <h2 id="prepare-title"><span lang="en">Before you come</span><span lang="es">Antes de venir</span></h2>
+  <ul class="prepare-list">
+    <li><strong><span lang="en">Leash and carrier</span><span lang="es">Correa y transportadora</span></strong><span lang="en">Dogs on a leash, cats in a carrier.</span><span lang="es">Perros con correa, gatos en transportadora.</span></li>
+    <li><strong><span lang="en">Medical history</span><span lang="es">Historial médico</span></strong><span lang="en">Bring your pet's medical and vaccination records.</span><span lang="es">Traiga el historial médico y de vacunas.</span></li>
+    <li><strong><span lang="en">A calmer visit</span><span lang="es">Una visita más tranquila</span></strong><span lang="en">Many of our staff and vets have completed the Fear Free Pets curriculum. Ask us how to prepare a nervous pet.</span><span lang="es">Muchos de nuestro equipo han completado el programa Fear Free Pets. Pregúntenos cómo preparar a una mascota nerviosa.</span></li>
+  </ul>
+</section>
+
+<section class="find" id="find-us" aria-labelledby="find-title">
+  <div class="find-info">
+    <h2 id="find-title"><span lang="en">Hours and directions</span><span lang="es">Horario y cómo llegar</span></h2>
+    <address>216 Winkler Dr<br>Houston, TX 77087</address>
+    <table class="hours" id="hours"></table>
+    <ul class="hours-notes">
+      <li><span lang="en">Appointments: Monday to Friday, 8 am to 4 pm.</span><span lang="es">Citas: lunes a viernes, de 8 a. m. a 4 p. m.</span></li>
+      <li><span lang="en">Last walk-in: 5 pm on weekdays, 1 pm on Saturday.</span><span lang="es">Último paciente sin cita: 5 p. m. entre semana, 1 p. m. el sábado.</span></li>
+      <li><span lang="en">Saturday is urgent care only, in order of arrival.</span><span lang="es">El sábado solo hay atención urgente, por orden de llegada.</span></li>
+      <li><span lang="en">Pharmacy: until 6 pm on weekdays, 2 pm on Saturday.</span><span lang="es">Farmacia: hasta las 6 p. m. entre semana y las 2 p. m. el sábado.</span></li>
+    </ul>
+    <details class="holidays">
+      <summary><span lang="en">Holiday schedule</span><span lang="es">Horario de días festivos</span></summary>
+      <ul>
+        <li><span lang="en">Thanksgiving, November 26: closed</span><span lang="es">Día de Acción de Gracias, 26 de noviembre: cerrado</span></li>
+        <li><span lang="en">Christmas, December 24 to 26: closed</span><span lang="es">Navidad, del 24 al 26 de diciembre: cerrado</span></li>
+        <li><span lang="en">New Year's Eve: 8 am to 2 pm</span><span lang="es">Nochevieja: de 8 a. m. a 2 p. m.</span></li>
+        <li><span lang="en">New Year's Day: closed</span><span lang="es">Año Nuevo: cerrado</span></li>
+      </ul>
+    </details>
+    <div class="find-actions">
+      <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gulfgate+Animal+Hospital%2C+216+Winkler+Dr%2C+Houston%2C+TX+77087&amp;destination_place_id=ChIJlwmxsOi9QIYRv2aUw7MkIM0" target="_blank" rel="noopener"><span lang="en">Get directions</span><span lang="es">Cómo llegar</span></a>
+      <a class="btn btn-line" href="tel:+17136435723">713-643-5723</a>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <div class="map" id="map" role="region" aria-label="Map: 216 Winkler Dr, Houston, TX 77087"></div>
+    <noscript><p class="map-fallback">216 Winkler Dr, Houston, TX 77087</p></noscript>
+  </div>
+</section>
+
+<section class="er" id="emergency" aria-labelledby="er-title">
+  <div class="er-head">
+    <h2 id="er-title"><span lang="en">After hours or an emergency?</span><span lang="es">¿Fuera de horario o una emergencia?</span></h2>
+    <p><span lang="en">We are not a 24-hour hospital. In an emergency, call your closest animal emergency clinic.</span><span lang="es">No somos un hospital de 24 horas. En una emergencia, llame a la clínica de emergencias más cercana.</span></p>
+  </div>
+  <ul class="er-list">
+    <li><span class="er-name">VCA Animal Emergency Hospital Southeast</span><a href="tel:+17139418460">713-941-8460</a></li>
+    <li><span class="er-name">Sunset Animal Hospital <em lang="en">open 24 hours</em><em lang="es">abierto 24 horas</em></span><a href="tel:+17135265881">713-526-5881</a></li>
+    <li><span class="er-name">Gulf Coast Veterinary Specialists, North Houston <em lang="en">open 24 hours</em><em lang="es">abierto 24 horas</em></span><a href="tel:+17135686116">713-568-6116</a></li>
+    <li><span class="er-name">VERGI, Houston <em lang="en">open 24 hours</em><em lang="es">abierto 24 horas</em></span><a href="tel:+17139329589">713-932-9589</a></li>
+    <li><span class="er-name">BluePearl Veterinary Specialists, West Houston <em lang="en">open 24 hours</em><em lang="es">abierto 24 horas</em></span><a href="tel:+12819946759">281-994-6759</a></li>
+    <li><span class="er-name">Sugar Land Veterinary Specialists <em lang="en">open 24 hours</em><em lang="es">abierto 24 horas</em></span><a href="tel:+12814917800">281-491-7800</a></li>
+  </ul>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title"><span lang="en">Questions people ask</span><span lang="es">Preguntas frecuentes</span></h2>
+  <details><summary><span lang="en">Do I need an appointment?</span><span lang="es">¿Necesito cita?</span></summary><p><span lang="en">No. Walk-ins are welcome until 5 pm on weekdays and 1 pm on Saturday, seen in order of arrival. An appointment costs less ($41 instead of $51) and means a shorter wait.</span><span lang="es">No. Atendemos sin cita hasta las 5 p. m. entre semana y la 1 p. m. el sábado, por orden de llegada. Con cita cuesta menos ($41 en vez de $51) y espera menos.</span></p></details>
+  <details><summary><span lang="en">Are you open on Saturday?</span><span lang="es">¿Abren el sábado?</span></summary><p><span lang="en">Yes, 8 am to 2 pm, for urgent care only. There are no scheduled appointments on Saturday.</span><span lang="es">Sí, de 8 a. m. a 2 p. m., solo atención urgente. Los sábados no hay citas programadas.</span></p></details>
+  <details><summary><span lang="en">Which pets do you see?</span><span lang="es">¿Qué mascotas atienden?</span></summary><p><span lang="en">Dogs and cats. We are no longer accepting exotic pets.</span><span lang="es">Perros y gatos. Ya no aceptamos mascotas exóticas.</span></p></details>
+  <details><summary><span lang="en">How do I get a refill or special food?</span><span lang="es">¿Cómo pido una receta o comida especial?</span></summary><p><span lang="en">Call or text us ahead of time and we'll have your order ready for a quick pickup.</span><span lang="es">Llámenos o escríbanos antes y tendremos su pedido listo para recogerlo rápido.</span></p></details>
+  <details><summary><span lang="en">Do you speak Spanish?</span><span lang="es">¿Hablan español?</span></summary><p><span lang="en">Yes. Hablamos español.</span><span lang="es">Sí, hablamos español. Le pedimos que programe su cita por teléfono para reducir el tiempo de espera.</span></p></details>
+</section>
+
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head">
+    <h2 id="offer-title">This is an example. Want a site like this?</h2>
+    <p>Everything here comes from your current website and your Google listing. The finished site can look different: tell us what to add, remove or change, and we'll do it before launch. Want something that isn't here, like online booking, a new-client form or a page for each service? Just describe it and we'll add it.</p>
+  </div>
+  <div class="offer-grid">
+    <div>
+      <h3>New compared with your current site</h3>
+      <ul>
+        <li>Open or closed right now, with today's last walk-in and appointment times</li>
+        <li>Exam fees in their own clear section, not in small print</li>
+        <li>The whole site in English and Spanish</li>
+        <li>Map, one-tap directions, call and text buttons</li>
+        <li>Team, services, holiday hours and emergency numbers, all built for phones</li>
+        <li>Clinic details marked up for Google search</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What you get</h3>
+      <ul>
+        <li>Live on your domain, gulfgateanimalhospital.com, within a week</li>
+        <li>First year of hosting included</li>
+        <li>Your photos, logo, colors and wording, changed as you like</li>
+      </ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Gulfgate%20website">Reply to Pawenn</a>
+    </div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your clinic or staff. Fees, hours, services, team and emergency contacts come from gulfgateanimalhospital.com (November 2026); the rating and review themes come from your Google listing.</p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="wordmark wordmark-lg" href="#top" aria-label="Gulfgate Animal Hospital"><span class="wm-name">Gulfgate</span><span class="wm-sub">Animal Hospital</span></a>
+      <p><span lang="en">Family-owned care for dogs and cats in Southeast Houston.</span><span lang="es">Atención familiar para perros y gatos en el sureste de Houston.</span></p>
+    </div>
+    <div class="footer-col">
+      <h2><span lang="en">Visit</span><span lang="es">Visítenos</span></h2>
+      <p>216 Winkler Dr<br>Houston, TX 77087</p>
+      <p><span lang="en">Mon to Fri 8 am – 6 pm</span><span lang="es">Lun a vie 8 a. m. – 6 p. m.</span><br><span lang="en">Sat 8 am – 2 pm</span><span lang="es">Sáb 8 a. m. – 2 p. m.</span></p>
+    </div>
+    <div class="footer-col">
+      <h2><span lang="en">Contact</span><span lang="es">Contacto</span></h2>
+      <p><a href="tel:+17136435723">713-643-5723</a> <span lang="en">(call or text)</span><span lang="es">(llamada o texto)</span><br><a href="mailto:gulfgateanimalhospital@yahoo.com">gulfgateanimalhospital@yahoo.com</a></p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/gulfgateanimalhospital/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a>
+        <a href="https://www.instagram.com/gulfgateah/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2><span lang="en">On this page</span><span lang="es">En esta página</span></h2>
+      <ul>
+        <li><a href="#visit"><span lang="en">Plan a visit</span><span lang="es">Planear visita</span></a></li>
+        <li><a href="#fees"><span lang="en">Fees</span><span lang="es">Precios</span></a></li>
+        <li><a href="#team"><span lang="en">Our vets</span><span lang="es">Veterinarias</span></a></li>
+        <li><a href="#emergency"><span lang="en">Emergencies</span><span lang="es">Emergencias</span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Gulfgate Animal Hospital</p>
+    <p><span lang="en">Website by</span><span lang="es">Sitio web por</span> <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p>
+    <a class="footer-top" href="#top"><span lang="en">Back to top</span><span lang="es">Volver arriba</span></a>
+  </div>
+</footer>
+
+<div class="thumb-bar" id="thumb-bar">
+  <a class="btn btn-solid" href="#visit"><span lang="en">Plan a visit</span><span lang="es">Planear visita</span></a>
+  <a class="btn btn-line" href="tel:+17136435723"><span lang="en">Call</span><span lang="es">Llamar</span></a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
