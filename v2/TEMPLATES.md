@@ -10,7 +10,8 @@ then gets its own palette, type and character (never the same look twice).
 | Template | For | Reference | Live |
 |---|---|---|---|
 | Mobile service | Mobile groomers, mobile vets, pet sitters who come to you | `v2/yofren/` | https://pawenn-previews.pages.dev/v2/yofren/ |
-| Fixed location | Vet clinics, grooming salons, hotels, daycares, shops: places people drive to | `v2/gulfgate/` | https://pawenn-previews.pages.dev/v2/gulfgate/ |
+| Fixed location: vet | Vet clinics | `v2/gulfgate/` | https://pawenn-previews.pages.dev/v2/gulfgate/ |
+| Fixed location: salon | Grooming salons and home groomers (shared code in `v2/salon/`) | `v2/kays/` (price finder), `v2/legacy/` and `v2/jackelyn/` (text composer) | https://pawenn-previews.pages.dev/v2/kays/ |
 
 ## What both templates share
 
@@ -61,6 +62,20 @@ then gets its own palette, type and character (never the same look twice).
   groomer bios, the planner becomes "book a groom" (service, size, day) as in Yofren, the
   emergency block goes away. Map, hours and parking stay.
 
+## Salon template (`v2/salon/` + one page per salon)
+
+- Shared `salon.css` and `salon.js`; each page sets its palette and fonts on `:root` and
+  its data in `<script id="site-config" type="application/json">` (time zone, hours,
+  phone, booking link, map position, and either `finder` or `composer`).
+- `finder`: when the salon publishes prices (Kay's MoeGo page). Pet, size, service gives
+  the price exactly as published, what's included, and Book online / Call.
+- `composer`: when there are no public prices (Legacy, Jackelyn). Pet, size, services, one
+  of the next open days, time, name, "nervous" tick; writes the text message.
+- Home groomers: no map and no street address (only the ZIP), "ask for the address when
+  you book".
+- Before any email: re-check the business still has no website (2026-11-15: Yofren put a
+  site live at yofrenpetgrooming.com since October, so it was taken off the list).
+
 ## Rules that keep the sites safe (vets especially)
 
 1. Every fact comes from the business's own site or Google listing, with the month it was
@@ -80,7 +95,7 @@ then gets its own palette, type and character (never the same look twice).
 ## Assets and credits
 
 Higgsfield budget for the whole sales project: 200 credits (owner). Spent so far:
-about 117. Think before spending: fix in post first (crop, re-encode, upscale), images
+about 123. Think before spending: fix in post first (crop, re-encode, upscale), images
 cost 2.75 at high quality, video only after agreeing with the owner (Seedance 2.5:
 35 credits at 720p, 80 at 1080p). Reuse: `v2/assets/hero.*` (grooming van video),
-`maltese.jpg`, `cat.jpg`, `paw.jpg`, `vet-exam.jpg`.
+`maltese.jpg`, `cat.jpg`, `paw.jpg`, `vet-exam.jpg`, `salon-doodle.jpg`, `salon-towel.jpg`.

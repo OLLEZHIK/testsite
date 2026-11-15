@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kay's Pooches &amp; Smooches | Dog and cat grooming in Irving Park, Chicago</title>
+<meta name="description" content="Dog and cat grooming on W Irving Park Rd, Chicago. Baths, tidy-ups, full grooms and doodle cuts with prices for every size. 5.0 on Google from 138 reviews. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../salon/salon.css">
+<style>
+  /* Kay's: lipstick red for the "smooches", plum-black ink, white salon walls, a single thin line like their logo. */
+  :root {
+    --ink: #22182b; --ink-soft: #5d5160; --accent: #c8234f; --accent-deep: #9c1238; --tint: #fde8ee;
+    --bg: #ffffff; --surface: #faf5f7; --line: #efdfe5;
+    --display: "Young Serif", Georgia, serif; --text: "Figtree", system-ui, sans-serif;
+    --hero-radius: 200px 200px 28px 28px;
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"PetGroomer","name":"Kay's Pooches & Smooches","telephone":"+1-312-826-8794","address":{"@type":"PostalAddress","streetAddress":"4021 W Irving Park Rd","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60641","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":41.9533691,"longitude":-87.728511},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"138"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"17:00"}],"sameAs":["https://www.facebook.com/kayspoochessmooches/"]}
+</script>
+<script id="site-config" type="application/json">
+{
+  "tz": "America/Chicago",
+  "hours": { "0": "closed", "1": "closed", "2": "09:00-18:00", "3": "09:00-18:00", "4": "09:00-18:00", "5": "09:00-18:00", "6": "08:00-17:00" },
+  "phone": "+13128268794", "phoneLabel": "312-826-8794",
+  "booking": "https://booking.moego.pet/ol/KaysPoochesSmooches/landing",
+  "address": "4021 W Irving Park Rd, Chicago, IL 60641",
+  "lat": 41.9533691, "lng": -87.728511, "pin": "Kay's Pooches & Smooches",
+  "openNote": "Book online any time, or call us.",
+  "priceSource": "Prices as listed on our booking page. The final price can change with the condition of the coat.",
+  "noPriceNote": "This size isn't on our price list for baths. Call us and we'll quote it.",
+  "thumbHideOn": "prices",
+  "finder": {
+    "dog": {
+      "label": "Dog", "noun": "dog",
+      "sizes": [
+        { "id": "s", "label": "Small", "note": "up to 20 lb" },
+        { "id": "m", "label": "Medium", "note": "21 to 40 lb" },
+        { "id": "l", "label": "Large", "note": "41 to 60 lb" },
+        { "id": "xl", "label": "X-Large", "note": "61 lb and up" }
+      ],
+      "services": [
+        { "id": "full", "label": "Full groom", "prices": { "s": "$90", "m": "$105", "l": "$125+", "xl": "$140" }, "includes": "Basic shampoo, ear cleaning, nail trimming, full haircut, cologne." },
+        { "id": "doodle", "label": "Oodles, doodles & poodles", "prices": { "s": "$100+", "m": "$115+", "l": "$135+", "xl": "$150+" }, "includes": "Enriching shampoo, moisturizing deep coat conditioner, extra brushing, ear cleaning, nail trimming, full haircut.", "note": "The price depends on size, weight and the condition of the coat." },
+        { "id": "tidy", "label": "Tidy-up", "prices": { "s": "$80", "m": "$90", "l": "$100", "xl": "$110" }, "includes": "No hair off the body. Basic shampoo, nail trim, ear cleaning, sanitary shave, visor trim, paw pad shave and rounding, cologne." },
+        { "id": "bath-short", "label": "Bath, short coat", "prices": { "s": "$50", "m": "$65", "l": "$80", "xl": null }, "includes": "Basic shampoo, ear cleaning, nail trim, cologne." },
+        { "id": "bath-long", "label": "Bath, long coat", "prices": { "s": "$60", "m": "$75", "l": "$90", "xl": null }, "includes": "Basic shampoo, ear cleaning, nail trim, cologne." }
+      ]
+    },
+    "cat": {
+      "label": "Cat",
+      "sizes": null,
+      "services": [
+        { "id": "cat-full", "label": "Full groom with bath", "price": "$120", "includes": "Haircut, nail trim, ear cleaning, bath, brush-out." },
+        { "id": "cat-groom", "label": "Groom, no bath", "price": "$110", "includes": "Haircut, nail clipping, ear cleaning, brush-out." },
+        { "id": "cat-bath-long", "label": "Bath, long hair", "price": "$95", "includes": "Basic shampoo, nail trim, ear cleaning, brush-out." },
+        { "id": "cat-bath-short", "label": "Bath, short hair", "price": "$85", "includes": "Basic shampoo, nail trim, ear cleaning, brush-out." }
+      ]
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="preview-bar">
+  <p><strong>Preview</strong> An example website made for Kay's Pooches &amp; Smooches by Pawenn. It is not live and not the salon's official site.</p>
+  <a href="#make-it-yours">See the offer</a>
+</div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Kay's Pooches &amp; Smooches"><img src="logo.png" alt="" width="269" height="342"><span class="brand-name">Kay's Pooches &amp; Smooches</span></a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#prices">Prices</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Hours &amp; map</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="btn btn-line" href="tel:+13128268794">312-826-8794</a>
+    <a class="btn btn-solid" href="https://booking.moego.pet/ol/KaysPoochesSmooches/landing" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm12 8H5v9h14zM5 8h14V6H5z"/></svg><span>Book online</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Dog and cat grooming in Irving Park, Chicago</p>
+    <h1 id="hero-title">Fresh cuts, gentle hands, <em>and a few smooches.</em></h1>
+    <p class="hero-sub">Kay and Larissa groom dogs of every size, doodles included, and cats too. See your price in a few taps, then book online.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#prices">Find your price</a>
+      <a class="btn btn-line" href="https://booking.moego.pet/ol/KaysPoochesSmooches/landing" target="_blank" rel="noopener">Book online</a>
+    </div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google from 138 reviews</p>
+  </div>
+  <figure class="hero-photo">
+    <img src="../assets/salon-doodle.jpg" alt="" width="1000" height="1250">
+    <svg class="scribble" viewBox="0 0 300 200" aria-hidden="true"><path d="M10 150 C 60 40, 120 30, 150 90 S 230 170, 260 80 S 220 10, 200 40 C 185 62, 230 70, 290 30"/></svg>
+    <figcaption>Illustration</figcaption>
+  </figure>
+</section>
+
+<section class="prices" id="prices" aria-labelledby="prices-title">
+  <div class="prices-inner">
+    <div class="prices-head">
+      <h2 id="prices-title">What will my groom cost?</h2>
+      <p>Pick your pet, its size and the service. The price comes straight from our menu.</p>
+    </div>
+    <div class="finder-grid">
+      <form class="finder" id="finder" onsubmit="return false">
+        <fieldset class="step"><legend>Who's coming in?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do they need?</legend><div class="chips" data-services></div></fieldset>
+      </form>
+      <article class="quote" id="quote" aria-live="polite"></article>
+    </div>
+    <details class="menu">
+      <summary>See the whole menu</summary>
+      <div class="menu-grid">
+        <div><h3>Full groom</h3><table><tr><td>Small, up to 20 lb</td><td>$90</td></tr><tr><td>Medium, 21–40 lb</td><td>$105</td></tr><tr><td>Large, 41–60 lb</td><td>$125+</td></tr><tr><td>X-Large, 61 lb and up</td><td>$140</td></tr></table></div>
+        <div><h3>Oodles, doodles &amp; poodles</h3><table><tr><td>Small</td><td>$100+</td></tr><tr><td>Medium</td><td>$115+</td></tr><tr><td>Large</td><td>$135+</td></tr><tr><td>X-Large</td><td>$150+</td></tr></table></div>
+        <div><h3>Tidy-up</h3><table><tr><td>Small</td><td>$80</td></tr><tr><td>Medium</td><td>$90</td></tr><tr><td>Large</td><td>$100</td></tr><tr><td>X-Large</td><td>$110</td></tr></table></div>
+        <div><h3>Bath</h3><table><tr><td>Short coat, small / medium / large</td><td>$50 / $65 / $80</td></tr><tr><td>Long coat, small / medium / large</td><td>$60 / $75 / $90</td></tr></table></div>
+        <div><h3>Cats</h3><table><tr><td>Full groom with bath</td><td>$120</td></tr><tr><td>Groom, no bath</td><td>$110</td></tr><tr><td>Bath, long hair</td><td>$95</td></tr><tr><td>Bath, short hair</td><td>$85</td></tr></table></div>
+        <div><h3>Quick services</h3><table><tr><td>Nail trim and grind</td><td>$20</td></tr><tr><td>Nail grinding</td><td>$15</td></tr><tr><td>Dog nail trim and ear cleaning</td><td>$10</td></tr><tr><td>Cat nail trim and ear cleaning</td><td>$20</td></tr><tr><td>Teeth brushing</td><td>$5</td></tr></table></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="voices" id="reviews" aria-labelledby="voices-title">
+  <h2 id="voices-title">Why people keep coming back</h2>
+  <div class="voices-grid">
+    <blockquote><strong>Kay and Larissa</strong><p>Clients describe both groomers as warm and patient, and Kay as especially attentive to how you want your pet to look. They take time to give grooming advice and reassure owners on a first visit.</p></blockquote>
+    <blockquote><strong>Calm, even for nervous pets</strong><p>Anxious rescues, puppies and cats stay relaxed on the table. One reviewer's pet even fell asleep during the groom.</p></blockquote>
+    <blockquote><strong>The cut you asked for</strong><p>Doodles, cavapoos and terriers come home with breed-right cuts, a thorough de-shed and coats that are easy to keep up at home.</p></blockquote>
+  </div>
+  <p class="voices-src">Themes from Google reviews, April to October 2026. 5.0 from 138 reviews.</p>
+</section>
+
+<ul class="info" aria-label="Good to know">
+  <li class="info-item"><strong>First visit</strong><p>Bringing a puppy or a shy rescue for the first time? Clients say Kay and Larissa take time to reassure them and share grooming advice.</p></li>
+  <li class="info-item"><strong>Cats welcome</strong><p>Baths, haircuts and brush-outs for cats, done in a calm salon.</p></li>
+  <li class="info-item"><strong>Book any time</strong><p>Our online booking is open day and night, and regular appointments are easy to set up.</p></li>
+</ul>
+
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Come see us</h2>
+    <address>4021 W Irving Park Rd<br>Chicago, IL 60641</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions">
+      <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kay%27s+Pooches+%26+Smooches%2C+4021+W+Irving+Park+Rd%2C+Chicago%2C+IL+60641" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-line" href="tel:+13128268794">312-826-8794</a>
+    </div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 4021 W Irving Park Rd, Chicago"></div></div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Questions people ask</h2>
+  <details><summary>Do you groom cats?</summary><p>Yes. A cat bath is $85 for short hair and $95 for long hair, a groom without a bath is $110, and a full groom with a bath is $120.</p></details>
+  <details><summary>How do I book?</summary><p>Book online any time, or call us at 312-826-8794.</p></details>
+  <details><summary>How do you size dogs?</summary><p>By weight: small up to 20 lb, medium 21 to 40 lb, large 41 to 60 lb, and X-large 61 lb and up.</p></details>
+  <details><summary>Why do some prices have a plus?</summary><p>Doodle and poodle cuts, and full grooms for large dogs, depend on the breed, size and the condition of the coat.</p></details>
+  <details><summary>Can my dog just get a nail trim?</summary><p>Yes. A nail trim and grind is $20, and a nail trim with ear cleaning is $10 for dogs and $20 for cats.</p></details>
+</section>
+
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head">
+    <h2 id="offer-title">This is an example. Want a site like this?</h2>
+    <p>Everything here comes from your booking page and your Google listing. The finished site can look different: tell us what to add, remove or change, and we'll do it before launch. Want a gallery of your grooms, a page for cats, or Spanish? Just describe it and we'll add it.</p>
+  </div>
+  <div class="offer-grid">
+    <div>
+      <h3>What it adds to your MoeGo page</h3>
+      <ul>
+        <li>A real home page people find on Google, with your name, address and hours marked up for search</li>
+        <li>A price finder: pet, size, service, and the price from your menu</li>
+        <li>Open or closed right now, a map and one-tap directions</li>
+        <li>What your clients say about you and Larissa</li>
+        <li>Your MoeGo "Book online" button on every screen</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What you get</h3>
+      <ul>
+        <li>Live on your own domain, such as kayspooches.com, within a week</li>
+        <li>Domain and hosting for the first year included</li>
+        <li>Your photos, colors and wording, changed as you like</li>
+      </ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Kay%27s%20website">Reply to Pawenn</a>
+    </div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your salon or a client's pet. Prices come from your MoeGo booking page and hours from your Google listing (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#top" aria-label="Kay's Pooches &amp; Smooches"><img src="logo.png" alt="" width="269" height="342" loading="lazy"></a>
+      <p>Dog and cat grooming in Irving Park, Chicago.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Visit</h2>
+      <p>4021 W Irving Park Rd<br>Chicago, IL 60641</p>
+      <p>Tue to Fri 9 am – 6 pm<br>Sat 8 am – 5 pm</p>
+    </div>
+    <div class="footer-col">
+      <h2>Contact</h2>
+      <p><a href="tel:+13128268794">312-826-8794</a><br><a href="https://booking.moego.pet/ol/KaysPoochesSmooches/landing" target="_blank" rel="noopener">Book online</a></p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/kayspoochessmooches/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2>On this page</h2>
+      <ul><li><a href="#prices">Prices</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours &amp; map</a></li><li><a href="#faq">Questions</a></li></ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kay's Pooches &amp; Smooches</p>
+    <p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p>
+    <a class="footer-top" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<div class="thumb-bar" id="thumb-bar">
+  <a class="btn btn-solid" href="#prices">See prices</a>
+  <a class="btn btn-line" href="https://booking.moego.pet/ol/KaysPoochesSmooches/landing" target="_blank" rel="noopener">Book online</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../salon/salon.js" defer></script>
+</body>
+</html>
