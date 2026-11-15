@@ -1,18 +1,18 @@
 /* Yofren - mobile grooming, Miami.
-   Palette: Miami pool water, flamingo, sun, harbor navy, foam white.
+   Palette: the lime of their logo (palm green), flamingo, sun, deep palm ink, pale leaf white.
    Type: Anybody (stretches on the width axis) for display, Hanken Grotesk for text.
    The one bold thing: the visit composer on a terrazzo floor. Everything else stays quiet. */
 
 :root {
-  --ink: #10213a;
-  --ink-soft: #3c4c63;
-  --pool: #2ec4c6;
-  --pool-deep: #0b6e72;
+  --ink: #1c2a17;
+  --ink-soft: #485543;
+  --pool: #77bd00;
+  --pool-deep: #3b7a0a;
   --flamingo: #ff8fa3;
   --sun: #ffd54a;
-  --foam: #f3faf9;
+  --foam: #f5f9ee;
   --white: #ffffff;
-  --line: #d5e6e5;
+  --line: #dbe6cf;
   --display: "Anybody", "Arial Narrow", sans-serif;
   --text: "Hanken Grotesk", system-ui, sans-serif;
   --step-0: 1.0625rem;
@@ -90,7 +90,7 @@ p { margin: 0; }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 1.5rem;
   padding: .7rem var(--gutter);
-  background: rgba(243, 250, 249, .92);
+  background: rgba(245, 249, 238, .92);
   backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -120,7 +120,7 @@ p { margin: 0; }
 }
 .hero-scrim {
   position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(90deg, rgba(243, 250, 249, .94) 0%, rgba(243, 250, 249, .82) 32%, rgba(243, 250, 249, 0) 58%);
+  background: linear-gradient(90deg, rgba(245, 249, 238, .94) 0%, rgba(245, 249, 238, .82) 32%, rgba(245, 249, 238, 0) 58%);
 }
 .hero-copy { max-width: 620px; }
 .hero-title {
@@ -149,7 +149,7 @@ p { margin: 0; }
   position: absolute; right: var(--gutter); bottom: 1.6rem;
   padding: .55rem 1rem; border-radius: 12px;
   background: var(--white); color: var(--ink); font-weight: 700; font-size: .95rem;
-  box-shadow: 0 6px 24px rgba(16, 33, 58, .16);
+  box-shadow: 0 6px 24px rgba(28, 42, 23, .16);
 }
 .hero-open:empty { display: none; }
 .hero-open::before {
@@ -162,13 +162,13 @@ p { margin: 0; }
 .plan {
   position: relative;
   padding: clamp(4rem, 9vw, 7rem) var(--gutter);
-  background-color: #e4f5f4;
+  background-color: #ecf4dd;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(46, 196, 198, .55) 0 3px, transparent 4px),
+    radial-gradient(circle at 12% 18%, rgba(119, 189, 0, .55) 0 3px, transparent 4px),
     radial-gradient(circle at 63% 72%, rgba(255, 143, 163, .55) 0 4px, transparent 5px),
     radial-gradient(circle at 81% 31%, rgba(255, 213, 74, .7) 0 2.5px, transparent 3.5px),
-    radial-gradient(circle at 37% 57%, rgba(16, 33, 58, .18) 0 2px, transparent 3px),
-    radial-gradient(circle at 92% 88%, rgba(46, 196, 198, .4) 0 5px, transparent 6px);
+    radial-gradient(circle at 37% 57%, rgba(28, 42, 23, .18) 0 2px, transparent 3px),
+    radial-gradient(circle at 92% 88%, rgba(119, 189, 0, .4) 0 5px, transparent 6px);
   background-size: 140px 140px, 190px 190px, 120px 120px, 90px 90px, 230px 230px;
 }
 .plan-intro { max-width: var(--max); margin: 0 auto 2.5rem; }
@@ -180,7 +180,7 @@ p { margin: 0; }
 }
 .plan-form {
   background: var(--white); border-radius: 28px; padding: clamp(1.25rem, 3vw, 2.25rem);
-  box-shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgba(16, 33, 58, .35);
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgba(28, 42, 23, .35);
 }
 fieldset { border: 0; margin: 0 0 1.6rem; padding: 0; }
 legend { font-weight: 700; font-size: var(--step-1); margin-bottom: .7rem; }
@@ -202,7 +202,7 @@ legend { font-weight: 700; font-size: var(--step-1); margin-bottom: .7rem; }
 .size svg { width: 72px; height: 48px; fill: var(--ink-soft); }
 .size span { font-weight: 700; }
 .size small { color: var(--ink-soft); font-size: .85rem; }
-.size:has(input:checked) { border-color: var(--pool-deep); background: #dff4f3; }
+.size:has(input:checked) { border-color: var(--pool-deep); background: #e9f5d6; }
 .size:has(input:checked) svg { fill: var(--pool-deep); }
 .size:has(input:focus-visible) { outline: 3px solid var(--sun); outline-offset: 2px; }
 #size-set[hidden] { display: none; }
@@ -306,11 +306,44 @@ legend { font-weight: 700; font-size: var(--step-1); margin-bottom: .7rem; }
 .offer-price span { font-family: var(--text); font-weight: 500; font-size: 1rem; color: var(--ink-soft); }
 .offer-fine { margin-top: 1.2rem; font-size: .85rem; color: var(--ink-soft); }
 
-.footer {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem;
-  padding: 1.5rem var(--gutter); background: var(--ink); color: #c7d6e4; font-size: .9rem;
+/* Footer: a Miami Beach awning edge, then the business card of the site. */
+.footer { position: relative; margin-top: 3rem; background: #e7f2d4; color: var(--ink); }
+.footer::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -17px; height: 18px;
+  background: radial-gradient(circle at 18px 18px, #e7f2d4 17px, transparent 18px) 0 0 / 36px 18px repeat-x;
 }
-.footer a { color: var(--white); }
+.footer-main {
+  max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) 2.5rem;
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2rem 3rem;
+}
+.footer-brand img { height: 52px; width: auto; }
+.footer-brand p { margin: 1rem 0 1.4rem; max-width: 32ch; color: var(--ink-soft); }
+.footer-cta { display: flex; flex-wrap: wrap; gap: .6rem; }
+.footer-cta .btn-ghost { color: var(--ink); }
+.footer-cta .btn-ghost:hover { background: var(--white); }
+.footer-col h2 {
+  font-family: var(--display); font-size: 1.15rem; font-weight: 800; font-variation-settings: "wdth" 92;
+  margin: .4rem 0 .9rem; color: var(--pool-deep);
+}
+.footer-col p { margin: 0 0 .8rem; }
+.footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.footer-col a { color: var(--ink); text-decoration-color: var(--pool); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.footer-social { display: flex; gap: .6rem; margin-top: 1rem; }
+.footer-social a {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--white); color: var(--ink); transition: background .2s, color .2s;
+}
+.footer-social a:hover { background: var(--pool); }
+.footer-social svg { width: 20px; height: 20px; fill: currentColor; }
+.footer-bottom {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 2rem;
+  padding: 1.1rem var(--gutter); background: var(--ink); color: #c9d4c2; font-size: .9rem;
+}
+.footer-bottom p { margin: 0; }
+.footer-bottom a { color: var(--white); }
+.footer-bottom .footer-top { margin-left: auto; }
+@media (max-width: 920px) { .footer-main { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .footer-main { grid-template-columns: 1fr; } .footer-bottom .footer-top { margin-left: 0; } }
 
 /* Phones */
 @media (max-width: 920px) {
@@ -347,11 +380,11 @@ section[id] { scroll-margin-top: 84px; }
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
     display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
     padding: .6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom));
-    background: rgba(243, 250, 249, .96); border-top: 1px solid var(--line);
+    background: rgba(245, 249, 238, .96); border-top: 1px solid var(--line);
     transition: transform .2s;
   }
   .thumb-bar.away { transform: translateY(110%); }
   .thumb-bar .btn-ghost { color: var(--ink); }
-  .footer { padding-bottom: 5.5rem; }
+  .footer-bottom { padding-bottom: 5.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .thumb-bar { transition: none; } }

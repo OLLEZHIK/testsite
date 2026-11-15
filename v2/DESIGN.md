@@ -10,8 +10,10 @@ generic defaults the skill lists.
 - **Subject:** a grooming salon in a van that parks at the client's door.
   Audience: busy Miami pet owners on phones, English and Spanish.
   Main job: get a visit booked by text or call.
-- **Palette (Miami pool and terrazzo):** ink #10213a, pool #2ec4c6,
-  pool-deep #0b6e72, flamingo #ff8fa3, sun #ffd54a, foam #f3faf9.
+- **Palette (palm green from their logo, Miami flamingo and sun):** ink #1c2a17,
+  leaf #77bd00 (the exact lime of their logo), leaf-deep #3b7a0a, flamingo #ff8fa3,
+  sun #ffd54a, background #f5f9ee. Owner, 2026-11-15: keep the business's own logo
+  and pull the palette toward it, not the other way round.
 - **Type:** Anybody (variable width) for display — the hero's second line
   "stretches" in once, like the van pulling up; Hanken Grotesk for text.
 - **The one bold thing:** the visit composer on a terrazzo floor — pet, size,
@@ -36,3 +38,12 @@ they fit any grooming preview until the client sends photos.
 
 Make a new plan for each (vet clinic ≠ groomer ≠ trainer), reuse the code
 patterns (composer, open-now, EN/ES, thumb bar), not the look.
+
+## Owner feedback, 2026-11-15
+
+- Hero video: no people or hands (AI hands shake). Start frame = end frame for a
+  seamless loop. Encode near the source quality (CRF ~21), never below ~1 Mbps at 1080p.
+- Credits: think before spending. Fix in post first (crop, re-encode, upscale), then a
+  cheap model (Kling 3.0 pro, ~9 credits for 6 s) before Seedance 1080p (80).
+- Keep the business's logo; adapt the palette to it.
+- Price $200. Full footer (brand, hours, contact, links, social).
