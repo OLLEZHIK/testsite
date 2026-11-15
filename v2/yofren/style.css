@@ -231,14 +231,14 @@ legend { font-weight: 700; font-size: var(--step-1); margin-bottom: .7rem; }
   background: var(--ink); color: var(--white); border-radius: 28px 28px 28px 8px;
   padding: 1.4rem 1.4rem 1.8rem; min-height: 220px;
 }
-.thread-to { font-size: .9rem; color: #a9bfd3; margin-bottom: 1rem; }
+.thread-to { font-size: .9rem; color: #b9c8b0; margin-bottom: 1rem; }
 .bubble {
   position: relative; margin-left: auto; max-width: 92%;
   padding: 1rem 1.15rem; border-radius: 20px 20px 6px 20px;
   background: var(--pool); color: var(--ink); font-size: 1.05rem; line-height: 1.5;
   transition: background-color .2s;
 }
-.bubble.changed { background: #7fe0e1; }
+.bubble.changed { background: #b6e35c; }
 .plan-send { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1rem; }
 .plan-send .btn-ghost { color: var(--ink); }
 .plan-note { margin-top: .8rem; font-size: .9rem; color: var(--ink-soft); }

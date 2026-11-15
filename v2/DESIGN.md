@@ -43,7 +43,10 @@ patterns (composer, open-now, EN/ES, thumb bar), not the look.
 
 - Hero video: no people or hands (AI hands shake). Start frame = end frame for a
   seamless loop. Encode near the source quality (CRF ~21), never below ~1 Mbps at 1080p.
-- Credits: think before spending. Fix in post first (crop, re-encode, upscale), then a
-  cheap model (Kling 3.0 pro, ~9 credits for 6 s) before Seedance 1080p (80).
+- Credits: think before spending. Fix in post first (crop, re-encode, upscale), then ask.
+  Owner prefers Seedance 2.5 for quality (720p 35 credits, 1080p 80); Kling 3.0 pro is
+  cheaper (~9) but weaker. Agree the spend with the owner before any video.
 - Keep the business's logo; adapt the palette to it.
 - Price $200. Full footer (brand, hours, contact, links, social).
+- After a palette change, grep every hard-coded colour (states such as .bubble.changed
+  flashed the old teal).
