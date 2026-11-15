@@ -40,6 +40,9 @@ for (const slug of wanted) {
   console.log(`built ${slug} -> ${path.relative(root, out) || "dist"}/`);
 }
 
+// v2/: hand-built prototypes of the next template, copied as they are.
+if (!single && fs.existsSync(path.join(root, "v2"))) fs.cpSync(path.join(root, "v2"), path.join(dist, "v2"), { recursive: true });
+
 // The root of the previews deployment lists nothing: every prospect gets
 // only their own link and must not see who else got one.
 if (!single) {
