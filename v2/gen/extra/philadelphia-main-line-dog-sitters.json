@@ -1,0 +1,45 @@
+{
+ "slug": "philadelphia-main-line-dog-sitters",
+ "name": "Main Line Dog Sitters",
+ "city": "philadelphia",
+ "cat": "sitting",
+ "address": "1619 Green St, Philadelphia, PA 19130",
+ "lat": "39.9644779",
+ "lng": "-75.1652501",
+ "phone": "+1 484-469-7132",
+ "email": "mainlinedogsitters@gmail.com",
+ "website": "https://mainlinedogsitters.com/",
+ "instagram": "",
+ "facebook": "",
+ "short_description": "Main Line Dog Sitters provides white-glove dog walking, sitting, and boarding services all along the Main Line. Schedule Meet & Greet Today!",
+ "description": "Main Line Dog Sitters provides white-glove dog walking, sitting, and boarding services all along the Main Line. Schedule Meet & Greet Today!",
+ "opening_hours": "fr 24h",
+ "google_place_id": "",
+ "google_rating": "",
+ "google_rating_count": "0",
+ "logo_file": "",
+ "home_visits": "",
+ "emergency_note": "",
+ "verify": {
+  "slug": "philadelphia--main-line-dog-sitters",
+  "url": "https://mainlinedogsitters.com/",
+  "final": "https://mainlinedogsitters.com/",
+  "lines": [
+   "\u00a9 Copyright | Main Line Dog Sitters | 2021"
+  ],
+  "years": [
+   2021
+  ],
+  "builder": "",
+  "mails": [
+   "mainlinedogsitters@gmail.com"
+  ],
+  "sw": 390,
+  "vp": "width=device-width, initial-scale=1",
+  "words": 549,
+  "title": "#1 Trusted Dog Walkers, Sitters, and Boarders on the Main Line",
+  "meta": "Main Line Dog Sitters provides white-glove dog walking, sitting, and boarding services all along the Main Line. Schedule Meet & Greet Today!",
+  "h1": "Services"
+ },
+ "not_on_pawenn": true
+}

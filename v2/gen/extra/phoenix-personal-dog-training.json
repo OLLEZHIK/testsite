@@ -1,0 +1,41 @@
+{
+ "slug": "phoenix-personal-dog-training",
+ "name": "Personal Dog Training",
+ "city": "phoenix",
+ "cat": "training",
+ "address": "3550 E Thunderbird Rd, Phoenix, AZ 85032",
+ "lat": "33.6136286",
+ "lng": "-112.0048327",
+ "phone": "+1 480-625-0498",
+ "email": "personaldogtraining1@gmail.com",
+ "website": "http://personaldogtraining.org/index.html",
+ "instagram": "",
+ "facebook": "",
+ "short_description": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
+ "description": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
+ "opening_hours": "fr 08:00-21:00",
+ "google_place_id": "ChIJp-n20RUfiYgRTfgNEDWrPiI",
+ "google_rating": "",
+ "google_rating_count": "0",
+ "logo_file": "",
+ "home_visits": "",
+ "emergency_note": "",
+ "verify": {
+  "slug": "phoenix--personal-dog-training",
+  "url": "http://personaldogtraining.org/",
+  "final": "http://personaldogtraining.org/index.html",
+  "lines": [],
+  "years": [],
+  "builder": "",
+  "mails": [
+   "personaldogtraining1@gmail.com"
+  ],
+  "sw": 450,
+  "vp": "width=device-width, initial-scale=1.0",
+  "words": 428,
+  "title": "Home",
+  "meta": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
+  "h1": "\u00a0"
+ },
+ "not_on_pawenn": true
+}

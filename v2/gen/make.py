@@ -49,6 +49,12 @@ def load(slug):
                 ins = json.load(open(ins_p)) if os.path.exists(ins_p) else None
                 cj = json.load(open(f"{DATA}/{city}/city.json")) if os.path.exists(f"{DATA}/{city}/city.json") else {}
                 return r, city, cat, ins, cj
+    extra = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra", slug + ".json")
+    if os.path.exists(extra):  # places that are not on Pawenn yet (Maps candidates + their own site)
+        r = json.load(open(extra))
+        city = r["city"]
+        cj = json.load(open(f"{DATA}/{city}/city.json")) if os.path.exists(f"{DATA}/{city}/city.json") else {}
+        return r, city, r["cat"], None, cj
     raise SystemExit(f"not found: {slug}")
 
 

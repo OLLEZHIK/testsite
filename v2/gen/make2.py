@@ -71,11 +71,10 @@ POOL = {
                            ("s/diego-1.jpg", "baths", "palms"), ("s/snip-2.jpg", "nail-care", None), ("s/snip-3.jpg", "teeth-brushing", None), ("s/karas-1.jpg", "boarding", None),
                            ("s/karas-2.jpg", "baths", None), ("s/karas-3.jpg", "daycare", None), ("s/snip-1.jpg", "daycare", "new-york"), ("p/groom-h2.jpg", "grooming", None),
                            ("p/groom-h1.jpg", "grooming", None)]},
-    "care": {"hero": [("pet-sitter-visit.jpg", None), ("cat-sitting.jpg", None), ("p/sit-h1.jpg", None), ("p/board-h1.jpg", None), ("dog-walk.jpg", "miami")],
+    "care": {"hero": [("pet-sitter-visit.jpg", None), ("cat-sitting.jpg", None), ("p/sit-h1.jpg", None), ("s/sugars-1.jpg", None), ("dog-walk.jpg", "miami")],
              "photo": [("s/sugars-1.jpg", "dog-walking", None), ("s/sugars-2.jpg", "pet-visits", None), ("s/sugars-3.jpg", "overnight-stays", None), ("s/keke-1.jpg", "dog-walking", "phoenix"),
                        ("s/keke-2.jpg", "boarding", None), ("s/keke-3.jpg", "medication", None), ("s/lovemiami-1.jpg", "daycare", "palms"), ("s/lovemiami-2.jpg", "travel-help", "palms"),
-                       ("s/lovemiami-3.jpg", "boarding", None), ("s/karas-1.jpg", "boarding", None), ("s/karas-3.jpg", "daycare", None), ("p/board-h1.jpg", "boarding", None),
-                       ("p/sit-h1.jpg", "pet-visits", None), ("cat-sitting.jpg", "pet-visits", None)]},
+                       ("s/lovemiami-3.jpg", "boarding", None), ("p/sit-h1.jpg", "pet-visits", None), ("cat-sitting.jpg", "pet-visits", None)]},
     "hotel": {"hero": [("daycare-play.jpg", None), ("p/board-h1.jpg", None), ("s/karas-3.jpg", None)],
               "photo": [("s/karas-1.jpg", "boarding", None), ("p/board-h1.jpg", "boarding", None), ("s/lovemiami-3.jpg", "boarding", None), ("s/bravo-1.jpg", "boarding", None),
                         ("s/karas-3.jpg", "daycare", None), ("daycare-play.jpg", "daycare", None), ("s/lovemiami-1.jpg", "daycare", "palms"), ("s/snip-1.jpg", "daycare", "new-york"),
@@ -104,6 +103,9 @@ def auto_images(slug, cat, city, svc_ids):
     for f, sv in cands:  # first pass: one photo per service the business offers
         if sv in svc_ids and sv not in seen and f not in used and len(photos) < 3:
             photos.append((f, sv, sv)); used.add(f); seen.add(sv)
+    for f, sv in cands:  # fill to three with plain illustrations (no caption, no service claimed)
+        if len(photos) < 3 and f not in used:
+            photos.append((f, None, "")); used.add(f)
     return hero, photos
 
 
@@ -370,6 +372,13 @@ def make(slug):
         main, second, night, use_logo = auto_palette(slug, lp[0] if lp else None)
     tel, tel_label = phone_parts(r["phone"])
     hours = hours_cfg(r["opening_hours"])
+    if hours:  # keep only plain "HH:MM-HH:MM" or "closed" days; anything else would confuse the open-now status
+        if all(v == "closed" or re.fullmatch(r"\d\d:\d\d-\d\d:\d\d", v) for v in hours.values()):
+            hours = {str(d): hours.get(str(d), "closed") for d in range(7)}  # a day not listed is closed
+        else:
+            hours = None  # split or unusual hours: show no status rather than a wrong one
+        if hours and not any(v != "closed" for v in hours.values()):
+            hours = None
     raw_hours = (r["opening_hours"] or "").strip()
     tz = tz_for(city, cj)
     locality, state = place(r["address"])
@@ -462,7 +471,7 @@ def make(slug):
     def photos_html(prefix):
         figs = ""
         for f, sv, cap in photos:
-            inner = f'<img src="{prefix}../../assets/{f}" alt="" loading="lazy" width="1200" height="900"><span class="cap">{e(cap)}</span>'
+            inner = f'<img src="{prefix}../../assets/{f}" alt="" loading="lazy" width="1200" height="900">' + (f'<span class="cap">{e(cap)}</span>' if cap else "")
             figs += f'<a class="photo" href="{prefix}services/{sv}/">{inner}</a>' if sv else f'<figure class="photo">{inner}</figure>'
         title = {"vet": "Care for every visit", "grooming": "From bath to finish", "training": "Training at work"}.get(cat, "Care while you're away")
         return (f'<section class="wrap section"><div class="section-head"><h2>{title}</h2><p class="fine">Illustrations. Your own photos go here.</p></div><div class="photos">{figs}</div></section>' if figs else "")
@@ -482,7 +491,7 @@ def make(slug):
         stats.append(("24 h", "open every day"))
     elif hours:
         nd = sum(1 for v in hours.values() if v != "closed")
-        stats.append((f"{nd} days", "open every week"))
+        stats.append((f"{nd} day{'s' if nd != 1 else ''}", "open every week"))
     if len(stats) < 4:
         stats.append((str(len(svcs)), "services"))
     stats_html = "".join(f"<div><strong>{e(a)}</strong><span>{e(b)}</span></div>" for a, b in stats[:4])
