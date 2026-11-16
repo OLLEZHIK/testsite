@@ -86,6 +86,16 @@ then gets its own palette, type and character (never the same look twice).
   Owner: glam serif and black/red/gold "don't fit grooming"; terrazzo dots on the whole
   page "look bad" (tried and removed 2026-11-16), keep backgrounds plain.
 
+## Multi-page generator (`v2/gen/make2.py`, 2026-11-16)
+
+- Same look as Super Star, for any business in the Pawenn data: `python3 v2/gen/make2.py <slug>` writes
+  `v2/s/<slug>/` with home, services, a page per service ("Vaccines in Hialeah"), hours and location
+  (Leaflet map), and booking. Shared `v2/multi/style.css` and `v2/multi/app.js`, config in each page.
+- Colors from the business's own logo (`PAL` in the script, picked by eye; their logo in the nav).
+  Vets get no soap bubbles. Sitters and home businesses: no street address and no map.
+- Services only from their own description (keywords), never a generic list. Old single-page
+  previews in `v2/p/` stay online for links already sent.
+
 ## Rules that keep the sites safe (vets especially)
 
 1. Every fact comes from the business's own site or Google listing, with the month it was
