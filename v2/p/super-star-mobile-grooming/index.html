@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Super Star Mobile Grooming | Dog grooming, mobile in Miami</title>
+<meta name="description" content="Super Star Mobile Grooming is a mobile pet grooming salon serving pets throughout Miami-Dade and Broward counties. Mobile groomers visit homes to provide b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #13293d; --ink-soft: #4a5b6b; --accent: #0f766e; --accent-deep: #115e59; --tint: #e2f3f1; --bg: #ffffff; --surface: #f2f6f7; --line: #dbe5e8;
+    --display: "Young Serif", Georgia, serif; --text: "Figtree", system-ui, sans-serif; --hero-radius: 200px 200px 28px 28px; }
+  h1, h2, h3 { font-weight: 400; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/New_York", "hours": {"1": "06:30-20:30", "2": "06:30-20:30", "3": "06:30-20:30", "4": "06:30-20:30", "5": "06:30-20:30", "6": "06:30-20:00", "0": "06:30-20:00"}, "phone": "+13058369274", "phoneLabel": "305-836-9274", "address": "9650 NW 27th Ave, Miami, FL 33147", "lat": null, "lng": null, "pin": "Super Star Mobile Grooming", "thumbHideOn": "book", "composer": {"greeting": "Hi Super Star Mobile Grooming!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": [{"id": "s", "label": "Small", "note": "up to 20 lb", "word": "small"}, {"id": "m", "label": "Medium", "note": "21 to 40 lb", "word": "medium"}, {"id": "l", "label": "Large", "note": "41 to 60 lb", "word": "large"}, {"id": "xl", "label": "X-Large", "note": "61 lb and up", "word": "extra large"}], "services": [{"id": "groom", "label": "Full groom", "phrase": "a full groom"}, {"id": "bath", "label": "Bath and brush", "phrase": "a bath and brush-out"}, {"id": "cut", "label": "Haircut", "phrase": "a haircut"}, {"id": "nails", "label": "Nails", "phrase": "a nail trim"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Super Star Mobile Grooming by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Super Star Mobile Grooming</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+13058369274"><span>305-836-9274</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Dog grooming, mobile in Miami</p>
+    <h1 id="hero-title">Super Star Mobile Grooming</h1>
+    <p class="hero-sub">Super Star Mobile Grooming is a mobile pet grooming salon serving pets throughout Miami-Dade and Broward counties. Mobile groomers visit homes to provide bathing, haircutting, nail trimming, and coat maintenance. The salon offers prepaid multi-visit grooming bundle packages.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a groom</a><a class="btn btn-line" href="tel:+13058369274">Call 305-836-9274</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.5 on Google from 1,299 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/paw.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step" hidden><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Super Star Mobile Grooming, 305-836-9274</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+13058369274">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-line" href="tel:+13058369274">305-836-9274</a></div>
+  </div>
+  <div class="find-info" style="justify-self:start;background:var(--ink);color:#fff;max-width:none"><h2 style="color:#fff">We come to you</h2><p class="find-note" style="color:rgba(255,255,255,.82)">Super Star Mobile Grooming is a mobile pet grooming salon serving pets throughout Miami-Dade and Broward counties. Mobile groomers visit homes to provide bathing, haircutting, nail trimming, and coat maintenance. The salon offers prepaid multi-visit grooming bundle packages.</p></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Does Super Star Mobile Grooming offer mobile services across Miami?</summary><p>Yes, reviewers and company details confirm that mobile grooming vans travel directly to residential doorsteps throughout Miami-Dade.</p></details><details><summary>Are cat grooming services available?</summary><p>Yes, the mobile unit accepts cats, though recent reviewers report mixed experiences with feline trimming and handling.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to superstargrooming.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, superstargrooming.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Super%20Star%20Mobile%20Grooming%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Super Star Mobile Grooming</span></a><p>Dog grooming, mobile in Miami.</p></div>
+    <div class="footer-col"><h2>Area</h2><p>Miami</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+13058369274">305-836-9274</a><br><a href="mailto:info@superstargrooming.com">info@superstargrooming.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Super Star Mobile Grooming</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+13058369274">Call</a></div>
+
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

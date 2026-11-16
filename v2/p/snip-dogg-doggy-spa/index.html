@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Snip Dogg Doggy Spa | Dog grooming in New York</title>
+<meta name="description" content="Snip Dogg Doggy Spa in Richmond Hill, Queens offers dog grooming and doggy daycare services. Offerings include coat baths with salon-quality shampoos, bree">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #15161a; --ink-soft: #4d4f57; --accent: #c2410c; --accent-deep: #9a3412; --tint: #fdeee6; --bg: #ffffff; --surface: #f4f4f5; --line: #e4e4e7;
+    --display: "Archivo", Georgia, serif; --text: "Archivo", system-ui, sans-serif; --hero-radius: 8px; }
+  h1, h2, h3 { font-weight: 700; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/New_York", "hours": {"1": "10:00-16:30", "2": "10:00-16:30", "3": "10:00-16:30", "4": "10:00-17:00", "5": "10:00-17:30", "6": "10:00-17:30", "0": "10:00-12:00"}, "phone": "+19293860006", "phoneLabel": "929-386-0006", "address": "119-19 Jamaica Ave, Richmond Hill, NY 11418", "lat": 40.7002894, "lng": -73.8301781, "pin": "Snip Dogg Doggy Spa", "thumbHideOn": "book", "composer": {"greeting": "Hi Snip Dogg Doggy Spa!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": [{"id": "s", "label": "Small", "note": "up to 20 lb", "word": "small"}, {"id": "m", "label": "Medium", "note": "21 to 40 lb", "word": "medium"}, {"id": "l", "label": "Large", "note": "41 to 60 lb", "word": "large"}, {"id": "xl", "label": "X-Large", "note": "61 lb and up", "word": "extra large"}], "services": [{"id": "groom", "label": "Full groom", "phrase": "a full groom"}, {"id": "bath", "label": "Bath and brush", "phrase": "a bath and brush-out"}, {"id": "cut", "label": "Haircut", "phrase": "a haircut"}, {"id": "nails", "label": "Nails", "phrase": "a nail trim"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Snip Dogg Doggy Spa by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Snip Dogg Doggy Spa</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+19293860006"><span>929-386-0006</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Dog grooming in New York</p>
+    <h1 id="hero-title">Snip Dogg Doggy Spa</h1>
+    <p class="hero-sub">Snip Dogg Doggy Spa in Richmond Hill, Queens offers dog grooming and doggy daycare services. Offerings include coat baths with salon-quality shampoos, breed clipping, paw pad trims, nail care, and teeth brushing. Supervised play and relaxation areas are provided for daytime daycare guests.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a groom</a><a class="btn btn-line" href="tel:+19293860006">Call 929-386-0006</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 on Google from 288 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/salon-towel.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step" hidden><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Snip Dogg Doggy Spa, 929-386-0006</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+19293860006">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="voices" id="reviews" aria-labelledby="voices-title"><h2 id="voices-title">What clients say</h2><div class="voices-grid"><blockquote><strong>Warm and attentive salon team</strong><p>Pet parents frequently praise Sherry and the grooming crew for their accommodating, friendly attitude and passion for pet care. Clients appreciate that staff notify them about skin observations and treat nervous pets like family members throughout the visit.</p></blockquote><blockquote><strong>Clean coats and tidy styling</strong><p>Most reviewers are delighted with finished grooms, highlighting neat breed trims, fresh smelling coats, and gentle teeth scaling. While one client felt groomers pushed to shave down knots too quickly, the vast majority describe consistently clean and attractive haircuts.</p></blockquote><blockquote><strong>Cage-free comfort for anxious pets</strong><p>Clients appreciate the open, cage-free setup where puppies and anxious dogs can relax rather than waiting inside enclosed crates. Reviewers note that pets remain calm throughout their visits, and owners can watch the grooming process for first-time puppies.</p></blockquote></div><p class="voices-src">Themes from Google reviews. 4.7 from 288 reviews.</p></section>
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    <address>119-19 Jamaica Ave, Richmond Hill, NY 11418</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Snip%20Dogg%20Doggy%20Spa%2C%20119-19%20Jamaica%20Ave%2C%20Richmond%20Hill%2C%20NY%2011418" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+19293860006">929-386-0006</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 119-19 Jamaica Ave, Richmond Hill, NY 11418"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Is the grooming setup cage-free?</summary><p>Yes, clients highlight the cage-free environment where dogs can relax openly rather than being kept in crates.</p></details><details><summary>Does the salon offer teeth cleaning services?</summary><p>Yes, pet parents mention that the salon provides teeth brushing and scaling services alongside routine grooming.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to snipdoggny.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, snipdoggny.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Snip%20Dogg%20Doggy%20Spa%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Snip Dogg Doggy Spa</span></a><p>Dog grooming in New York.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>119-19 Jamaica Ave, Richmond Hill, NY 11418</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+19293860006">929-386-0006</a><br><a href="mailto:snipdognyc@gmail.com">snipdognyc@gmail.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Snip Dogg Doggy Spa</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+19293860006">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kara’s K9 Retreat Daycare Boarding and Grooming | Dog grooming in San Antonio</title>
+<meta name="description" content="Kara’s K9 Retreat provides dog daycare, boarding accommodations, deluxe baths, and grooming in north-central San Antonio. The facility operates seven days ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #13293d; --ink-soft: #4a5b6b; --accent: #0f766e; --accent-deep: #115e59; --tint: #e2f3f1; --bg: #ffffff; --surface: #f2f6f7; --line: #dbe5e8;
+    --display: "Young Serif", Georgia, serif; --text: "Figtree", system-ui, sans-serif; --hero-radius: 200px 200px 28px 28px; }
+  h1, h2, h3 { font-weight: 400; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/Chicago", "hours": {"1": "07:15-18:00", "2": "07:15-18:00", "3": "07:15-18:00", "4": "07:15-18:00", "5": "07:15-18:00", "6": "08:00-18:00", "0": "08:00-18:00"}, "phone": "+12108223647", "phoneLabel": "210-822-3647", "address": "235 W Sunset Rd, San Antonio, TX 78209", "lat": 29.5077165, "lng": -98.4700192, "pin": "Kara\u2019s K9 Retreat", "thumbHideOn": "book", "composer": {"greeting": "Hi Kara\u2019s K9 Retreat!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": [{"id": "s", "label": "Small", "note": "up to 20 lb", "word": "small"}, {"id": "m", "label": "Medium", "note": "21 to 40 lb", "word": "medium"}, {"id": "l", "label": "Large", "note": "41 to 60 lb", "word": "large"}, {"id": "xl", "label": "X-Large", "note": "61 lb and up", "word": "extra large"}], "services": [{"id": "groom", "label": "Full groom", "phrase": "a full groom"}, {"id": "bath", "label": "Bath and brush", "phrase": "a bath and brush-out"}, {"id": "cut", "label": "Haircut", "phrase": "a haircut"}, {"id": "nails", "label": "Nails", "phrase": "a nail trim"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Kara’s K9 Retreat Daycare Boarding and Grooming by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Kara’s K9 Retreat</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+12108223647"><span>210-822-3647</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Dog grooming in San Antonio</p>
+    <h1 id="hero-title">Kara’s K9 Retreat</h1>
+    <p class="hero-sub">Kara’s K9 Retreat provides dog daycare, boarding accommodations, deluxe baths, and grooming in north-central San Antonio. The facility operates seven days a week with client portal booking.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a groom</a><a class="btn btn-line" href="tel:+12108223647">Call 210-822-3647</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.6 on Google from 92 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/salon-doodle.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step" hidden><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Kara’s K9 Retreat, 210-822-3647</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+12108223647">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="voices" id="reviews" aria-labelledby="voices-title"><h2 id="voices-title">What clients say</h2><div class="voices-grid"><blockquote><strong>Enriching play for social dogs</strong><p>Reviewers emphasize that high-energy, social dogs thrive in the open playgroups and return home tired and fulfilled. Pet parents appreciate the mandatory temperament evaluation day that helps ensure safe group dynamics. While two owners reported canine scuffles leading to bite injuries or distress in larger play areas, the majority of clients describe a safe, stimulating social setting for well-socialised dogs.</p></blockquote><blockquote><strong>Clean cage-free daycare and boarding</strong><p>Pet owners value the cage-free philosophy where dogs are not crated and can move freely between indoor and outdoor play yards. Clients frequently describe the facility as clean, hygienic, and well maintained. While one reviewer expressed concern about indoor summer temperatures, most visitors commend the spacious layout and dedicated areas that separate smaller dogs from larger playgroups.</p></blockquote></div><p class="voices-src">Themes from Google reviews. 4.6 from 92 reviews.</p></section>
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    <address>235 W Sunset Rd, San Antonio, TX 78209</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kara%E2%80%99s%20K9%20Retreat%20Daycare%20Boarding%20and%20Grooming%2C%20235%20W%20Sunset%20Rd%2C%20San%20Antonio%2C%20TX%2078209&amp;destination_place_id=ChIJC-vHAVD1XIYRTS5XqOb7rz0" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+12108223647">210-822-3647</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 235 W Sunset Rd, San Antonio, TX 78209"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Does Kara&#x27;s K9 Retreat crate dogs during boarding?</summary><p>No, the facility operates a cage-free boarding model where dogs sleep and socialise without standard crates.</p></details><details><summary>Is an evaluation required before booking daycare or boarding?</summary><p>Yes, all dogs must complete a scheduled temperament trial day to ensure compatibility with group play.</p></details><details><summary>What pet services are provided at the retreat?</summary><p>The facility offers cage-free dog daycare, overnight boarding, bathing, grooming, and pet taxi transportation.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to karask9retreat.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, karask9retreat.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Kara%E2%80%99s%20K9%20Retreat%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Kara’s K9 Retreat</span></a><p>Dog grooming in San Antonio.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>235 W Sunset Rd, San Antonio, TX 78209</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+12108223647">210-822-3647</a><br><a href="mailto:kk9retreat@gmail.com">kk9retreat@gmail.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Kara’s K9 Retreat Daycare Boarding and Grooming</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+12108223647">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

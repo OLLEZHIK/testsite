@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Keke and Fetch Dog Walking and Cat Boarding | Boarding and daycare in Phoenix</title>
+<meta name="description" content="Keke and Fetch Dog Walking and Cat Boarding provides personalized boarding and sitting services for pets in West Phoenix. Care options include overnight ho">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #24182c; --ink-soft: #5a4d62; --accent: #6b3fa0; --accent-deep: #522c7d; --tint: #f1eaf8; --bg: #ffffff; --surface: #f7f4fa; --line: #e7dfee;
+    --display: "DM Serif Text", Georgia, serif; --text: "Source Sans 3", system-ui, sans-serif; --hero-radius: 50% 50% 28px 28px / 40% 40% 28px 28px; }
+  h1, h2, h3 { font-weight: 400; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/Phoenix", "hours": {}, "phone": "+16025019408", "phoneLabel": "602-501-9408", "address": "2009 N 77th Glen, Phoenix, AZ 85035", "lat": 33.4698313, "lng": -112.2261418, "pin": "Keke and Fetch", "thumbHideOn": "book", "composer": {"greeting": "Hi Keke and Fetch!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": [{"id": "s", "label": "Small", "note": "up to 20 lb", "word": "small"}, {"id": "m", "label": "Medium", "note": "21 to 40 lb", "word": "medium"}, {"id": "l", "label": "Large", "note": "41 to 60 lb", "word": "large"}, {"id": "xl", "label": "X-Large", "note": "61 lb and up", "word": "extra large"}], "services": [{"id": "walk", "label": "Dog walks", "phrase": "dog walks"}, {"id": "visit", "label": "Drop-in visits", "phrase": "drop-in visits"}, {"id": "stay", "label": "Overnight stay", "phrase": "an overnight stay"}, {"id": "board", "label": "Boarding", "phrase": "boarding"}]}, "cat": {"label": "Cat", "noun": "cat", "sizes": null, "services": [{"id": "visit", "label": "Drop-in visits", "phrase": "drop-in visits"}, {"id": "stay", "label": "Overnight stay", "phrase": "an overnight stay"}, {"id": "board", "label": "Boarding", "phrase": "boarding"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Keke and Fetch Dog Walking and Cat Boarding by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Keke and Fetch</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#reviews">Reviews</a><a href="#visit">Contact</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+16025019408"><span>602-501-9408</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Boarding and daycare in Phoenix</p>
+    <h1 id="hero-title">Keke and Fetch</h1>
+    <p class="hero-sub">Keke and Fetch Dog Walking and Cat Boarding provides personalized boarding and sitting services for pets in West Phoenix. Care options include overnight home stays for dogs and cats, daily walks, and medication administration.</p>
+    
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a stay</a><a class="btn btn-line" href="tel:+16025019408">Call 602-501-9408</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.8 on Google from 60 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/salon-towel.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step"><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Keke and Fetch, 602-501-9408</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+16025019408">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="voices" id="reviews" aria-labelledby="voices-title"><h2 id="voices-title">What clients say</h2><div class="voices-grid"><blockquote><strong>Accommodating and dedicated pet sitter</strong><p>Most pet owners praise Sherri for her kind demeanour, flexibility with scheduling, and willingness to assist on short notice. Clients who booked extended boarding stays appreciate her responsiveness and regular updates. However, one client reported a lack of professionalism and felt their boarding expectations were not met, though other reviewers describe a dependable and supportive coordinator.</p></blockquote></div><p class="voices-src">Themes from Google reviews. 4.8 from 60 reviews.</p></section>
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Get in touch</h2>
+    <address>2009 N 77th Glen, Phoenix, AZ 85035</address>
+    <p class="find-note"><strong>By appointment.</strong> Send a text or call to book a time.</p>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Keke%20and%20Fetch%20Dog%20Walking%20and%20Cat%20Boarding%2C%202009%20N%2077th%20Glen%2C%20Phoenix%2C%20AZ%2085035&amp;destination_place_id=ChIJJbee9G8VK4cRSZ2L2x3UnAQ" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+16025019408">602-501-9408</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 2009 N 77th Glen, Phoenix, AZ 85035"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>What types of pet boarding are offered?</summary><p>The service provides in-home overnight boarding and day care for both dogs and cats in West Phoenix.</p></details><details><summary>Can pets stay for extended periods?</summary><p>Yes, reviewers note that long-term stays lasting several weeks or months were accommodated with flexible extensions.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to kekeandfetchdogwalking.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, kekeandfetchdogwalking.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Keke%20and%20Fetch%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Keke and Fetch</span></a><p>Boarding and daycare in Phoenix.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>2009 N 77th Glen, Phoenix, AZ 85035</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+16025019408">602-501-9408</a><br></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Keke and Fetch Dog Walking and Cat Boarding</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+16025019408">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

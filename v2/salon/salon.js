@@ -123,6 +123,7 @@
       if (i === 0 && now.mins > h[1] - 90) continue;
       days.push({ i, dow, label: i === 0 ? "Today" : i === 1 ? "Tomorrow" : `${SHORT[dow]} ${d.getUTCDate()}`, word: i === 0 ? "today" : i === 1 ? "tomorrow" : `on ${DAYS[dow]}` });
     }
+    if (!days.length) box.querySelector("[data-days]").closest(".step").hidden = true;
     box.querySelector("[data-days]").innerHTML = days.map((d, n) => `<label class="chip"><input type="radio" name="day" value="${n}" ${n === (days.length > 1 ? 1 : 0) ? "checked" : ""}><span>${d.label}</span></label>`).join("");
     const val = (n) => (box.querySelector(`input[name="${n}"]:checked`) || {}).value;
     function drawOptions() {

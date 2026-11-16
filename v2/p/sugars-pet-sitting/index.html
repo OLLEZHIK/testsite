@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sugar&#x27;s Pet Sitting | Pet sitting in Dallas</title>
+<meta name="description" content="Sugar&#x27;s Pet Sitting provides pet care services for dogs and cats across Dallas. Services include daily dog walking, in-home pet visits, and overnight pet s">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #13293d; --ink-soft: #4a5b6b; --accent: #0f766e; --accent-deep: #115e59; --tint: #e2f3f1; --bg: #ffffff; --surface: #f2f6f7; --line: #dbe5e8;
+    --display: "Young Serif", Georgia, serif; --text: "Figtree", system-ui, sans-serif; --hero-radius: 200px 200px 28px 28px; }
+  h1, h2, h3 { font-weight: 400; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/Chicago", "hours": {"1": "09:00-17:00", "2": "09:00-17:00", "3": "09:00-17:00", "4": "09:00-17:00", "5": "09:00-17:00", "6": "10:00-13:00", "0": "closed"}, "phone": "+12145305993", "phoneLabel": "214-530-5993", "address": "12700 Hillcrest Rd Ste 125, Dallas, TX 75230", "lat": 32.9222086, "lng": -96.7853907, "pin": "Sugar's Pet Sitting", "thumbHideOn": "book", "composer": {"greeting": "Hi Sugar's Pet Sitting!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": null, "services": [{"id": "walk", "label": "Dog walks", "phrase": "dog walks"}, {"id": "visit", "label": "Drop-in visits", "phrase": "drop-in visits"}, {"id": "stay", "label": "Overnight stay", "phrase": "an overnight stay"}]}, "cat": {"label": "Cat", "noun": "cat", "sizes": null, "services": [{"id": "visit", "label": "Drop-in visits", "phrase": "drop-in visits"}, {"id": "stay", "label": "Overnight stay", "phrase": "an overnight stay"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Sugar&#x27;s Pet Sitting by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Sugar&#x27;s Pet Sitting</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+12145305993"><span>214-530-5993</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Pet sitting in Dallas</p>
+    <h1 id="hero-title">Sugar&#x27;s Pet Sitting</h1>
+    <p class="hero-sub">Sugar&#x27;s Pet Sitting provides pet care services for dogs and cats across Dallas. Services include daily dog walking, in-home pet visits, and overnight pet sitting. Pet sitters provide feeding, potty breaks, exercise, and photo updates after each visit.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a booking</a><a class="btn btn-line" href="tel:+12145305993">Call 214-530-5993</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google from 72 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/cat.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step"><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Sugar&#x27;s Pet Sitting, 214-530-5993</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+12145305993">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="voices" id="reviews" aria-labelledby="voices-title"><h2 id="voices-title">What clients say</h2><div class="voices-grid"><blockquote><strong>Dependable and patient sitting team</strong><p>Pet parents describe the sitters as trustworthy, kind, and willing to go the extra mile, including navigating tricky entry logistics or making visits during harsh winter weather. Clients note that regular caregivers build strong relationships with household pets, following specific feeding routines and care directions thoroughly.</p></blockquote><blockquote><strong>Attentive companionship for dogs and cats</strong><p>Owners frequently share that both dogs and cats appear relaxed, joyful, and well settled upon their return from work trips or family holidays. Reviewers appreciate the gentle handling provided to nervous rescues, older cats, and large multi-dog households, noting that animals eagerly greet their sitters whenever they arrive at the door.</p></blockquote><blockquote><strong>Prompt updates with detailed journals</strong><p>Clients consistently praise the frequent text updates, detailed visit summaries, and daily photographs sent after each drop-in appointment. Pet owners express great reassurance knowing exactly how their companions are doing while away, highlighting prompt communication and quick answers to questions from the administrative team.</p></blockquote></div><p class="voices-src">Themes from Google reviews. 5.0 from 72 reviews.</p></section>
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    <address>12700 Hillcrest Rd Ste 125, Dallas, TX 75230</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sugar%27s%20Pet%20Sitting%2C%2012700%20Hillcrest%20Rd%20Ste%20125%2C%20Dallas%2C%20TX%2075230&amp;destination_place_id=ChIJBRQmG0YZTIYRAQk9S0_Kqkw" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+12145305993">214-530-5993</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 12700 Hillcrest Rd Ste 125, Dallas, TX 75230"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Does Sugar&#x27;s Pet Sitting provide care for both dogs and cats?</summary><p>Yes, caregivers look after both dogs and cats, offering midday dog walking, drop-in visits, and in-home care.</p></details><details><summary>Do clients receive updates while away from home?</summary><p>Yes, pet owners report receiving daily visit journals, photos, and messages detailing their pets&#x27; activities and meals.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to sugarspetsitting.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, sugarspetsitting.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Sugar%27s%20Pet%20Sitting%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Sugar&#x27;s Pet Sitting</span></a><p>Pet sitting in Dallas.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>12700 Hillcrest Rd Ste 125, Dallas, TX 75230</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+12145305993">214-530-5993</a><br><a href="mailto:info@sugarspetsitting.com">info@sugarspetsitting.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Sugar&#x27;s Pet Sitting</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+12145305993">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

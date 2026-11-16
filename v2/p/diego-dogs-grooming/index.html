@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Diego Dogs Grooming | Dog grooming in San Diego</title>
+<meta name="description" content="Diego Dogs Grooming offers pet styling and spa care in San Diego. The salon provides bathing, coat trims, and grooming in a calm environment with dedicated">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #1d2a24; --ink-soft: #4f5d55; --accent: #2f6b4f; --accent-deep: #1f4d3a; --tint: #e6f1ea; --bg: #ffffff; --surface: #f3f5f2; --line: #dfe6e0;
+    --display: "Gloock", Georgia, serif; --text: "Karla", system-ui, sans-serif; --hero-radius: 28px; }
+  h1, h2, h3 { font-weight: 400; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/Los_Angeles", "hours": {"1": "10:00-18:00", "2": "08:30-16:30", "3": "08:30-16:30", "4": "08:30-16:30", "5": "08:30-16:30", "6": "closed", "0": "closed"}, "phone": "+18584125202", "phoneLabel": "858-412-5202", "address": "4605 Cass St, San Diego, CA 92109", "lat": 32.7985808, "lng": -117.2520175, "pin": "Diego Dogs Grooming", "thumbHideOn": "book", "composer": {"greeting": "Hi Diego Dogs Grooming!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": [{"id": "s", "label": "Small", "note": "up to 20 lb", "word": "small"}, {"id": "m", "label": "Medium", "note": "21 to 40 lb", "word": "medium"}, {"id": "l", "label": "Large", "note": "41 to 60 lb", "word": "large"}, {"id": "xl", "label": "X-Large", "note": "61 lb and up", "word": "extra large"}], "services": [{"id": "groom", "label": "Full groom", "phrase": "a full groom"}, {"id": "bath", "label": "Bath and brush", "phrase": "a bath and brush-out"}, {"id": "cut", "label": "Haircut", "phrase": "a haircut"}, {"id": "nails", "label": "Nails", "phrase": "a nail trim"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Diego Dogs Grooming by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Diego Dogs Grooming</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+18584125202"><span>858-412-5202</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Dog grooming in San Diego</p>
+    <h1 id="hero-title">Diego Dogs Grooming</h1>
+    <p class="hero-sub">Diego Dogs Grooming offers pet styling and spa care in San Diego. The salon provides bathing, coat trims, and grooming in a calm environment with dedicated safety equipment.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a groom</a><a class="btn btn-line" href="tel:+18584125202">Call 858-412-5202</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 on Google from 84 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/salon-doodle.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step" hidden><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Diego Dogs Grooming, 858-412-5202</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+18584125202">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="voices" id="reviews" aria-labelledby="voices-title"><h2 id="voices-title">What clients say</h2><div class="voices-grid"><blockquote><strong>Knowledgeable and compassionate salon owner</strong><p>Reviewers consistently speak warmly of Amanda and her grooming team in Pacific Beach, describing her as sweet, attentive, and deeply knowledgeable about pet needs. Long-time clients emphasise complete trust in her hands, praising the salon&#x27;s welcoming atmosphere and individual care provided during every appointment.</p></blockquote><blockquote><strong>Calming atmosphere for reactive dogs</strong><p>Pet owners highlight that even anxious or reactive dogs, including large German Shepherds, feel remarkably comfortable and safe at Diego Dogs. Reviewers appreciate the gentle handling and tranquil energy in the salon, noting that pets leave looking relaxed and happy rather than frightened or stressed.</p></blockquote><blockquote><strong>Detailed trims and coat maintenance</strong><p>Clients express high satisfaction with grooming outcomes for various breeds, including poodles and Cavalier King Charles spaniels. Owners note that groomers pay close attention to specific haircut requests, resulting in neat scissor work, clean coats, and pets that regularly receive compliments from passers-by.</p></blockquote></div><p class="voices-src">Themes from Google reviews. 4.7 from 84 reviews.</p></section>
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    <address>4605 Cass St, San Diego, CA 92109</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Diego%20Dogs%20Grooming%2C%204605%20Cass%20St%2C%20San%20Diego%2C%20CA%2092109&amp;destination_place_id=ChIJ__-PPJAB3IARiHUM0-c5Lpw" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+18584125202">858-412-5202</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 4605 Cass St, San Diego, CA 92109"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Where in San Diego is Diego Dogs Grooming located?</summary><p>The parlour is situated on Cass Street in the Pacific Beach neighbourhood of San Diego.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to diegodogsgrooming.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, diegodogsgrooming.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Diego%20Dogs%20Grooming%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Diego Dogs Grooming</span></a><p>Dog grooming in San Diego.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>4605 Cass St, San Diego, CA 92109</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+18584125202">858-412-5202</a><br><a href="mailto:DiegoDogsGrooming@gmail.com">DiegoDogsGrooming@gmail.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Diego Dogs Grooming</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+18584125202">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>

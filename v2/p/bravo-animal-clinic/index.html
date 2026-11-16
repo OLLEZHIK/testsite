@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bravo Animal Clinic | Veterinary care in Miami</title>
+<meta name="description" content="Bravo Animal Clinic is a family-owned veterinary clinic in Cutler Bay that has served pet owners for over 26 years. The clinic provides general veterinary ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../../salon/salon.css">
+<style>
+  :root { --ink: #15161a; --ink-soft: #4d4f57; --accent: #c2410c; --accent-deep: #9a3412; --tint: #fdeee6; --bg: #ffffff; --surface: #f4f4f5; --line: #e4e4e7;
+    --display: "Archivo", Georgia, serif; --text: "Archivo", system-ui, sans-serif; --hero-radius: 8px; }
+  h1, h2, h3 { font-weight: 700; }
+</style>
+<script id="site-config" type="application/json">{"tz": "America/New_York", "hours": {"1": "08:00-18:00", "2": "08:00-18:00", "3": "08:00-17:00", "4": "08:00-18:00", "5": "08:00-18:00", "6": "08:30-17:00", "0": "closed"}, "phone": "+13052349422", "phoneLabel": "305-234-9422", "address": "10901 SW 186th St, Cutler Bay, FL 33157", "lat": 25.5960441, "lng": -80.3688798, "pin": "Bravo Animal Clinic", "thumbHideOn": "book", "composer": {"greeting": "Hi Bravo Animal Clinic!", "pets": {"dog": {"label": "Dog", "noun": "dog", "sizes": null, "services": [{"id": "check", "label": "Checkup", "phrase": "a checkup"}, {"id": "vacc", "label": "Vaccines", "phrase": "vaccines"}, {"id": "sick", "label": "Sick visit", "phrase": "a sick visit"}, {"id": "dental", "label": "Dental", "phrase": "a dental consult"}]}, "cat": {"label": "Cat", "noun": "cat", "sizes": null, "services": [{"id": "check", "label": "Checkup", "phrase": "a checkup"}, {"id": "vacc", "label": "Vaccines", "phrase": "vaccines"}, {"id": "sick", "label": "Sick visit", "phrase": "a sick visit"}, {"id": "dental", "label": "Dental", "phrase": "a dental consult"}]}}}}</script>
+</head>
+<body>
+<div class="preview-bar"><p><strong>Preview</strong> An example website made for Bravo Animal Clinic by Pawenn. It is not live and not the business's official site.</p><a href="#make-it-yours">See the offer</a></div>
+<header class="nav">
+  <a class="brand" href="#top"><span class="brand-name">Bravo Animal Clinic</span></a>
+  <nav class="nav-links" aria-label="Sections"><a href="#book">Book</a><a href="#visit">Hours</a><a href="#faq">Questions</a></nav>
+  <div class="nav-actions"><a class="btn btn-solid" href="tel:+13052349422"><span>305-234-9422</span></a></div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-kicker">Veterinary care in Miami</p>
+    <h1 id="hero-title">Bravo Animal Clinic</h1>
+    <p class="hero-sub">Bravo Animal Clinic is a family-owned veterinary clinic in Cutler Bay that has served pet owners for over 26 years. The clinic provides general veterinary medical care, healthcare checkups, and boarding.</p>
+    <div class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><div><p class="status-main"></p><p class="status-sub"></p></div></div>
+    <div class="hero-actions"><a class="btn btn-solid" href="#book">Book a visit</a><a class="btn btn-line" href="tel:+13052349422">Call 305-234-9422</a></div>
+    <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.5 on Google from 564 reviews</p>
+  </div>
+  <figure class="hero-photo"><img src="../../assets/vet-exam.jpg" alt="" width="1000" height="1250"><figcaption>Illustration</figcaption></figure>
+</section>
+<section class="prices" id="book" aria-labelledby="book-title">
+  <div class="prices-inner">
+    <div class="prices-head"><h2 id="book-title">Tell us what you need. We'll write the text.</h2><p>Pick the details and send them as a text message, then ask for a time and a price.</p></div>
+    <div class="finder-grid">
+      <form id="composer" onsubmit="return false">
+        <fieldset class="step"><legend>Who's coming?</legend><div class="chips" data-pets></div></fieldset>
+        <fieldset class="step"><legend>How big?</legend><div class="sizes" data-sizes></div></fieldset>
+        <fieldset class="step"><legend>What do you need?</legend><div class="chips" data-services></div></fieldset>
+        <fieldset class="step"><legend>Which day?</legend><div class="chips" data-days></div></fieldset>
+        <fieldset class="step"><legend>What time?</legend><div class="chips"><label class="chip"><input type="radio" name="time" value="morning" checked><span>Morning</span></label><label class="chip"><input type="radio" name="time" value="afternoon"><span>Afternoon</span></label></div></fieldset>
+        <div class="field"><label for="pet-name">Your pet's name (optional)</label><input id="pet-name" type="text" autocomplete="off" maxlength="30"></div>
+        <label class="check"><input type="checkbox" id="shy"> My pet gets nervous</label>
+      </form>
+      <aside id="message" aria-live="polite">
+        <div class="thread"><p class="thread-to">To Bravo Animal Clinic, 305-234-9422</p><p class="bubble"></p></div>
+        <div class="composer-actions"><a class="btn btn-solid" data-sms href="sms:+13052349422">Send as a text</a><button class="btn btn-line" type="button" data-copy>Copy message</button></div>
+        <p class="composer-note">Opens your messages app with the text ready. If this number doesn't take texts, call it instead.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="visit" aria-labelledby="visit-title">
+  <div class="find-info">
+    <h2 id="visit-title">Hours</h2>
+    <address>10901 SW 186th St, Cutler Bay, FL 33157</address>
+    <table class="hours" id="hours"></table>
+    <div class="find-actions"><a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bravo%20Animal%20Clinic%2C%2010901%20SW%20186th%20St%2C%20Cutler%20Bay%2C%20FL%2033157&amp;destination_place_id=ChIJ3_3TA4nD2YgRuY5MbhmvwBM" target="_blank" rel="noopener">Get directions</a><a class="btn btn-line" href="tel:+13052349422">305-234-9422</a></div>
+  </div>
+  <div class="map-wrap"><div class="map" id="map" role="region" aria-label="Map: 10901 SW 186th St, Cutler Bay, FL 33157"></div></div>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Questions people ask</h2><details><summary>Are walk-in visits accepted at the clinic?</summary><p>Yes, clients frequently visit on a walk-in basis, though owners note that walk-ins typically involve longer wait times than scheduled visits.</p></details><details><summary>How long is the typical waiting time for appointments?</summary><p>Several pet owners report substantial delays, with wait times occasionally extending from two to four hours during peak office hours.</p></details></section>
+<section class="offer" id="make-it-yours" aria-labelledby="offer-title">
+  <div class="offer-head"><h2 id="offer-title">This is an example. Want a site like this?</h2><p>We made it from your Google listing, your website and your reviews. The finished site can look different: tell us what to add, remove or change (prices, photos, your logo, Spanish, online booking), and we'll do it before launch.</p></div>
+  <div class="offer-grid">
+    <div><h3>What it adds to bravoanimalclinic.com</h3><ul><li>A layout built for phones first</li><li>Open or closed right now, from your own hours</li><li>New clients send you a ready request in a few taps</li><li>What your reviews say, on the first page</li><li>Details marked up for Google search</li></ul></div>
+    <div><h3>What you get</h3><ul><li>Live on your current domain, bravoanimalclinic.com, within a week</li><li>First year of hosting included</li><li>Your logo, photos, colors and wording, changed as you like</li></ul>
+      <p class="offer-price">$200 <span>one-time, paid only once it's live and you're happy</span></p>
+      <a class="btn btn-solid" href="mailto:pawenn.info@gmail.com?subject=Bravo%20Animal%20Clinic%20website">Reply to Pawenn</a></div>
+  </div>
+  <p class="offer-fine">The photo is an illustration, not your business or a client's pet. Details come from your Google listing and website (November 2026); the rating and review themes come from Google reviews.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="#top"><span class="brand-name" style="font-size:1.7rem">Bravo Animal Clinic</span></a><p>Veterinary care in Miami.</p></div>
+    <div class="footer-col"><h2>Visit</h2><p>10901 SW 186th St, Cutler Bay, FL 33157</p></div>
+    <div class="footer-col"><h2>Contact</h2><p><a href="tel:+13052349422">305-234-9422</a><br><a href="mailto:bravoanimalclinic@yahoo.com">bravoanimalclinic@yahoo.com</a></p></div>
+    <nav class="footer-col" aria-label="Footer"><h2>On this page</h2><ul><li><a href="#book">Book</a></li><li><a href="#visit">Hours</a></li></ul></nav>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Bravo Animal Clinic</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p><a class="footer-top" href="#top">Back to top</a></div>
+</footer>
+<div class="thumb-bar" id="thumb-bar"><a class="btn btn-solid" href="#book">Book</a><a class="btn btn-line" href="tel:+13052349422">Call</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="../../salon/salon.js" defer></script>
+</body>
+</html>
