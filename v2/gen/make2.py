@@ -172,7 +172,7 @@ KEYS = {
                  ("daycare", "Daycare", "daycare", ("daycare", "day care"), True),
                  ("boarding", "Boarding", "boarding", ("boarding",), True)],
     "care": [("dog-walking", "Dog walking", "dog walks", ("walk",), True),
-             ("pet-visits", "In-home visits", "in-home visits", ("drop-in", "pet visits", "home visits"), True),
+             ("pet-visits", "In-home visits", "in-home visits", ("drop-in", "pet visits", "home visits", "pet sitting", "house sitting", "dog sitting", "cat sitting"), True),
              ("overnight-stays", "Overnight stays", "an overnight stay", ("overnight", "home stays"), True),
              ("boarding", "Boarding", "boarding", ("boarding",), True),
              ("daycare", "Daycare", "daycare", ("daycare",), True),
@@ -396,7 +396,7 @@ def make(slug):
     if cat == "vet":
         book_svcs = book_svcs + [{"id": "sick-visit", "label": "Sick pet", "phrase": "a visit for my sick pet", "keys": (), "book": True}]
     cats = bool(re.search(r"\bcats?\b", d_low)) or cat == "vet"
-    show_addr = cat != "sitting" and not CONCEPT.get(slug, {}).get("home")
+    show_addr = cat != "sitting" and not CONCEPT.get(slug, {}).get("home") and not r.get("home")
     lat = float(r["lat"]) if (show_addr and r["lat"]) else None
     lng = float(r["lng"]) if (show_addr and r["lng"]) else None
     sizes = cat in ("grooming",) or any(s["id"] in ("boarding", "daycare") for s in book_svcs) and cat != "vet"

@@ -1,0 +1,42 @@
+{
+ "slug": "san-diego-happy-dog-happy-owner",
+ "name": "Happy Dog Happy Owner",
+ "city": "san-diego",
+ "cat": "training",
+ "address": "4495 Niagara Ave, San Diego, CA 92107",
+ "lat": "32.7403889",
+ "lng": "-117.2431788",
+ "phone": "+1 619-889-8606",
+ "email": "lara@happydoghappyowner.com",
+ "website": "https://www.happydoghappyowner.com/dogtrainingsandiego.php",
+ "instagram": "",
+ "facebook": "",
+ "short_description": "Dog training and obedience classes in San Diego, including agility, obedience training and scent work for dogs and puppies.",
+ "description": "Dog training and obedience classes in San Diego, including agility, obedience training and scent work for dogs and puppies.",
+ "opening_hours": "fr 07:00-22:00",
+ "google_place_id": "ChIJJdxeZEqq3oARbR1rqK5QXxY",
+ "google_rating": "",
+ "google_rating_count": "0",
+ "logo_file": "",
+ "home_visits": "",
+ "emergency_note": "",
+ "verify": {
+  "slug": "san-diego--happy-dog-happy-owner",
+  "url": "http://www.happydoghappyowner.com/",
+  "final": "https://www.happydoghappyowner.com/dogtrainingsandiego.php",
+  "lines": [],
+  "years": [],
+  "builder": "",
+  "mails": [
+   "lara@happydoghappyowner.com"
+  ],
+  "sw": 981,
+  "vp": "NONE",
+  "words": 331,
+  "title": "San Diego Dog Training",
+  "meta": "San Diego dog training and obedience classes offered by Happy Dog Happy Owner include; agility, obedience training, and scent work for both dogs and puppies.",
+  "h1": "San Diego Dog Training"
+ },
+ "not_on_pawenn": true,
+ "home": true
+}

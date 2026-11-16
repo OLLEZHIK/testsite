@@ -11,8 +11,8 @@
  "website": "http://personaldogtraining.org/index.html",
  "instagram": "",
  "facebook": "",
- "short_description": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
- "description": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
+ "short_description": "In-home, customized dog training that specializes in behavior issues.",
+ "description": "In-home, customized dog training that specializes in behavior issues.",
  "opening_hours": "fr 08:00-21:00",
  "google_place_id": "ChIJp-n20RUfiYgRTfgNEDWrPiI",
  "google_rating": "",
@@ -37,5 +37,6 @@
   "meta": "Personal Dog Training offers in-home, customized dog training and specializes in dog behavior issues. Your goals are our focus as we provide you with individual solutions and ongoing support. Serving the Phoenix, Arizona area 480-625-0498",
   "h1": "\u00a0"
  },
- "not_on_pawenn": true
+ "not_on_pawenn": true,
+ "home": true
 }
