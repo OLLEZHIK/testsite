@@ -76,6 +76,16 @@ then gets its own palette, type and character (never the same look twice).
 - Before any email: re-check the business still has no website (2026-11-15: Yofren put a
   site live at yofrenpetgrooming.com since October, so it was taken off the list).
 
+## Multi-page template (`v2/superstar/`, owner approved 2026-11-16)
+
+- Built by `v2/superstar/build.py`: home, services (package comparison table), prepaid
+  bundles, a page per service area (SEO: "Mobile pet grooming in <city>, FL"), booking.
+- Every page: "Do we come to you?" check, booking message (text or email), open-now status.
+- Look: the business's own brand colors (for Super Star, the pink and lime of their vans),
+  a round friendly display face (Baloo 2 + Nunito), soap-bubble rings in the hero, and
+  terrazzo dots in the business's colors on white and soft backgrounds. Owner: glam serif
+  and black/red/gold "don't fit grooming".
+
 ## Rules that keep the sites safe (vets especially)
 
 1. Every fact comes from the business's own site or Google listing, with the month it was
