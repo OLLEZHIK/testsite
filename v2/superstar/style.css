@@ -216,21 +216,3 @@ p { margin: 0; }
 .composer-out .btn-ghost { border-color: var(--line); }
 .nav-call { padding-inline: 1.1rem; }
 
-/* Terrazzo dots on the white and soft-pink backgrounds (owner liked them in the Yofren composer). */
-:root {
-  --dots:
-    radial-gradient(circle at 12% 18%, rgba(224, 53, 154, .38) 0 3px, transparent 4px),
-    radial-gradient(circle at 63% 72%, rgba(140, 198, 63, .45) 0 4px, transparent 5px),
-    radial-gradient(circle at 81% 31%, rgba(255, 205, 60, .6) 0 2.5px, transparent 3.5px),
-    radial-gradient(circle at 37% 57%, rgba(43, 22, 64, .16) 0 2px, transparent 3px),
-    radial-gradient(circle at 92% 88%, rgba(224, 53, 154, .25) 0 5px, transparent 6px);
-  --dots-size: 150px 150px, 200px 200px, 130px 130px, 95px 95px, 240px 240px;
-}
-body, .band, .page-head { background-image: var(--dots); background-size: var(--dots-size); }
-.band, .page-head { background-color: var(--paper); }
-.steps li, .quote blockquote, .faq details, .area-check { background-clip: padding-box; }
-.faq details { background: rgba(255, 255, 255, .85); padding-inline: 1rem; border-radius: 12px; margin-bottom: .4rem; border-bottom: 0; }
-.steps li { background: rgba(255, 255, 255, .85); padding: 1rem 1rem 1.1rem; border-radius: 0 0 14px 14px; }
-.quote { padding: clamp(1.5rem, 4vw, 2.5rem); background: rgba(255, 255, 255, .9); border-radius: 24px; margin-block: clamp(2rem, 5vw, 3.5rem); }
-.compare { background: #fff; border-radius: 14px; }
-.hours { background: rgba(255, 255, 255, .9); }

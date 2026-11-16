@@ -82,9 +82,9 @@ then gets its own palette, type and character (never the same look twice).
   bundles, a page per service area (SEO: "Mobile pet grooming in <city>, FL"), booking.
 - Every page: "Do we come to you?" check, booking message (text or email), open-now status.
 - Look: the business's own brand colors (for Super Star, the pink and lime of their vans),
-  a round friendly display face (Baloo 2 + Nunito), soap-bubble rings in the hero, and
-  terrazzo dots in the business's colors on white and soft backgrounds. Owner: glam serif
-  and black/red/gold "don't fit grooming".
+  a round friendly display face (Baloo 2 + Nunito) and soap-bubble rings in the hero.
+  Owner: glam serif and black/red/gold "don't fit grooming"; terrazzo dots on the whole
+  page "look bad" (tried and removed 2026-11-16), keep backgrounds plain.
 
 ## Rules that keep the sites safe (vets especially)
 
