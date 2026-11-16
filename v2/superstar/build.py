@@ -138,7 +138,7 @@ def home():
     areas = "".join(f'<a href="areas/{s}/">{e(n)}</a>' for s, n, _ in AREAS)
     body = f"""
 <section class="hero">
-  <video class="hero-video" autoplay muted playsinline poster="../assets/superstar-poster.jpg" aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline poster="../assets/superstar-poster.jpg" aria-hidden="true">
     <source src="../assets/superstar.webm" type="video/webm"><source src="../assets/superstar.mp4" type="video/mp4">
   </video>
   <div class="hero-shade"></div>
