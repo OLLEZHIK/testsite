@@ -92,7 +92,10 @@ then gets its own palette, type and character (never the same look twice).
   `v2/s/<slug>/` with home, services, a page per service ("Vaccines in Hialeah"), hours and location
   (Leaflet map), and booking. Shared `v2/multi/style.css` and `v2/multi/app.js`, config in each page.
 - Colors from the business's own logo (`PAL` in the script, picked by eye; their logo in the nav).
-  Vets get no soap bubbles. Sitters and home businesses: no street address and no map.
+  Soap bubbles only for groomers (they mean grooming); everyone else gets a plain hero. Sitters and home businesses: no street address and no map.
+- The hero picture shows the actual service (owner, 2026-11-16: a poodle in a pink bandana
+  is not dog training). Training: a working dog with a trainer (no face); walking: a walk; daycare:
+  dogs playing; vets: an exam. Reusable: `training-malinois.jpg`, `dog-walk.jpg`, `daycare-play.jpg`.
 - Services only from their own description (keywords), never a generic list. Old single-page
   previews in `v2/p/` stay online for links already sent.
 

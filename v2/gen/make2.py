@@ -29,7 +29,7 @@ PAL = {
     "snip-dogg-doggy-spa": ("#1f9e8f", "#f2c200", "#3a2410", True),
     "brooklyn-veterinary-group": ("#1f5a2a", "#8cc63f", "#11301a", True),
     "delta-force-k-9": ("#d61f1f", "#2a5bd7", "#0f1f45", True),
-    "love-miami-dogs": ("#0f9a95", "#ff7f6e", "#173a46", True),
+    "love-miami-dogs": ("#0f9a95", "#ff7f6e", "#173a46", False),
     "pet-lovers-animal-clinic-nw-7th-st": ("#5f9a25", "#9bd14b", "#1b2a12", True),
     "e-l-animal-clinic": ("#a0682a", "#d8a860", "#2e1a0e", True),
     "wags-animal-hospital": ("#7d9a0e", "#e6b98a", "#1f2a10", True),
@@ -38,7 +38,7 @@ PAL = {
     "spawtlight-dog-salon-spa": ("#7b3fd6", "#ffc93c", "#1d1238", False),
 }
 HERO = {"vet": "vet-exam.jpg", "grooming": "salon-towel.jpg", "sitting": "maltese.jpg", "training": "maltese.jpg", "hotel": "cat.jpg"}
-HERO_ALT = {"spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "love-miami-dogs": "maltese.jpg", "sugars-pet-sitting": "cat.jpg"}
+HERO_ALT = {"delta-force-k-9": "training-malinois.jpg", "love-miami-dogs": "dog-walk.jpg", "karas-k9-retreat": "daycare-play.jpg", "spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "sugars-pet-sitting": "cat.jpg"}
 
 # id, label, phrase in a message, keywords in their own description, bookable from the message builder
 KEYS = {
@@ -75,6 +75,7 @@ KEYS = {
 }
 KIND = {"grooming": "Dog grooming", "vet": "Veterinary care", "sitting": "Pet sitting", "training": "Dog training", "hotel": "Pet sitting and boarding"}
 ASK = {"vet": "Is there an appointment available?", "grooming": "Do you have a spot?", "sitting": "Are you available?", "hotel": "Are you available?", "training": "Could we set up a first session?"}
+CONCEPT = {"karas-k9-retreat": {"kind": "Dog daycare, boarding and grooming", "book": "Book a stay", "bubbles": False}}
 SIZES = [("small", "Small"), ("medium", "Medium"), ("large", "Large")]
 
 
@@ -282,7 +283,7 @@ def make(slug):
     cards = [x for x in (ins or {}).get("cards", []) if x.get("sentiment") == "positive"][:3]
     faq = [q for q in (ins or {}).get("faq", []) if q.get("basis") in ("site", "both")][:4]
     rating, count = r["google_rating"], r["google_rating_count"]
-    kind = KIND.get(cat, "Pet care")
+    kind = CONCEPT.get(slug, {}).get("kind") or KIND.get(cat, "Pet care")
     if raw_hours == "24h":
         hours_line = "Open 24 hours."
     elif not hours:
@@ -311,6 +312,7 @@ def make(slug):
     schema = {k: v for k, v in schema.items() if v}
     nav = [("", "Home"), ("services/", "Services"), ("visit/", "Hours & location" if show_addr else "Hours & contact"), ("book/", "Book")]
     book_label = {"vet": "Book a visit", "grooming": "Book a groom", "training": "Book a session"}.get(cat, "Book care")
+    book_label = CONCEPT.get(slug, {}).get("book", book_label)
     tagline = {"vet": f"Vet care for dogs and cats in {locality}", "grooming": f"Dog grooming in {locality}", "training": f"Dog training in {locality}",
                "sitting": f"Pet sitting in {locality}", "hotel": f"Pet sitting and boarding in {locality}"}.get(cat, f"Pet care in {locality}")
     if slug == "karas-k9-retreat":
@@ -327,6 +329,8 @@ def make(slug):
     rating_line = f'<p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> {e(rating)} on Google from {int(count):,} reviews</p>' if rating else ""
     lead = (r["short_description"] or desc).strip()
     img = HERO_ALT.get(slug) or HERO.get(cat, "paw.jpg")
+    from PIL import Image
+    iw, ih = Image.open(os.path.join(ROOT, "v2", "assets", img)).size
     hours_block = '<table class="hours" data-hours></table>' if hours else f'<p class="big-status">{e(hours_line)}</p><p class="muted">Send a text or call to book a time.</p>'
     status = status_html() if hours else ""
     street = r["address"].split(",")[0]
@@ -371,8 +375,8 @@ def make(slug):
         emerg = f'<div class="note-box"><strong>Emergency?</strong> {e(note) if note else "Call us right away during opening hours. When we are closed, go to the nearest 24-hour animal emergency hospital."}</div>'
 
     home = f"""
-<section class="hero{" plain" if cat == "vet" else ""}">
-  <img class="hero-img" src="../../assets/{img}" alt="" width="1000" height="1250"><span class="illus">Illustration</span>
+<section class="hero{" plain" if cat != "grooming" or not CONCEPT.get(slug, {}).get("bubbles", True) else ""}">
+  <img class="hero-img" src="../../assets/{img}" alt="" width="{iw}" height="{ih}"><span class="illus">Illustration</span>
   <div class="hero-shade"></div>
   <div class="hero-copy">
     <p class="kicker">{e(kind)} · {e(loc)}</p>
