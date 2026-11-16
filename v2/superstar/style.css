@@ -217,3 +217,10 @@ p { margin: 0; }
 .nav-call { padding-inline: 1.1rem; }
 
 .vanity { opacity: .7; font-weight: 600; }
+/* 2026-11-16: the red-carpet video ends on the dog in the middle of the frame, so on wide screens
+   the video sits on the right two thirds and fades into the dark left side where the text is. */
+@media (min-width: 961px) {
+  .hero-video { left: 30%; width: 70%; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%); mask-image: linear-gradient(90deg, transparent 0, #000 22%); }
+  .hero-shade { background: linear-gradient(90deg, rgba(43, 22, 64, .55) 0%, rgba(43, 22, 64, .25) 35%, rgba(43, 22, 64, 0) 55%); }
+}
+@media (max-width: 960px) { .hero::after { display: none; } }

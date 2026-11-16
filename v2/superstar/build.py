@@ -130,7 +130,7 @@ OFFER = """<section class="offer" id="make-it-yours" aria-labelledby="offer-titl
     <div><p class="offer-price">$200 <span>one-time, paid only once it's live on superstargrooming.com and you're happy</span></p>
     <a class="btn btn-gold" href="mailto:pawenn.info@gmail.com?subject=Super%20Star%20website">Reply to Pawenn</a></div>
   </div>
-  <p class="fine">The video and photos are illustrations, not your van or clients' pets. Services, bundles, areas, policies and the testimonial come from your current site (November 2026); hours and rating from your Google listing.</p>
+  <p class="fine">The video is an illustration, not your van or a client's pet. Services, bundles, areas, policies and the testimonial come from your current site (November 2026); hours and rating from your Google listing.</p>
 </section>"""
 
 
@@ -138,8 +138,8 @@ def home():
     areas = "".join(f'<a href="areas/{s}/">{e(n)}</a>' for s, n, _ in AREAS)
     body = f"""
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="../assets/hero-poster.jpg" aria-hidden="true">
-    <source src="../assets/hero.webm" type="video/webm"><source src="../assets/hero.mp4" type="video/mp4">
+  <video class="hero-video" autoplay muted playsinline poster="../assets/superstar-poster.jpg" aria-hidden="true">
+    <source src="../assets/superstar.webm" type="video/webm"><source src="../assets/superstar.mp4" type="video/mp4">
   </video>
   <div class="hero-shade"></div>
   <div class="hero-copy">
