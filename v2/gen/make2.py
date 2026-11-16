@@ -38,7 +38,7 @@ PAL = {
     "spawtlight-dog-salon-spa": ("#7b3fd6", "#ffc93c", "#1d1238", False),
 }
 HERO = {"vet": "vet-exam.jpg", "grooming": "salon-towel.jpg", "sitting": "maltese.jpg", "training": "maltese.jpg", "hotel": "cat.jpg"}
-HERO_ALT = {"delta-force-k-9": "training-malinois.jpg", "love-miami-dogs": "dog-walk.jpg", "karas-k9-retreat": "daycare-play.jpg", "spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "sugars-pet-sitting": "cat.jpg"}
+HERO_ALT = {"delta-force-k-9": "training-malinois.jpg", "love-miami-dogs": "dog-walk.jpg", "karas-k9-retreat": "daycare-play.jpg", "spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "sugars-pet-sitting": "pet-sitter-visit.jpg", "keke-and-fetch-dog-walking-and-cat-boarding": "cat-sitting.jpg"}
 
 # id, label, phrase in a message, keywords in their own description, bookable from the message builder
 KEYS = {
@@ -75,7 +75,12 @@ KEYS = {
 }
 KIND = {"grooming": "Dog grooming", "vet": "Veterinary care", "sitting": "Pet sitting", "training": "Dog training", "hotel": "Pet sitting and boarding"}
 ASK = {"vet": "Is there an appointment available?", "grooming": "Do you have a spot?", "sitting": "Are you available?", "hotel": "Are you available?", "training": "Could we set up a first session?"}
-CONCEPT = {"karas-k9-retreat": {"kind": "Dog daycare, boarding and grooming", "book": "Book a stay", "bubbles": False}}
+CONCEPT = {"karas-k9-retreat": {"kind": "Dog daycare, boarding and grooming", "book": "Book a stay", "bubbles": False, "first": ("daycare", "boarding"),
+                                 "steps": [("Send your request", "Daycare, a stay or a groom: pick it below and send it as a text."), ("We confirm", "We reply to confirm the day or the dates."),
+                                           ("Drop off, pick up", "Bring your dog to 235 W Sunset Rd for the day, the stay or the groom.")]}}
+LEAD = {"pharmacy": "an on-site pharmacy", "lab-testing": "in-house lab testing", "x-rays": "digital X-rays", "medication": "medication for pets in their care",
+        "travel-help": "travel assistance for dogs", "intensive-care": "intensive care monitoring", "grooming": "full grooming", "pet-visits": "in-home pet visits",
+        "overnight-stays": "overnight stays", "obedience": "basic obedience training", "behavior": "behavior modification", "protection": "personal protection training"}
 SIZES = [("small", "Small"), ("medium", "Medium"), ("large", "Large")]
 
 
@@ -263,6 +268,8 @@ def make(slug):
     if not svcs:
         a, b, p, ks, bk = KEYS[group][0]
         svcs = [{"id": a, "label": b, "phrase": p, "keys": ks, "book": bk}]
+    first = CONCEPT.get(slug, {}).get("first", ())
+    svcs.sort(key=lambda x: (x["id"] not in first, first.index(x["id"]) if x["id"] in first else 0))
     book_svcs = [s for s in svcs if s["book"]][:6]
     if cat == "vet":
         book_svcs = book_svcs + [{"id": "sick-visit", "label": "Sick pet", "phrase": "a visit for my sick pet", "keys": (), "book": True}]
@@ -349,6 +356,7 @@ def make(slug):
         joined = ", ".join(s["label"].lower() for s in svcs[:3])
         steps = [("Tell us about your pets", "Who they are and the dates you need, sent as a text."), ("We confirm", "We reply to set up the care you need."),
                  ("Your pets are looked after", f"{joined[0].upper() + joined[1:]}, as you booked." if joined else "As you booked.")]
+    steps = CONCEPT.get(slug, {}).get("steps", steps)
     steps_html = "".join(f"<li><strong>{e(a)}</strong><span>{e(b)}</span></li>" for a, b in steps)
     def card_text(sv):
         said = sentence_with(desc, sv["keys"])
@@ -434,7 +442,7 @@ def make(slug):
         said = sentence_with(desc, s["keys"])
         where = f"at {street}, {locality}" if show_addr else f"in {loc}"
         sp = f"""
-<section class="page-head"><div class="wrap"><p class="kicker">{e(sname)} · {e(loc)}</p><h1>{e(s["label"])} in {e(locality)}</h1><p class="lead">{e(sname)} offers {e(s["label"].lower())} {e(where)}{' for dogs and cats' if cats and s["id"] not in ('dog-walking', 'obedience', 'protection', 'behavior') else ''}.</p>
+<section class="page-head"><div class="wrap"><p class="kicker">{e(sname)} · {e(loc)}</p><h1>{e(s["label"])} in {e(locality)}</h1><p class="lead">{e(sname)} offers {e(LEAD.get(s["id"], s["label"].lower()))}{' for dogs and cats' if cats and s["id"] not in ('dog-walking', 'obedience', 'protection', 'behavior', 'medication', 'travel-help') else ''} {e(where)}.</p>
 <div class="hero-actions"><a class="btn btn-gold" href="#book">Ask about {e(s["label"].lower())}</a>{f'<a class="btn btn-ghost-dark" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div></div></section>
 <section class="wrap section two">
   <div><h2>About this service</h2>{f'<p class="muted">{e(said)}</p>' if said else ''}<p class="muted" style="margin-top:.8rem">Ask us for the price and the next free time: send the message below or call.</p>{emerg if s["id"] in ("urgent-care",) else ''}</div>

@@ -95,7 +95,8 @@ then gets its own palette, type and character (never the same look twice).
   Soap bubbles only for groomers (they mean grooming); everyone else gets a plain hero. Sitters and home businesses: no street address and no map.
 - The hero picture shows the actual service (owner, 2026-11-16: a poodle in a pink bandana
   is not dog training). Training: a working dog with a trainer (no face); walking: a walk; daycare:
-  dogs playing; vets: an exam. Reusable: `training-malinois.jpg`, `dog-walk.jpg`, `daycare-play.jpg`.
+  dogs playing; vets: an exam. Reusable: `training-malinois.jpg`, `dog-walk.jpg`, `daycare-play.jpg`,
+  `pet-sitter-visit.jpg`, `cat-sitting.jpg`. `cat.jpg` is a cat being groomed: grooming only, never sitting.
 - Services only from their own description (keywords), never a generic list. Old single-page
   previews in `v2/p/` stay online for links already sent.
 
