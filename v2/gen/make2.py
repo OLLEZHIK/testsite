@@ -37,6 +37,23 @@ PAL = {
     "maspeth-animal-hospital": ("#0f8a82", "#f3a73b", "#0f2b2c", False),
     "spawtlight-dog-salon-spa": ("#7b3fd6", "#ffc93c", "#1d1238", False),
 }
+IMAGES = {
+    "bravo-animal-clinic": ("s/bravo-hero.jpg", [("s/bravo-1.jpg", "boarding", "Boarding"), ("s/bravo-2.jpg", "wellness-exams", "Checkups"), ("s/bravo-3.jpg", None, "Front desk")]),
+    "brooklyn-veterinary-group": ("s/brooklyn-hero.jpg", [("s/brooklyn-1.jpg", "lab-testing", "In-house lab"), ("s/brooklyn-2.jpg", "vaccines", "Vaccines"), ("s/brooklyn-3.jpg", "x-rays", "Digital X-rays")]),
+    "e-l-animal-clinic": ("s/el-hero.jpg", [("s/el-1.jpg", "dental-care", "Dental care"), ("s/el-2.jpg", "wellness-exams", "Checkups"), ("s/el-3.jpg", "lab-testing", "Bloodwork")]),
+    "maspeth-animal-hospital": ("s/maspeth-hero.jpg", [("s/maspeth-1.jpg", "wellness-exams", "Checkups"), ("s/maspeth-2.jpg", "x-rays", "Digital X-rays"), ("s/maspeth-3.jpg", "echocardiograms", "Echocardiograms")]),
+    "pet-lovers-animal-clinic-nw-7th-st": ("s/petlovers-hero.jpg", [("s/petlovers-1.jpg", "surgery", "Surgery"), ("s/petlovers-2.jpg", "intensive-care", "Intensive care"), ("s/petlovers-3.jpg", "wellness-exams", "Checkups")]),
+    "wags-animal-hospital": ("s/wags-hero.jpg", [("s/wags-1.jpg", "pharmacy", "Pharmacy"), ("s/wags-2.jpg", "wellness-exams", "Checkups"), ("s/wags-3.jpg", "dental-care", "Dental care")]),
+    "spawtlight-dog-salon-spa": ("s/spawtlight-hero.jpg", [("s/spawtlight-1.jpg", "haircuts", "Haircuts"), ("s/spawtlight-2.jpg", "baths", "Baths"), ("s/spawtlight-3.jpg", "coloring", "Coloring")]),
+    "diego-dogs-grooming": ("s/diego-hero.jpg", [("s/diego-1.jpg", "baths", "Baths"), ("s/diego-2.jpg", "haircuts", "Haircuts"), ("s/diego-3.jpg", None, "Self wash")]),
+    "snip-dogg-doggy-spa": ("s/snip-hero.jpg", [("s/snip-1.jpg", "daycare", "Daycare"), ("s/snip-2.jpg", "nail-care", "Nail care"), ("s/snip-3.jpg", "teeth-brushing", "Teeth brushing")]),
+    "karas-k9-retreat": ("daycare-play.jpg", [("s/karas-1.jpg", "boarding", "Boarding"), ("s/karas-2.jpg", "baths", "Deluxe baths"), ("s/karas-3.jpg", "daycare", "Play yard")]),
+    "sugars-pet-sitting": ("pet-sitter-visit.jpg", [("s/sugars-1.jpg", "dog-walking", "Dog walking"), ("s/sugars-2.jpg", "pet-visits", "In-home visits"), ("s/sugars-3.jpg", "overnight-stays", "Overnight stays")]),
+    "keke-and-fetch-dog-walking-and-cat-boarding": ("cat-sitting.jpg", [("s/keke-1.jpg", "dog-walking", "Dog walking"), ("s/keke-2.jpg", "boarding", "Cat boarding"), ("s/keke-3.jpg", "medication", "Medication")]),
+    "love-miami-dogs": ("dog-walk.jpg", [("s/lovemiami-1.jpg", "daycare", "Daycare"), ("s/lovemiami-2.jpg", "travel-help", "Travel help"), ("s/lovemiami-3.jpg", "boarding", "Boarding")]),
+    "delta-force-k-9": ("training-malinois.jpg", [("s/delta-1.jpg", "protection", "Protection"), ("s/delta-2.jpg", "obedience", "Obedience"), ("s/delta-3.jpg", "behavior", "Behavior")]),
+}
+PAW = '<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="var(--pink)"/><g fill="#fff"><ellipse cx="32" cy="41" rx="11" ry="9"/><ellipse cx="19" cy="29" rx="5" ry="6.5"/><ellipse cx="45" cy="29" rx="5" ry="6.5"/><ellipse cx="26" cy="19.5" rx="4.6" ry="6"/><ellipse cx="38" cy="19.5" rx="4.6" ry="6"/></g></svg>'
 HERO = {"vet": "vet-exam.jpg", "grooming": "salon-towel.jpg", "sitting": "maltese.jpg", "training": "maltese.jpg", "hotel": "cat.jpg"}
 HERO_ALT = {"delta-force-k-9": "training-malinois.jpg", "love-miami-dogs": "dog-walk.jpg", "karas-k9-retreat": "daycare-play.jpg", "spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "sugars-pet-sitting": "pet-sitter-visit.jpg", "keke-and-fetch-dog-walking-and-cat-boarding": "cat-sitting.jpg"}
 
@@ -141,7 +158,7 @@ def page(slug, path, title, desc, body, active, ctx):
     cur = ' aria-current="page"'
     nav = "".join(f'<a href="{up}{href}"{cur if href == active else ""}>{label}</a>' for href, label in ctx["nav"])
     c = ctx
-    brand = (f'<img class="brand-logo{" named" if c["logo_named"] else ""}" src="{up}logo.{c["logo_ext"]}" alt="">' if c["logo_ext"] else f'<span class="brand-mono" aria-hidden="true">{e(c["sname"][0])}</span>')
+    brand = (f'<img class="brand-logo{" named" if c["logo_named"] else ""}" src="{up}logo.{c["logo_ext"]}" alt="">' if c["logo_ext"] else f'<span class="brand-mark">{PAW}</span>')
     leaflet_css = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">' if c["map"] and "visit/" in path else ""
     leaflet_js = '<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>' if c["map"] and "visit/" in path else ""
     call = f'<a class="btn btn-gold nav-call" href="tel:{c["tel"]}"><span class="nav-call-long">{e(c["tel_label"])}</span><span class="nav-call-short">Call</span></a>' if c["tel"] else ""
@@ -335,9 +352,41 @@ def make(slug):
     directions = f'https://www.google.com/maps/dir/?api=1&destination={quote(name + ", " + r["address"])}' + (f'&destination_place_id={r["google_place_id"]}' if r.get("google_place_id") else "")
     rating_line = f'<p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> {e(rating)} on Google from {int(count):,} reviews</p>' if rating else ""
     lead = (r["short_description"] or desc).strip()
-    img = HERO_ALT.get(slug) or HERO.get(cat, "paw.jpg")
     from PIL import Image
+    hero_file, gal = IMAGES.get(slug, (HERO_ALT.get(slug) or HERO.get(cat, "paw.jpg"), []))
+    img = hero_file
     iw, ih = Image.open(os.path.join(ROOT, "v2", "assets", img)).size
+    ids = {x["id"]: x for x in svcs}
+    photos = [(f, sv if sv in ids else None, ids[sv]["label"] if sv in ids else cap) for f, sv, cap in gal]
+    photo_for = {sv: f for f, sv, _ in photos if sv}
+
+    def photos_html(prefix):
+        figs = ""
+        for f, sv, cap in photos:
+            inner = f'<img src="{prefix}../../assets/{f}" alt="" loading="lazy" width="1200" height="900"><span class="cap">{e(cap)}</span>'
+            figs += f'<a class="photo" href="{prefix}services/{sv}/">{inner}</a>' if sv else f'<figure class="photo">{inner}</figure>'
+        title = {"vet": "Care for every visit", "grooming": "From bath to finish", "training": "Training at work"}.get(cat, "Care while you're away")
+        return (f'<section class="wrap section"><div class="section-head"><h2>{title}</h2><p class="fine">Illustrations. Your own photos go here.</p></div><div class="photos">{figs}</div></section>' if figs else "")
+
+    # stats: only numbers we know
+    stats = []
+    if rating:
+        stats.append((f"{rating}★", "rating on Google"))
+        stats.append((f"{int(count):,}", "Google reviews"))
+    m_years = re.search(r"over (\d+) years", desc)
+    m_founded = re.search(r"[Ff]ounded in (\d{4})", desc)
+    if m_years:
+        stats.append((m_years.group(1) + "+", "years serving pet owners"))
+    elif m_founded:
+        stats.append((m_founded.group(1), "the year we started"))
+    if raw_hours == "24h":
+        stats.append(("24 h", "open every day"))
+    elif hours:
+        nd = sum(1 for v in hours.values() if v != "closed")
+        stats.append((f"{nd} days", "open every week"))
+    if len(stats) < 4:
+        stats.append((str(len(svcs)), "services"))
+    stats_html = "".join(f"<div><strong>{e(a)}</strong><span>{e(b)}</span></div>" for a, b in stats[:4])
     hours_block = '<table class="hours" data-hours></table>' if hours else f'<p class="big-status">{e(hours_line)}</p><p class="muted">Send a text or call to book a time.</p>'
     status = status_html() if hours else ""
     street = r["address"].split(",")[0]
@@ -367,7 +416,7 @@ def make(slug):
     svc_cards = "".join(f'<article class="card{" star" if i == 0 else ""}"><h3>{e(s["label"])}</h3><p>{e(card_text(s))}</p><a class="more" href="services/{s["id"]}/">More about {e(s["label"].lower())}</a></article>' for i, s in enumerate(svcs[:6]))
     voices = "".join(f'<blockquote><strong>{e(x["title"]["en"])}</strong><p>{e(x["text"]["en"])}</p></blockquote>' for x in cards)
     reviews_html = (f'<section class="wrap section"><div class="section-head"><h2>What clients say</h2><p class="rating-big"><span>{e(rating)}</span> on Google from {int(count):,} reviews</p></div><div class="voices-grid">{voices}</div><p class="fine">Themes from Google reviews, {e(ins.get("period_from", "")[:7])} to {e(ins.get("period_to", "")[:7])}. Not quotes.</p></section>'
-                    if cards else (f'<section class="wrap section quote"><p class="rating-big"><span>{e(rating)}</span> on Google from {int(count):,} reviews</p></section>' if rating else ""))
+                    if cards else "")
     gen_faq = []
     if hours:
         gen_faq.append(("When are you open?", "Today's hours are at the top of the page; the full week is on the Hours page."))
@@ -383,18 +432,20 @@ def make(slug):
         emerg = f'<div class="note-box"><strong>Emergency?</strong> {e(note) if note else "Call us right away during opening hours. When we are closed, go to the nearest 24-hour animal emergency hospital."}</div>'
 
     home = f"""
-<section class="hero{" plain" if cat != "grooming" or not CONCEPT.get(slug, {}).get("bubbles", True) else ""}">
-  <img class="hero-img" src="../../assets/{img}" alt="" width="{iw}" height="{ih}"><span class="illus">Illustration</span>
-  <div class="hero-shade"></div>
-  <div class="hero-copy">
-    <p class="kicker">{e(kind)} · {e(loc)}</p>
-    <h1>{e(sname)} <em>{e(tagline)}</em></h1>
-    <p class="lead">{e(lead)}</p>
-    {status}
-    <div class="hero-actions"><a class="btn btn-gold" href="book/">{e(book_label)}</a>{f'<a class="btn btn-ghost" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div>
-    {rating_line}
+<section class="hero2{" bubbles" if cat == "grooming" and CONCEPT.get(slug, {}).get("bubbles", True) else ""}">
+  <div class="wrap hero2-grid">
+    <div class="hero2-copy">
+      <p class="kicker">{e(kind)} · {e(loc)}</p>
+      <h1>{e(sname)} <em>{e(tagline)}</em></h1>
+      <p class="lead">{e(lead)}</p>
+      {status}
+      <div class="hero-actions"><a class="btn btn-gold" href="book/">{e(book_label)}</a>{f'<a class="btn btn-ghost" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div>
+    </div>
+    <figure class="hero2-photo"><img src="../../assets/{img}" alt="" width="{iw}" height="{ih}"><span class="illus">Illustration</span>
+      {f'<div class="float-card"><strong>{e(rating)} <span class="stars" aria-hidden="true">★★★★★</span></strong><span>{int(count):,} Google reviews</span></div>' if rating else ''}</figure>
   </div>
 </section>
+<section class="stats"><div class="wrap stats-grid">{stats_html}</div></section>
 
 <section class="band">
   <div class="wrap two">
@@ -403,7 +454,7 @@ def make(slug):
     <div><h2>What we do</h2><div class="svc-chips">{''.join(f'<span>{e(s["label"])}</span>' for s in svcs)}</div></div>
   </div>
 </section>
-
+{photos_html("")}
 <section class="wrap section">
   <h2>How it works</h2>
   <ol class="steps three">{steps_html}</ol>
@@ -432,6 +483,7 @@ def make(slug):
     sv = f"""
 <section class="page-head"><div class="wrap"><p class="kicker">Services</p><h1>{e(kind)} in {e(locality)}</h1><p class="lead">{e(desc)}</p></div></section>
 <section class="wrap section"><div class="cards auto">{rows}</div>{emerg}</section>
+{photos_html("../")}
 <section class="book-band"><div class="wrap"><h2>Ready to book?</h2>{composer(c)}</div></section>
 {offer(c)}"""
     pages["services/index.html"] = page(slug, "services/index.html", f"Services | {sname}, {loc}", desc, sv, "services/", c)
@@ -442,8 +494,9 @@ def make(slug):
         said = sentence_with(desc, s["keys"])
         where = f"at {street}, {locality}" if show_addr else f"in {loc}"
         sp = f"""
-<section class="page-head"><div class="wrap"><p class="kicker">{e(sname)} · {e(loc)}</p><h1>{e(s["label"])} in {e(locality)}</h1><p class="lead">{e(sname)} offers {e(LEAD.get(s["id"], s["label"].lower()))}{' for dogs and cats' if cats and s["id"] not in ('dog-walking', 'obedience', 'protection', 'behavior', 'medication', 'travel-help') else ''} {e(where)}.</p>
-<div class="hero-actions"><a class="btn btn-gold" href="#book">Ask about {e(s["label"].lower())}</a>{f'<a class="btn btn-ghost-dark" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div></div></section>
+<section class="page-head"><div class="wrap ph-grid"><div><p class="kicker">{e(sname)} · {e(loc)}</p><h1>{e(s["label"])} in {e(locality)}</h1><p class="lead">{e(sname)} offers {e(LEAD.get(s["id"], s["label"].lower()))}{' for dogs and cats' if cats and s["id"] not in ('dog-walking', 'obedience', 'protection', 'behavior', 'medication', 'travel-help') else ''} {e(where)}.</p>
+<div class="hero-actions"><a class="btn btn-gold" href="#book">Ask about {e(s["label"].lower())}</a>{f'<a class="btn btn-ghost-dark" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div></div>
+<figure class="ph-photo"><img src="../../../../assets/{photo_for.get(s["id"], img)}" alt="" width="1200" height="900"><span class="illus">Illustration</span></figure></div></section>
 <section class="wrap section two">
   <div><h2>About this service</h2>{f'<p class="muted">{e(said)}</p>' if said else ''}<p class="muted" style="margin-top:.8rem">Ask us for the price and the next free time: send the message below or call.</p>{emerg if s["id"] in ("urgent-care",) else ''}</div>
   <div><h2>{'Hours' if hours else 'When'}</h2>{status}{hours_block}{f'<h2 class="mt">Other services</h2><div class="area-cloud">{others}</div>' if others else ''}</div>

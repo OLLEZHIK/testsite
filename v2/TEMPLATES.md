@@ -97,6 +97,11 @@ then gets its own palette, type and character (never the same look twice).
   is not dog training). Training: a working dog with a trainer (no face); walking: a walk; daycare:
   dogs playing; vets: an exam. Reusable: `training-malinois.jpg`, `dog-walk.jpg`, `daycare-play.jpg`,
   `pet-sitter-visit.jpg`, `cat-sitting.jpg`. `cat.jpg` is a cat being groomed: grooming only, never sitting.
+- Pictures: Seedream 5.0 Flash at 2K (0.5 credit; owner, 2026-11-16: GPT Image at 2.75 is too
+  expensive). Landscape 4:3, one hero and three photos per site (`v2/assets/s/`), shown in frames,
+  never stretched. Check every picture with people at full size before use: hands with wrong
+  fingers or three hands get through at thumbnail size (owner caught one, 2026-11-16). Prefer
+  scenes with no hands at all.
 - Services only from their own description (keywords), never a generic list. Old single-page
   previews in `v2/p/` stay online for links already sent.
 
