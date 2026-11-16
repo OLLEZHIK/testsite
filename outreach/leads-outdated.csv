@@ -1,7 +1,7 @@
 status,score,reviews,rating,city,category,slug,"signals (crawler, verify before use)",emails on site,site,builder
-pool,6,224,4.9,miami,grooming,d-luxe-dog-pet-concierge-boutique,"© 2020, builder banner",AG@DLUXEDOG.COM,https://dluxedog.com/,godaddy
+scheduled,6,224,4.9,miami,grooming,d-luxe-dog-pet-concierge-boutique,"© 2020, builder banner",AG@DLUXEDOG.COM,https://dluxedog.com/,godaddy
 scheduled,5,1299,4.5,miami,grooming,super-star-mobile-grooming,"© 2013, zoom blocked/old viewport, no https",info@superstargrooming.com,http://www.superstargrooming.com/,wordpress
-pool,4,449,4.8,new-york,vet,worth-street-veterinary-center,"© 2020, zoom blocked/old viewport",help@worthstreetvet.com jobs@worthstreetvet.com,https://worthstreetvet.com/,wordpress
+scheduled,4,449,4.8,new-york,vet,worth-street-veterinary-center,"© 2020, zoom blocked/old viewport",help@worthstreetvet.com jobs@worthstreetvet.com,https://worthstreetvet.com/,wordpress
 scheduled,4,314,4.7,miami,vet,wags-animal-hospital,"© 2019, 12 MB page",frontdesk@wagsbrickellkey.com,https://www.wagsbrickellkey.com/?utm_campaign=gmb,wordpress
 pool,4,301,4.5,miami,grooming,hachi-dog-grooming-and-boutique,"© 2017, zoom blocked/old viewport",pawenn:contact@hachidoggrooming.com,https://hachidoggrooming.com/,wordpress
 scheduled,4,288,4.7,new-york,grooming,snip-dogg-doggy-spa,"© 2018, zoom blocked/old viewport",snipdognyc@gmail.com,https://www.snipdoggny.com/,wix
@@ -9,19 +9,19 @@ scheduled,4,283,4.7,miami,vet,e-l-animal-clinic,"© 2020, zoom blocked/old viewp
 pool,4,261,4.7,san-antonio,vet,guilbeau-station-animal-hospital,"© 2019, 21 MB page",guilbeaustation@hotmail.com,https://guilbeaustation.com/,godaddy
 scheduled,4,92,4.6,san-antonio,grooming,karas-k9-retreat,"© 2020, zoom blocked/old viewport",kk9retreat@gmail.com,https://www.karask9retreat.com/,wix
 scheduled,4,72,5,dallas,sitting,sugars-pet-sitting,"© 2020, zoom blocked/old viewport",info@sugarspetsitting.com,https://www.sugarspetsitting.com/,wix
-pool,4,63,4.8,phoenix,grooming,le-doggie-pet-grooming,"© 2018, 93 words",Ledoggiegroom@gmail.com,https://ledoggie.com/,godaddy
+scheduled,4,63,4.8,phoenix,grooming,le-doggie-pet-grooming,"© 2018, 93 words",Ledoggiegroom@gmail.com,https://ledoggie.com/,godaddy
 scheduled,4,62,4.7,miami,training,delta-force-k-9,"© 2018, 79 words",trainers@deltaforcek-9.com,https://deltaforcek-9.com/,
 scheduled,4,59,4.8,san-diego,grooming,spawtlight-dog-salon-spa,"© 2014, zoom blocked/old viewport",spawtlightdogsalon@gmail.com,https://www.spawtlightdog.com/,wix
 scheduled,4,56,5,miami,sitting,love-miami-dogs,"© 2019, zoom blocked/old viewport",lovemiamidogs@gmail.com,https://www.lovemiamidogs.com/,wix
-pool,4,56,5,san-antonio,training,alamo-dog-obedience-club,"© 2017, zoom blocked/old viewport",jonil.puckett@me.com alamodogobedienceclub@gmail.com AlamoDogObedienceClub@gmail.com adoctrainingk9@gmail.com,https://alamodogobedienceclub.org/,wordpress
+scheduled,4,56,5,san-antonio,training,alamo-dog-obedience-club,"© 2017, zoom blocked/old viewport",jonil.puckett@me.com alamodogobedienceclub@gmail.com AlamoDogObedienceClub@gmail.com adoctrainingk9@gmail.com,https://alamodogobedienceclub.org/,wordpress
 pool,3,658,4.7,dallas,vet,pet-vet-dallas,"zoom blocked/old viewport, 10 MB page, 0 words",pawenn:petvet.1@hotmail.com,https://petvetdallas.com/,wordpress
 scheduled,3,630,4.5,miami,vet,pet-lovers-animal-clinic-nw-7th-st,© 2018,clinic@petloversus.com,https://petloversus.com/,wordpress
 scheduled,3,587,4.6,new-york,vet,brooklyn-veterinary-group,© 2020,BVG7624@gmail.com bvg7624@gmail.com,https://www.brooklynvetgroup.com/,
 scheduled,3,564,4.5,miami,vet,bravo-animal-clinic,"no mobile viewport, no https, 108 words",bravoanimalclinic@yahoo.com,http://www.bravoanimalclinic.com/,
-pool,3,235,4.9,los-angeles,hotel,oh-hello-dog-dtla-dog-daycare-boarding,"zoom blocked/old viewport, sideways scroll on phone, 13 MB page",hello@ohhellodog.com support@broadly.com,https://ohhellodog.com/,wordpress
+scheduled,3,235,4.9,los-angeles,hotel,oh-hello-dog-dtla-dog-daycare-boarding,"zoom blocked/old viewport, sideways scroll on phone, 13 MB page",hello@ohhellodog.com support@broadly.com,https://ohhellodog.com/,wordpress
 pool,3,205,4.5,new-york,grooming,marie-s-pet-grooming,© 2015,pawenn:mariespetgrooming@gmail.com,https://mariespetgrooming.com/,godaddy
-pool,3,187,4.6,new-york,grooming,golden-paws-spa-grooming,builder banner,Goldenpaws4367@gmail.com,https://goldenpaws2018.com/,godaddy
-pool,3,141,4.9,new-york,training,hustle-pups-nyc,© 2016,info@hustlepupsnyc.com,https://hustlepupsnyc.com/,
+scheduled,3,187,4.6,new-york,grooming,golden-paws-spa-grooming,builder banner,Goldenpaws4367@gmail.com,https://goldenpaws2018.com/,godaddy
+scheduled,3,141,4.9,new-york,training,hustle-pups-nyc,© 2016,info@hustlepupsnyc.com,https://hustlepupsnyc.com/,
 scheduled,3,84,4.7,san-diego,grooming,diego-dogs-grooming,© 2019,DiegoDogsGrooming@gmail.com,https://www.diegodogsgrooming.com/,
 scheduled,3,60,4.8,phoenix,hotel,keke-and-fetch-dog-walking-and-cat-boarding,© 2018,kekeandfetchdogwalking@gmail.com,https://kekeandfetchdogwalking.com/,godaddy
 pool,2,1299,4.7,san-antonio,vet,blue-cross-pet-clinic,"zoom blocked/old viewport, 37 MB page",bluecross124@gmail.com,https://bluecrosspetclinic.com/,wordpress
@@ -36,42 +36,42 @@ pool,2,492,4.6,philadelphia,vet,the-pet-mechanic-fishtown,"zoom blocked/old view
 pool,2,490,4.9,philadelphia,vet,love-city-vet-south-philly,"zoom blocked/old viewport, 22 MB page",SP@lovecityvet.com NL@lovecityvet.com,https://lovecityvet.com/,wordpress
 pool,2,470,4.7,phoenix,vet,laveen-veterinary-center,"zoom blocked/old viewport, 15 MB page",office@laveenvetcenter.com,https://laveenvetcenter.com/,wordpress
 pool,2,469,4.8,houston,vet,midtown-veterinary-hospital,"zoom blocked/old viewport, 21 MB page",info@midtownvethospital.com,https://midtownvethospital.com/,wordpress
-pool,2,444,4.7,dallas,vet,edgefield-animal-clinic,"no https, 8 words",pawenn:edgefieldac@gmail.com,http://edgefieldanimalclinic.org/,
+scheduled,2,444,4.7,dallas,vet,edgefield-animal-clinic,"no https, 8 words",pawenn:edgefieldac@gmail.com,http://edgefieldanimalclinic.org/,
 pool,2,345,4.8,new-york,vet,brilliant-veterinary-care,"zoom blocked/old viewport, 45 MB page",hello@brilliantvets.com pharmacy@brilliantvets.com,https://brilliantvets.com/,wordpress
 pool,2,344,4.6,miami,vet,coconut-grove-animal-clinic,"no https, 29 words",pawenn:cganimalclinic@aol.com,http://www.coconutgroveanimalclinic.com/,
-pool,2,339,4.8,san-antonio,grooming,puppy-power-dog-resort,"© 2022, zoom blocked/old viewport",PUPPYPOWERUNLEASHED@GMAIL.COM,https://www.puppypowerunleashed.com/,wix
-pool,2,326,4.6,new-york,grooming,homedoggy-pet-salon-boarding-store-1,"© 2021, 32 MB page",info@homedoggy.com,https://homedoggy.com/,wordpress
+scheduled,2,339,4.8,san-antonio,grooming,puppy-power-dog-resort,"© 2022, zoom blocked/old viewport",PUPPYPOWERUNLEASHED@GMAIL.COM,https://www.puppypowerunleashed.com/,wix
+scheduled,2,326,4.6,new-york,grooming,homedoggy-pet-salon-boarding-store-1,"© 2021, 32 MB page",info@homedoggy.com,https://homedoggy.com/,wordpress
 pool,2,312,4.7,miami,vet,miami-lakes-veterinary-clinic,"zoom blocked/old viewport, 55 MB page",myvet@miamilakesvet.com,https://miamilakesvet.com/,wordpress
 pool,2,291,4.8,miami,vet,hammocks-veterinary-hospital,"zoom blocked/old viewport, 45 MB page",info@hammocksvet.com,https://hammocksvet.com/,wordpress
-pool,2,287,4.9,new-york,grooming,pet-story-ny,"© 2021, zoom blocked/old viewport",petstorynj@gmail.com petstoryny@gmail.com riverside@petstoryny.com,https://www.petstoryny.com/,wix
+scheduled,2,287,4.9,new-york,grooming,pet-story-ny,"© 2021, zoom blocked/old viewport",petstorynj@gmail.com petstoryny@gmail.com riverside@petstoryny.com,https://www.petstoryny.com/,wix
 pool,2,285,4.6,houston,grooming,fur-babies-pet-spa-market,"zoom blocked/old viewport, 12 words",info@mysite.com,https://www.furbabieskingwood.com/,wix
 pool,2,282,5,dallas,hotel,dallas-dog-daycare-boarding-bachman,"zoom blocked/old viewport, 105 MB page",LoveField@DallasDogDaycare.com Downtown@DallasDogDaycare.com Arlington@DallasDogDaycare.com ArlingtonDogDaycare@gmail.com,https://www.dallasdogsdaycare.com/,wix
 pool,2,274,4.7,philadelphia,vet,city-cat-vets,"no https, 54 words",hello@citycatvets.com,http://www.citycatvets.com/,squarespace
 pool,2,264,4.7,chicago,grooming,puppy-haberdashery,"zoom blocked/old viewport, 47 MB page",puppyhaberdasheryhydepark@gmail.com puppyhaberdashery79th@gmail.com,https://www.puppyhaberdashery.com/,wix
 pool,2,198,4.9,dallas,vet,blink-veterinary-eye-specialists,"68 MB page, 44 words",hello@blinkvets.com,https://blinkvets.com/,wordpress
 pool,2,197,5,chicago,vet,ivy-veterinary-care,"zoom blocked/old viewport, 17 MB page",info@ivy.vet,https://ivy.vet/,wordpress
-pool,2,184,4.8,los-angeles,hotel,paradise-ranch-pet-resort,"no https, 8 words",pawenn:Paradise-ranch-pet-resort@pawpartner.com,http://paradiseranch.net/,
+scheduled,2,184,4.8,los-angeles,hotel,paradise-ranch-pet-resort,"no https, 8 words",pawenn:Paradise-ranch-pet-resort@pawpartner.com,http://paradiseranch.net/,
 pool,2,170,4.8,chicago,grooming,puppy-haberdashery-hyde-park,"zoom blocked/old viewport, 47 MB page",puppyhaberdasheryhydepark@gmail.com puppyhaberdashery79th@gmail.com,https://www.puppyhaberdashery.com/,wix
 pool,2,166,4.5,phoenix,vet,integrative-vet-oncology,"no https, 8 words",pawenn:ivo.staff@yahoo.com,http://ivocancercare.com/,
-pool,2,154,4.8,los-angeles,vet,lake-balboa-veterinary-care,"© 2021, zoom blocked/old viewport",prescriptions@lbvetcare.com,https://www.lbvetcare.com/,wix
+scheduled,2,154,4.8,los-angeles,vet,lake-balboa-veterinary-care,"© 2021, zoom blocked/old viewport",prescriptions@lbvetcare.com,https://www.lbvetcare.com/,wix
 pool,2,142,4.5,new-york,hotel,devils-den-kennels,"no https, 15 MB page",devilsdeninfo@gmail.com,http://www.devilsdenkennels.com/,weebly
 pool,2,135,4.7,miami,training,k9-off-leash,"zoom blocked/old viewport, 8 MB page",info@k9offleash.com,https://k9offleash.com/,wordpress
 pool,2,129,4.8,new-york,sitting,prospectbark,"zoom blocked/old viewport, 0 words",frontdesk@prospectbark.com,https://www.prospectbark.com/,wix
 pool,2,124,4.9,new-york,training,the-dog-institute-of-williamsburg,"zoom blocked/old viewport, 88 words",info@thedoginstitute.com,https://www.thedoginstitute.com/,squarespace
 pool,2,105,5,chicago,sitting,smart-paws-chicago,"zoom blocked/old viewport, 100 words",pawenn:woof@smartpawschicago.com,https://www.smartpawschicago.com/,wix
 pool,2,103,5,philadelphia,vet,love-city-vet-northern-liberties,"zoom blocked/old viewport, 32 MB page",SP@lovecityvet.com NL@lovecityvet.com,https://lovecityvet.com/,wordpress
-pool,2,101,4.6,miami,training,asger-k9,"© 2021, zoom blocked/old viewport",juan.asgerk9@gmail.com,https://www.asgerk9.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=13239422386710242076,wix
+scheduled,2,101,4.6,miami,training,asger-k9,"© 2021, zoom blocked/old viewport",juan.asgerk9@gmail.com,https://www.asgerk9.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=13239422386710242076,wix
 pool,2,93,4.7,miami,training,west-point-k-9-academy-inc,"no https, 8 words",pawenn:doglovers@westpointk9.com,http://westpointk9.com/,
 pool,2,88,4.6,dallas,grooming,the-paw-spa-dallas,"zoom blocked/old viewport, 92 words",pawenn:info@pawspadallas.com,https://www.pawspadallas.com/,wix
 pool,2,87,5,philadelphia,sitting,top-tails-dog-walking-cat-sitting,"no https, 8 words",pawenn:info@toptailspetsitting.com,http://www.toptailspetsitting.com/,
 pool,2,82,5,miami,sitting,casa-del-paw,"zoom blocked/old viewport, 10 words",casadelpaw@gmail.com,https://www.casadelpaw.com/,wix
 pool,2,82,5,los-angeles,sitting,critters-dog-co,"zoom blocked/old viewport, 11 words",crittersdogco@gmail.com,https://www.crittersdogco.com/,wix
 pool,2,75,4.5,phoenix,vet,eyeshine-veterinary,"no https, 8 words",pawenn:eyeshineveterinary@gmail.com,http://www.eyeshinevet.com/,
-pool,2,68,4.9,miami,sitting,ardon-pets-services-llc,"zoom blocked/old viewport, 72 words",ardon.pets@gmail.com contact@ardonpets.com,https://www.ardonpets.com/,wix
+scheduled,2,68,4.9,miami,sitting,ardon-pets-services-llc,"zoom blocked/old viewport, 72 words",ardon.pets@gmail.com contact@ardonpets.com,https://www.ardonpets.com/,wix
 pool,2,67,4.7,phoenix,vet,soderstrom-veterinary,"no https, 31 words",INFO@SODERSTROMVETERINARYSURGERY.COM doctorsoderstrom@gmail.com,http://www.soderstromveterinarysurgery.com/,squarespace
 pool,2,66,5,miami,training,connor-canine-training,"zoom blocked/old viewport, 201 MB page",albertmesa@connorcaninetraining.com,https://www.connork9.com/,wix
 pool,2,63,4.9,los-angeles,sitting,valley-pet-sitting,"no https, 8 words",pawenn:contact@valleypetsitting.com,http://www.valleypetsitting.com/,
-pool,2,59,5,philadelphia,sitting,pandas-petsitting,"© 2022, zoom blocked/old viewport",info@pandaspetsitting.com,https://www.pandaspetsitting.com/,wix
+scheduled,2,59,5,philadelphia,sitting,pandas-petsitting,"© 2022, zoom blocked/old viewport",info@pandaspetsitting.com,https://www.pandaspetsitting.com/,wix
 pool,2,58,4.9,san-antonio,training,the-traveling-hounds,"zoom blocked/old viewport, 10 MB page",info@thetravelinghounds.com Jeremiah@thetravelinghounds.com,https://thetravelinghounds.com/,godaddy
 pool,1,1938,4.8,san-antonio,vet,great-northwest-animal-hospital,zoom blocked/old viewport,paws@gnwah.com,https://www.gnwah.com/,wix
 pool,1,1576,4.5,houston,vet,long-drive-dog-cat-hospital,zoom blocked/old viewport,LongDriveClinic@gmail.com longdriveclinic@gmail.com,https://longdrivedogcat.com/,wordpress
@@ -79,7 +79,7 @@ pool,1,1305,5,miami,training,k-9-specialist-dog-trainer,30 MB page,k9specialist.
 pool,1,1132,4.9,chicago,grooming,groom-for-gentlemen,sideways scroll on phone,CONTACT@GROOMCHICAGO.COM Contact@groomchicago.com,https://www.groomchicago.com/,squarespace
 pool,1,1097,4.5,phoenix,vet,north-phoenix-animal-clinic,zoom blocked/old viewport,npsnc1@hotmail.com,https://northphoenixanimalclinic.com/,wordpress
 pool,1,900,4.7,houston,hotel,meadowlake-pet-resort-furman-rd,zoom blocked/old viewport,info@meadowlakepetresort.com,https://www.meadowlakepetresort.com/,wordpress
-pool,1,900,4.9,new-york,grooming,rapawzel-dog-grooming-bayside,19 MB page,info@rapawzeldoggroomer.com,https://rapawzeldoggroomer.com/dog-grooming-and-daycare-in-bayside/,wordpress
+scheduled,1,900,4.9,new-york,grooming,rapawzel-dog-grooming-bayside,19 MB page,info@rapawzeldoggroomer.com,https://rapawzeldoggroomer.com/dog-grooming-and-daycare-in-bayside/,wordpress
 pool,1,853,4.8,houston,vet,kings-crossing-animal-hospital,227 MB page,info@kingscrossingvet.com,https://www.kingscrossingvet.com/?utm_source=gmb&utm_medium=Yext&cp=2817649204&y_source=1_MTYxMTMwMTEtNzE1LWxvY2F0aW9uLndlYnNpdGU=,
 pool,1,749,4.8,miami,grooming,pimp-my-dog-mobile-pet-grooming-services,zoom blocked/old viewport,pimpmydogllc@gmail.com,https://www.pimpmydog.net/,wix
 pool,1,733,4.7,miami,vet,eco-deco-pet-hospital,zoom blocked/old viewport,pawenn:nat@ecodecopet.com,https://www.ecodecopethospital.com/,
@@ -94,25 +94,25 @@ pool,1,613,4.8,chicago,training,found-chicago-boarding-training-center,zoom bloc
 pool,1,584,4.8,san-diego,vet,abc-veterinary-hospital-pacific-beach,zoom blocked/old viewport,INFO@ABCVETS.COM info@abcvets.com,https://abcvets.com/,wordpress
 pool,1,583,4.6,new-york,vet,williamsburg-veterinary-clinic,zoom blocked/old viewport,info@williamsburgvets.com,https://williamsburgvets.com/,wordpress
 pool,1,581,4.8,phoenix,vet,canyon-animal-hospital,zoom blocked/old viewport,canyonanimalaz@gmail.com,https://canyonanimalhospitalphoenix.com/,wordpress
-pool,1,578,4.6,philadelphia,vet,wissahickon-creek-veterinary-hospital,no https,info@wcvh.org,http://www.wcvh.org/,
-pool,1,578,4.6,san-antonio,vet,ace-veterinary-clinic,no mobile viewport,acevetclinic@gmail.com,https://acevetclinic.com/,
+scheduled,1,578,4.6,philadelphia,vet,wissahickon-creek-veterinary-hospital,no https,info@wcvh.org,http://www.wcvh.org/,
+scheduled,1,578,4.6,san-antonio,vet,ace-veterinary-clinic,no mobile viewport,acevetclinic@gmail.com,https://acevetclinic.com/,
 pool,1,567,4.8,san-diego,vet,black-mountain-animal-hospital,zoom blocked/old viewport,info@sandiegovets.com,https://sandiegovets.com/?utm_campaign=gmb,godaddy
 pool,1,560,4.5,philadelphia,vet,pet-health-center,zoom blocked/old viewport,phillypethealthcenter@gmail.com,https://phillypethealthcenter.com/,godaddy
 pool,1,547,4.7,houston,hotel,houston-bark-park-and-daycare-27th-st,zoom blocked/old viewport,info@houstonbarkpark.com,https://www.houstonbarkpark.com/,wix
 pool,1,544,4.7,phoenix,vet,catalina-animal-hospital,24 MB page,pawenn:catalinaanimalhospitalphx@gmail.com,https://catalinaanimalhospital.com/,wordpress
-pool,1,500,4.7,san-diego,vet,rose-canyon-animal-hospital,© 2021,info.rosecanyonvet@gmail.com,https://rosecanyonvet.com/,wordpress
+scheduled,1,500,4.7,san-diego,vet,rose-canyon-animal-hospital,© 2021,info.rosecanyonvet@gmail.com,https://rosecanyonvet.com/,wordpress
 pool,1,497,4.8,miami,training,applause-your-paws-inc,zoom blocked/old viewport,pawenn:training@applauseyourpaws.com,https://www.applauseyourpaws.com/,wordpress
 pool,1,465,4.5,dallas,hotel,petz-mania,zoom blocked/old viewport,info@petzmania.net,https://www.petzmania.net/,wix
 pool,1,448,4.8,houston,hotel,houston-bark-park-and-daycare-maxie-st,zoom blocked/old viewport,info@houstonbarkpark.com,https://www.houstonbarkpark.com/,wix
 pool,1,446,4.5,philadelphia,vet,boulevard-animal-hospital,zoom blocked/old viewport,BAHphilly@gmail.com,https://www.boulevardanimalhospitalphilly.com/,wix
 pool,1,441,4.5,houston,vet,heights-veterinary-clinic-northwest,zoom blocked/old viewport,pawenn:heightsveterinaryclinic@gmail.com,https://heightsvet.com/,wordpress
 pool,1,435,4.6,houston,grooming,petbar-boutique-the-heights,zoom blocked/old viewport,theheights@petbarboutique.com INFO@PETBARINC.COM,https://www.petbarinc.com/locations/houston-heights/?utm_source=gbp&utm_medium=organic&utm_campaign=houston+heights,wordpress
-pool,1,429,4.7,new-york,vet,4-legged-friends-veterinary-clinic-pc,zoom blocked/old viewport,4leggedvet291@gmail.com 4leggedfriendsclinic@gmail.com,https://www.4leggedfriendsvetclinic.com/,wordpress
+scheduled,1,429,4.7,new-york,vet,4-legged-friends-veterinary-clinic-pc,zoom blocked/old viewport,4leggedvet291@gmail.com 4leggedfriendsclinic@gmail.com,https://www.4leggedfriendsvetclinic.com/,wordpress
 pool,1,414,4.6,san-diego,vet,grand-animal-hospital,9 MB page,grandanimalhospital@yahoo.com,https://grandanimalhospital.com/,wordpress
 pool,1,413,4.8,houston,vet,kirkwood-veterinary-hospital,zoom blocked/old viewport,kirkwoodveterinaryhospital@gmail.com,https://kirkwoodveterinaryhospital.com/,wordpress
 pool,1,410,4.8,chicago,vet,pets-first,zoom blocked/old viewport,info@petsfirstchicago.com,https://www.petsfirstchicago.com/,wix
 pool,1,407,4.8,houston,vet,houston-spay-neuter,119 words,info@houstonspayneuter.com,https://houstonspayneuter.com/,wordpress
-pool,1,388,4.9,philadelphia,vet,indy-veterinary-care,© 2021,info@indyvetcare.com,https://indyvetcare.com/,wordpress
+scheduled,1,388,4.9,philadelphia,vet,indy-veterinary-care,© 2021,info@indyvetcare.com,https://indyvetcare.com/,wordpress
 pool,1,386,4.7,houston,vet,animal-care-center-lake-houston,zoom blocked/old viewport,drh.acclh@yahoo.com,https://acclh.net/,wordpress
 pool,1,383,4.8,houston,vet,tanglewilde-veterinary-clinic,zoom blocked/old viewport,tanglewildevet@gmail.com,https://tanglewildevet.com/,wordpress
 pool,1,377,4.8,san-antonio,grooming,petbar-san-antonio-alamo-heights,zoom blocked/old viewport,alamoheights@petbarboutique.com INFO@PETBARINC.COM,https://www.petbarinc.com/locations/san-antonio-alamo-heights/,wordpress
@@ -137,7 +137,7 @@ pool,1,310,4.9,philadelphia,vet,rox-falls-vet,zoom blocked/old viewport,info@rox
 pool,1,301,4.9,houston,grooming,jackson-s-place-unleashed-pet-resort-bakery-dog-daycare-dog-boarding-dog-grooming-dog-training,12 MB page,Midtown@JacksonsPlace.com,https://houstondogdaycare.com/,godaddy
 pool,1,296,4.7,san-antonio,vet,lincoln-heights-animal-hospital,zoom blocked/old viewport,info@lhanimalhospital.com,https://www.lhanimalhospital.com/,wix
 pool,1,294,4.8,los-angeles,grooming,21pooch-hollywood,zoom blocked/old viewport,pawenn:21poochh@gmail.com,https://www.21pooch.com/,wix
-pool,1,292,4.6,san-diego,vet,uptown-animal-hospital-normal-st,© 2021,abcvetut@gmail.com,https://uptownanimalhospitalsd.com/,wordpress
+scheduled,1,292,4.6,san-diego,vet,uptown-animal-hospital-normal-st,© 2021,abcvetut@gmail.com,https://uptownanimalhospitalsd.com/,wordpress
 pool,1,291,4.8,los-angeles,grooming,21pooch,zoom blocked/old viewport,pawenn:21poochh@gmail.com,https://www.21pooch.com/,wix
 pool,1,289,4.6,dallas,grooming,furry-tails,zoom blocked/old viewport,Furrytailsdallas@gmail.com furrytailsdallas@gmail.com,https://www.furrytailstx.com/,wix
 pool,1,287,4.7,phoenix,vet,desert-view-animal-hospital,zoom blocked/old viewport,dvahvet@gmail.com,https://www.dvah.com/?utm_campaign=gmb,wix
@@ -148,7 +148,7 @@ pool,1,264,5,miami,training,k9-specialist-inc,41 MB page,k9specialist.du@gmail.c
 pool,1,264,4.8,san-antonio,vet,ss-family-pet-hospital,zoom blocked/old viewport,pawenn:pawscare@mail.com,https://smithandshedd.com/,wordpress
 pool,1,261,4.6,los-angeles,vet,winnetka-animal-clinic,© 2022,pawenn:info@winnetkaanimalclinic.com,https://winnetkaanimalclinic.com/,
 pool,1,250,4.6,houston,grooming,petbar-boutique-oak-forest,zoom blocked/old viewport,INFO@PETBARINC.COM,https://www.petbarinc.com/locations/,wordpress
-pool,1,246,4.8,san-diego,vet,rancho-san-carlos-pet-clinic,22 MB page,contact@ranchosancarlospet.com,https://ranchosancarlospet.com/,wordpress
+scheduled,1,246,4.8,san-diego,vet,rancho-san-carlos-pet-clinic,22 MB page,contact@ranchosancarlospet.com,https://ranchosancarlospet.com/,wordpress
 pool,1,245,4.8,chicago,vet,animal-advocate-pet-hospital,zoom blocked/old viewport,info@advocatepetvet.com,https://advocatepetvet.com/,wordpress
 pool,1,243,4.8,chicago,grooming,salon-dog,108 words,pawenn:salon.dogs@gmail.com,https://salondog.net/,
 pool,1,242,4.6,chicago,grooming,temple-of-the-dog-chicago,89 words,templeofthedog2344@gmail.com,https://www.templeofthedogchicago.com/,squarespace
@@ -182,7 +182,7 @@ pool,1,164,4.7,los-angeles,vet,veterinary-medical-center,zoom blocked/old viewpo
 pool,1,161,4.5,los-angeles,vet,modern-animal-playa-vista,18 MB page,pawenn:hello@modernanimal.com,https://www.modernanimal.com/clinics/playa-vista,webflow
 pool,1,160,4.7,san-diego,vet,tierrasanta-veterinary-hospital,13 MB page,clients@tvhvet.com,https://www.tierrasantavetsd.com/,
 pool,1,160,4.8,chicago,training,downtown-dogs-chicago,zoom blocked/old viewport,info@dtowndogs.com ari@dtowndogs.com,https://chicagodogtraining.com/,godaddy
-pool,1,158,4.5,chicago,grooming,roger-s-bark-pet-salon-inc,zoom blocked/old viewport,rogersbarkpetsalon@gmail.com,https://www.rogersbark.net/,wix
+scheduled,1,158,4.5,chicago,grooming,roger-s-bark-pet-salon-inc,zoom blocked/old viewport,rogersbarkpetsalon@gmail.com,https://www.rogersbark.net/,wix
 pool,1,158,5,dallas,vet,dallas-veterinary-hospice,© 2022,info@dallasveterinaryhospice.com,https://www.dallasveterinaryhospice.com/,squarespace
 pool,1,148,4.8,chicago,grooming,bowie-barker-lincoln-park,11 MB page,lincolnpark@bowiebarker.com,https://www.bowiebarker.com/lincoln-park,squarespace
 pool,1,147,4.8,san-diego,hotel,pupper-club,zoom blocked/old viewport,pawenn:infoSD@thepupperclub.com,https://www.pupperclub.co/,wix
@@ -194,11 +194,11 @@ pool,1,143,4.9,san-antonio,sitting,paw-time-favorite-pet-sitting-dog-walking,zoo
 pool,1,143,4.5,san-antonio,grooming,the-wash-dawg,zoom blocked/old viewport,thewashdawg@yahoo.com,https://www.thewashdawgllc.com/,wix
 pool,1,141,4.6,chicago,vet,goodvets-roscoe-village,8 MB page,roscoevillage@goodvets.com,https://goodvets.com/locations/chicago/roscoe,
 pool,1,141,4.9,chicago,training,anything-is-pawzible,zoom blocked/old viewport,info@anythingispawzible.com,https://anythingispawzible.com/,godaddy
-pool,1,139,4.5,chicago,grooming,paradise-pet-salon-spa-too-inc,84 words,pps9691@gmail.com,https://www.paradisepetsalonspa.com/,weebly
+scheduled,1,139,4.5,chicago,grooming,paradise-pet-salon-spa-too-inc,84 words,pps9691@gmail.com,https://www.paradisepetsalonspa.com/,weebly
 pool,1,138,4.7,chicago,vet,tlc-first-animal-hospital,zoom blocked/old viewport,info@tlcfirst.com,https://tlcfirst.com/,wordpress
 pool,1,136,4.9,philadelphia,vet,pet-dermatology-center-philly,8 MB page,info@petdermphilly.com,https://www.petdermphilly.com/,webflow
 pool,1,134,4.8,philadelphia,grooming,pets-and-the-city-shop,zoom blocked/old viewport,petsandthecitygrooming@gmail.com info@mysite.com Petsandthecitygrooming@gmail.com,https://www.petsandthecityphilly.com/,wix
-pool,1,130,5,new-york,sitting,the-dog-dude,© 2021,blgthedogdude@gmail.com,https://www.thedogdudenyc.com/,
+scheduled,1,130,5,new-york,sitting,the-dog-dude,© 2021,blgthedogdude@gmail.com,https://www.thedogdudenyc.com/,
 pool,1,129,4.5,chicago,grooming,grooming-lounge-chicago,69 MB page,groomingloungechicago@gmail.com,https://www.groomingloungechicago.com/,
 pool,1,123,4.7,los-angeles,grooming,bowie-barker-west-hollywood,11 MB page,info@bowiebarker.com,https://www.bowiebarker.com/west-hollywood,squarespace
 pool,1,119,4.8,chicago,grooming,urban-canine-doggy-day-spa,zoom blocked/old viewport,info@urbancanine.com,https://www.urbancanine.com/,wix
@@ -210,12 +210,12 @@ pool,1,107,4.9,new-york,sitting,cattitude-street-strutters,zoom blocked/old view
 pool,1,103,4.6,san-diego,grooming,doggies-divine,zoom blocked/old viewport,DoggiesDivine@gmail.com,https://www.doggiesdivine.com/,
 pool,1,101,4.5,san-antonio,vet,olmos-park-animal-hospital,zoom blocked/old viewport,opanimalhospital@gmail.com,https://opanimalhospital.com/,wordpress
 pool,1,95,5,dallas,grooming,uptown-clippers-pet-mobile-grooming-l-l-c,94 words,uptownclippers@gmail.com,https://sites.google.com/view/uptownclippers,
-pool,1,93,4.7,dallas,hotel,bones-bacon-doggy-daycare,no https,info@bonesandbacon.com,http://www.bonesandbacon.com/,squarespace
+scheduled,1,93,4.7,dallas,hotel,bones-bacon-doggy-daycare,no https,info@bonesandbacon.com,http://www.bonesandbacon.com/,squarespace
 pool,1,92,4.7,houston,training,houston-dogworks,zoom blocked/old viewport,woof@houstondogworks.com,https://www.houstondogworks.com/,wix
 pool,1,86,5,chicago,training,leash-drop-canine-llc,zoom blocked/old viewport,team@leashdropcanine.com Team@leashdropcanine.com info@leashdropcanine.com leashdrop@gmail.com,https://www.leashdropcanine.com/,wix
 pool,1,84,4.9,san-diego,vet,tierramesa-veterinary-clinic,zoom blocked/old viewport,Tierramesavetclinic@gmail.com tierramesavetclinic@gmail.com,https://www.tierramesavet.com/,wix
 pool,1,82,4.9,miami,training,rocco-s-pack-pet-services,zoom blocked/old viewport,info@roccospack.com,https://www.roccospack.com/,wordpress
-pool,1,81,5,chicago,sitting,south-loop-pet-care,no mobile viewport,debra@southlooppetcare.com,https://southlooppetcare.com/,
+scheduled,1,81,5,chicago,sitting,south-loop-pet-care,no mobile viewport,debra@southlooppetcare.com,https://southlooppetcare.com/,
 pool,1,81,5,phoenix,vet,mcgee-mobile-vet-service,zoom blocked/old viewport,INFO@McGeeVetService.com info@McGeeVetService.com,https://www.mcgeevetservice.com/,wix
 pool,1,73,4.6,san-diego,grooming,priscillas-grooming-san-diego,zoom blocked/old viewport,PRISCILLASGROOMING@HOTMAIL.COM priscillasgrooming@hotmail.com,https://priscillasgrooming.com/,wordpress
 pool,1,70,4.7,dallas,grooming,petbar-boutique-preston-trail,zoom blocked/old viewport,prestontrail@petbarboutique.com INFO@PETBARINC.COM,https://www.petbarinc.com/locations/dallas-preston/,wordpress

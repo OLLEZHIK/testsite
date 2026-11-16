@@ -281,7 +281,7 @@ p { margin: 0; }
 .stats-grid div { display: grid; text-align: center; }
 .stats-grid strong { font: 800 clamp(1.6rem, 3vw, 2.2rem)/1.1 var(--display); color: var(--red); }
 .stats-grid span { font-size: .9rem; color: var(--ink-soft); font-weight: 700; }
-.photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.6rem; }
+.photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.6rem; }
 .photo { position: relative; display: block; margin: 0; border-radius: 20px; overflow: hidden; text-decoration: none; }
 .photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s; }
 a.photo:hover img { transform: scale(1.04); }

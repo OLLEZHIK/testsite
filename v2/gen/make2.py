@@ -53,6 +53,96 @@ IMAGES = {
     "love-miami-dogs": ("dog-walk.jpg", [("s/lovemiami-1.jpg", "daycare", "Daycare"), ("s/lovemiami-2.jpg", "travel-help", "Travel help"), ("s/lovemiami-3.jpg", "boarding", "Boarding")]),
     "delta-force-k-9": ("training-malinois.jpg", [("s/delta-1.jpg", "protection", "Protection"), ("s/delta-2.jpg", "obedience", "Obedience"), ("s/delta-3.jpg", "behavior", "Behavior")]),
 }
+
+# Shared picture pool for businesses without their own set (lead batches). city tag: None = anywhere,
+# "palms" = warm cities only, or one city slug.
+PALMS = {"miami", "los-angeles", "san-diego", "houston", "phoenix", "san-antonio"}
+POOL = {
+    "vet": {"hero": [("p/vet-h1.jpg", None), ("p/vet-h2.jpg", None), ("p/vet-h3.jpg", None), ("p/vet-h4.jpg", None), ("p/vet-h5.jpg", None), ("p/vet-h6.jpg", None),
+                     ("p/vet-h7.jpg", None), ("p/vet-h8.jpg", None), ("s/bravo-hero.jpg", "palms"), ("s/el-hero.jpg", "palms"), ("s/wags-hero.jpg", "miami"),
+                     ("s/petlovers-hero.jpg", "miami"), ("s/brooklyn-hero.jpg", "new-york"), ("s/maspeth-hero.jpg", "new-york")],
+            "photo": [("s/bravo-1.jpg", "boarding", None), ("s/bravo-2.jpg", "wellness-exams", None), ("s/brooklyn-1.jpg", "lab-testing", None), ("s/brooklyn-2.jpg", "vaccines", None),
+                      ("s/brooklyn-3.jpg", "x-rays", None), ("s/el-1.jpg", "dental-care", None), ("s/el-2.jpg", "wellness-exams", "palms"), ("s/el-3.jpg", "lab-testing", None),
+                      ("s/maspeth-1.jpg", "wellness-exams", None), ("s/maspeth-2.jpg", "x-rays", None), ("s/maspeth-3.jpg", "echocardiograms", None), ("s/petlovers-1.jpg", "surgery", None),
+                      ("s/petlovers-2.jpg", "intensive-care", None), ("s/petlovers-3.jpg", "wellness-exams", "palms"), ("s/wags-1.jpg", "pharmacy", None), ("s/wags-3.jpg", "dental-care", None),
+                      ("s/maspeth-hero.jpg", "ultrasound", "new-york"), ("s/brooklyn-2.jpg", "wellness-exams", None)]},
+    "grooming": {"hero": [("s/snip-hero.jpg", None), ("p/groom-h1.jpg", None), ("p/groom-h2.jpg", None), ("s/spawtlight-hero.jpg", "san-diego"), ("s/diego-hero.jpg", "san-diego")],
+                 "photo": [("s/spawtlight-1.jpg", "haircuts", None), ("s/spawtlight-2.jpg", "baths", None), ("s/spawtlight-3.jpg", "coloring", None), ("s/diego-2.jpg", "haircuts", None),
+                           ("s/diego-1.jpg", "baths", "palms"), ("s/snip-2.jpg", "nail-care", None), ("s/snip-3.jpg", "teeth-brushing", None), ("s/karas-1.jpg", "boarding", None),
+                           ("s/karas-2.jpg", "baths", None), ("s/karas-3.jpg", "daycare", None), ("s/snip-1.jpg", "daycare", "new-york"), ("p/groom-h2.jpg", "grooming", None),
+                           ("p/groom-h1.jpg", "grooming", None)]},
+    "care": {"hero": [("pet-sitter-visit.jpg", None), ("cat-sitting.jpg", None), ("p/sit-h1.jpg", None), ("p/board-h1.jpg", None), ("dog-walk.jpg", "miami")],
+             "photo": [("s/sugars-1.jpg", "dog-walking", None), ("s/sugars-2.jpg", "pet-visits", None), ("s/sugars-3.jpg", "overnight-stays", None), ("s/keke-1.jpg", "dog-walking", "phoenix"),
+                       ("s/keke-2.jpg", "boarding", None), ("s/keke-3.jpg", "medication", None), ("s/lovemiami-1.jpg", "daycare", "palms"), ("s/lovemiami-2.jpg", "travel-help", "palms"),
+                       ("s/lovemiami-3.jpg", "boarding", None), ("s/karas-1.jpg", "boarding", None), ("s/karas-3.jpg", "daycare", None), ("p/board-h1.jpg", "boarding", None),
+                       ("p/sit-h1.jpg", "pet-visits", None), ("cat-sitting.jpg", "pet-visits", None)]},
+    "hotel": {"hero": [("daycare-play.jpg", None), ("p/board-h1.jpg", None), ("s/karas-3.jpg", None)],
+              "photo": [("s/karas-1.jpg", "boarding", None), ("p/board-h1.jpg", "boarding", None), ("s/lovemiami-3.jpg", "boarding", None), ("s/bravo-1.jpg", "boarding", None),
+                        ("s/karas-3.jpg", "daycare", None), ("daycare-play.jpg", "daycare", None), ("s/lovemiami-1.jpg", "daycare", "palms"), ("s/snip-1.jpg", "daycare", "new-york"),
+                        ("p/groom-h1.jpg", "grooming", None), ("s/karas-2.jpg", "baths", None), ("s/sugars-1.jpg", "dog-walking", None), ("p/train-h1.jpg", "obedience", None)]},
+    "training": {"hero": [("p/train-h1.jpg", None), ("p/train-leash.jpg", None), ("training-malinois.jpg", "palms")],
+                 "photo": [("p/train-puppy.jpg", "puppy-training", None), ("p/train-agility.jpg", "obedience", None), ("p/train-leash.jpg", "behavior", None),
+                           ("s/delta-1.jpg", "protection", "palms"), ("s/delta-2.jpg", "obedience", "palms"), ("s/delta-3.jpg", "behavior", "palms"), ("p/train-h1.jpg", "obedience", None)]},
+}
+
+
+USED = {}
+
+
+def auto_images(slug, cat, city, svc_ids):
+    import hashlib as _h
+    group = "care" if cat == "sitting" else cat if cat in POOL else "grooming"
+    ok = lambda tag: tag is None or tag == city or (tag == "palms" and city in PALMS)
+    h = int(_h.md5(slug.encode()).hexdigest(), 16)
+    heroes = [f for f, t in POOL[group]["hero"] if ok(t)]
+    heroes.sort(key=lambda f: (USED.get(f, 0), int(_h.md5((f + slug).encode()).hexdigest()[:6], 16)))  # least used first, so one batch spreads pictures
+    hero = heroes[0]
+    USED[hero] = USED.get(hero, 0) + 1
+    photos, used, seen = [], {hero}, set()
+    cands = [(f, sv) for f, sv, t in POOL[group]["photo"] if ok(t) and f not in used]
+    cands = cands[h % len(cands):] + cands[:h % len(cands)]
+    for f, sv in cands:  # first pass: one photo per service the business offers
+        if sv in svc_ids and sv not in seen and f not in used and len(photos) < 3:
+            photos.append((f, sv, sv)); used.add(f); seen.add(sv)
+    return hero, photos
+
+
+PRESETS = [("#2563c9", "#3fbf86", "#10233f"), ("#0f8a82", "#f3a73b", "#0f2b2c"), ("#7b3fd6", "#ffc93c", "#1d1238"), ("#c2410c", "#2a9d8f", "#2a1a12"),
+           ("#d6336c", "#38d9a9", "#2b1030"), ("#2f9e44", "#4dabf7", "#12291a"), ("#1597c7", "#f2a541", "#0b2238"), ("#b5476b", "#8cc63f", "#2a1621")]
+
+
+def auto_palette(slug, logo_path):
+    """Main color from the business's own logo when it has a clear one, else a preset."""
+    import colorsys, hashlib as _h
+    h = int(_h.md5(slug.encode()).hexdigest(), 16)
+    preset = PRESETS[h % len(PRESETS)]
+    if not logo_path:
+        return preset + (False,)
+    try:
+        from PIL import Image
+        im = Image.open(logo_path).convert("RGBA").resize((80, 80))
+        cnt = {}
+        for r, g, b, a in im.getdata():
+            if a < 128:
+                continue
+            hh, l, sat = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
+            if sat < .35 or l < .18 or l > .82:
+                continue
+            k = (round(hh * 24) % 24)
+            cnt.setdefault(k, []).append((r, g, b))
+        if not cnt:
+            return preset + (True,)
+        best = max(cnt.values(), key=len)
+        if len(best) < 60:
+            return preset + (True,)
+        main = hexc(tuple(sum(c[i] for c in best) / len(best) for i in range(3)))
+        others = sorted((v for k, v in cnt.items() if v is not best and len(v) > 25), key=len, reverse=True)
+        second = hexc(tuple(sum(c[i] for c in others[0]) / len(others[0]) for i in range(3))) if others else preset[1]
+        night = mix(mix(main, "#000000", .78), "#10233f", .35)
+        return (main, second, night, True)
+    except Exception:
+        return preset + (True,)
+
 PAW = '<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="var(--pink)"/><g fill="#fff"><ellipse cx="32" cy="41" rx="11" ry="9"/><ellipse cx="19" cy="29" rx="5" ry="6.5"/><ellipse cx="45" cy="29" rx="5" ry="6.5"/><ellipse cx="26" cy="19.5" rx="4.6" ry="6"/><ellipse cx="38" cy="19.5" rx="4.6" ry="6"/></g></svg>'
 HERO = {"vet": "vet-exam.jpg", "grooming": "salon-towel.jpg", "sitting": "maltese.jpg", "training": "maltese.jpg", "hotel": "cat.jpg"}
 HERO_ALT = {"delta-force-k-9": "training-malinois.jpg", "love-miami-dogs": "dog-walk.jpg", "karas-k9-retreat": "daycare-play.jpg", "spawtlight-dog-salon-spa": "salon-doodle.jpg", "snip-dogg-doggy-spa": "salon-doodle.jpg", "sugars-pet-sitting": "pet-sitter-visit.jpg", "keke-and-fetch-dog-walking-and-cat-boarding": "cat-sitting.jpg"}
@@ -87,17 +177,19 @@ KEYS = {
              ("medication", "Medication", "help with medication", ("medication",), True),
              ("travel-help", "Travel help", "help with travel", ("travel",), True)],
     "training": [("obedience", "Basic obedience", "obedience training", ("obedience",), True),
+                 ("puppy-training", "Puppy training", "puppy training", ("puppy",), True),
                  ("behavior", "Behavior modification", "help with behavior", ("behavio",), True),
                  ("protection", "Personal protection", "protection training", ("protection",), True)],
 }
-KIND = {"grooming": "Dog grooming", "vet": "Veterinary care", "sitting": "Pet sitting", "training": "Dog training", "hotel": "Pet sitting and boarding"}
+KIND = {"grooming": "Dog grooming", "vet": "Veterinary care", "sitting": "Pet sitting", "training": "Dog training", "hotel": "Dog daycare and boarding"}
 ASK = {"vet": "Is there an appointment available?", "grooming": "Do you have a spot?", "sitting": "Are you available?", "hotel": "Are you available?", "training": "Could we set up a first session?"}
-CONCEPT = {"karas-k9-retreat": {"kind": "Dog daycare, boarding and grooming", "book": "Book a stay", "bubbles": False, "first": ("daycare", "boarding"),
+CONCEPT = {"keke-and-fetch-dog-walking-and-cat-boarding": {"kind": "Dog walking and cat boarding", "home": True},
+           "karas-k9-retreat": {"kind": "Dog daycare, boarding and grooming", "book": "Book a stay", "bubbles": False, "first": ("daycare", "boarding"),
                                  "steps": [("Send your request", "Daycare, a stay or a groom: pick it below and send it as a text."), ("We confirm", "We reply to confirm the day or the dates."),
                                            ("Drop off, pick up", "Bring your dog to 235 W Sunset Rd for the day, the stay or the groom.")]}}
 LEAD = {"pharmacy": "an on-site pharmacy", "lab-testing": "in-house lab testing", "x-rays": "digital X-rays", "medication": "medication for pets in their care",
         "travel-help": "travel assistance for dogs", "intensive-care": "intensive care monitoring", "grooming": "full grooming", "pet-visits": "in-home pet visits",
-        "overnight-stays": "overnight stays", "obedience": "basic obedience training", "behavior": "behavior modification", "protection": "personal protection training"}
+        "overnight-stays": "overnight stays", "obedience": "basic obedience training", "puppy-training": "puppy training", "behavior": "behavior modification", "protection": "personal protection training"}
 SIZES = [("small", "Small"), ("medium", "Medium"), ("large", "Large")]
 
 
@@ -271,7 +363,11 @@ def make(slug):
     r, city, cat, ins, cj = load(slug)
     name = r["name"].strip().rstrip(".")
     sname = short_name(name)
-    main, second, night, use_logo = PAL[slug]
+    if slug in PAL:
+        main, second, night, use_logo = PAL[slug]
+    else:
+        lp = glob.glob(f"{LOGOS}/{city}/{r['logo_file']}") if r.get("logo_file") else []
+        main, second, night, use_logo = auto_palette(slug, lp[0] if lp else None)
     tel, tel_label = phone_parts(r["phone"])
     hours = hours_cfg(r["opening_hours"])
     raw_hours = (r["opening_hours"] or "").strip()
@@ -291,7 +387,7 @@ def make(slug):
     if cat == "vet":
         book_svcs = book_svcs + [{"id": "sick-visit", "label": "Sick pet", "phrase": "a visit for my sick pet", "keys": (), "book": True}]
     cats = bool(re.search(r"\bcats?\b", d_low)) or cat == "vet"
-    show_addr = cat not in ("sitting", "hotel")
+    show_addr = cat != "sitting" and not CONCEPT.get(slug, {}).get("home")
     lat = float(r["lat"]) if (show_addr and r["lat"]) else None
     lng = float(r["lng"]) if (show_addr and r["lng"]) else None
     sizes = cat in ("grooming",) or any(s["id"] in ("boarding", "daycare") for s in book_svcs) and cat != "vet"
@@ -338,12 +434,12 @@ def make(slug):
     book_label = {"vet": "Book a visit", "grooming": "Book a groom", "training": "Book a session"}.get(cat, "Book care")
     book_label = CONCEPT.get(slug, {}).get("book", book_label)
     tagline = {"vet": f"Vet care for dogs and cats in {locality}", "grooming": f"Dog grooming in {locality}", "training": f"Dog training in {locality}",
-               "sitting": f"Pet sitting in {locality}", "hotel": f"Pet sitting and boarding in {locality}"}.get(cat, f"Pet care in {locality}")
+               "sitting": f"Pet sitting in {locality}", "hotel": f"Daycare and boarding in {locality}"}.get(cat, f"Pet care in {locality}")
     if slug == "karas-k9-retreat":
         tagline = f"Daycare, boarding and grooming in {locality}"
     if slug == "snip-dogg-doggy-spa":
         tagline = f"Dog grooming and daycare in {locality}"
-    tagline_small = {"vet": "Animal clinic", "grooming": "Grooming", "training": "Dog training", "sitting": "Pet sitting", "hotel": "Pet care"}.get(cat, "")
+    tagline_small = {"vet": "Animal clinic", "grooming": "Grooming", "training": "Dog training", "sitting": "Pet sitting", "hotel": "Daycare & boarding"}.get(cat, "")
     if sname.lower().endswith(("clinic", "hospital", "group", "spa", "retreat", "grooming", "sitting")):
         tagline_small = locality
     c = dict(name=name, sname=sname, tel=tel, tel_label=tel_label, email=email, ig=r["instagram"], fb=r["facebook"], kind=kind, loc=loc,
@@ -353,7 +449,10 @@ def make(slug):
     rating_line = f'<p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> {e(rating)} on Google from {int(count):,} reviews</p>' if rating else ""
     lead = (r["short_description"] or desc).strip()
     from PIL import Image
-    hero_file, gal = IMAGES.get(slug, (HERO_ALT.get(slug) or HERO.get(cat, "paw.jpg"), []))
+    if slug in IMAGES:
+        hero_file, gal = IMAGES[slug]
+    else:
+        hero_file, gal = auto_images(slug, cat, city, {x["id"] for x in svcs})
     img = hero_file
     iw, ih = Image.open(os.path.join(ROOT, "v2", "assets", img)).size
     ids = {x["id"]: x for x in svcs}
