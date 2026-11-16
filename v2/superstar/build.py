@@ -42,7 +42,7 @@ def page(path, title, desc, body, active):
 <meta name="description" content="{e(desc)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{up}style.css">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "PetGroomer", "name": "Super Star Mobile Grooming", "telephone": "+1-305-836-9274", "email": EMAIL, "areaServed": [n for _, n, _ in AREAS], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "1299"}, "sameAs": ["http://www.facebook.com/SSGrooming"]})}</script>
 <script id="site-config" type="application/json">{json.dumps(CONFIG)}</script>
