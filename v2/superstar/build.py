@@ -52,10 +52,10 @@ def page(path, title, desc, body, active):
 <header class="nav">
   <a class="brand" href="{up}" aria-label="Super Star Mobile Grooming home"><span class="brand-star" aria-hidden="true">★</span><span class="brand-name">Super Star<small>Mobile Grooming</small></span></a>
   <nav class="nav-links" aria-label="Pages">{nav}</nav>
-  <a class="btn btn-gold nav-call" href="tel:{PHONE}"><span class="nav-call-long">{PHONE_VANITY}</span><span class="nav-call-short">Call</span></a>
+  <a class="btn btn-gold nav-call" href="tel:{PHONE}"><span class="nav-call-long">{PHONE_LABEL}</span><span class="nav-call-short">Call</span></a>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
 </header>
-<nav class="mobile-menu" id="mobile-menu" hidden aria-label="Pages">{nav}<a href="tel:{PHONE}">Call {PHONE_VANITY}</a></nav>
+<nav class="mobile-menu" id="mobile-menu" hidden aria-label="Pages">{nav}<a href="tel:{PHONE}">Call {PHONE_LABEL}</a></nav>
 <main id="top">
 {body}
 </main>
@@ -63,7 +63,7 @@ def page(path, title, desc, body, active):
   <div class="footer-main">
     <div><p class="footer-brand"><span aria-hidden="true">★</span> Super Star Mobile Grooming</p><p class="muted">South Florida's mobile pet grooming salon, serving Miami-Dade and Broward counties.</p></div>
     <div><h2>Visit us at home</h2><p class="muted">We come to you, every day: Monday to Friday 6:30 am to 8:30 pm, weekends 6:30 am to 8 pm.</p></div>
-    <div><h2>Contact</h2><p><a href="tel:{PHONE}">{PHONE_VANITY} ({PHONE_LABEL})</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="http://www.facebook.com/SSGrooming" target="_blank" rel="noopener">Facebook</a></p></div>
+    <div><h2>Contact</h2><p><a href="tel:{PHONE}">{PHONE_LABEL} <small class="vanity">(305-836-WASH)</small></a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="http://www.facebook.com/SSGrooming" target="_blank" rel="noopener">Facebook</a></p></div>
     <nav aria-label="Footer"><h2>Pages</h2>{nav}</nav>
   </div>
   <div class="footer-bottom"><p>© 2026 Super Star Mobile Grooming</p><p>Website by <a href="https://pawenn.com/en/" rel="noopener">Pawenn</a></p></div>
@@ -104,7 +104,7 @@ def composer(area_slug=""):
     <p class="ticket-label">Your message</p>
     <p class="bubble" data-bubble></p>
     <div class="actions"><a class="btn btn-gold" data-sms href="sms:{PHONE}">Send as a text</a><a class="btn btn-ghost" data-mail href="mailto:{EMAIL}">Email it</a><button class="btn btn-ghost" type="button" data-copy>Copy</button></div>
-    <p class="fine">Opens your messages or email app with everything filled in. Prefer to talk? Call {PHONE_VANITY}.</p>
+    <p class="fine">Opens your messages or email app with everything filled in. Prefer to talk? Call {PHONE_LABEL}.</p>
   </aside>
 </div>"""
 
@@ -147,7 +147,7 @@ def home():
     <h1>Pampered, prepped, <em>and ready for the red carpet.</em></h1>
     <p class="lead">A full grooming salon on wheels parks at your door. Baths, haircuts, nails and teeth for dogs and cats, plus a bow or bandana to wear around town.</p>
     <div class="status" id="status"><span class="dot"></span><span class="status-text"></span></div>
-    <div class="hero-actions"><a class="btn btn-gold" href="book/">Book a groom</a><a class="btn btn-ghost" href="tel:{PHONE}">Call {PHONE_VANITY}</a></div>
+    <div class="hero-actions"><a class="btn btn-gold" href="book/">Book a groom</a><a class="btn btn-ghost" href="tel:{PHONE}">Call {PHONE_LABEL}</a></div>
     <p class="rating"><span class="stars">★★★★★</span> 4.5 on Google from 1,299 reviews</p>
   </div>
 </section>
@@ -277,7 +277,7 @@ def area_page(slug, name, county):
     near = ", ".join(n for _, n, _ in others)
     body = f"""
 <section class="page-head"><div class="wrap"><p class="kicker">Mobile grooming in {county} County</p><h1>Mobile pet grooming in {e(name)}</h1><p class="lead">Super Star brings a full grooming salon to homes in {e(name)}: baths, haircuts, nails, ears and teeth for dogs and cats, without the car ride.</p>
-<div class="hero-actions"><a class="btn btn-gold" href="#book">Book in {e(name)}</a><a class="btn btn-ghost-dark" href="tel:{PHONE}">Call {PHONE_VANITY}</a></div></div></section>
+<div class="hero-actions"><a class="btn btn-gold" href="#book">Book in {e(name)}</a><a class="btn btn-ghost-dark" href="tel:{PHONE}">Call {PHONE_LABEL}</a></div></div></section>
 <section class="wrap section two">
   <div><h2>What we do in {e(name)}</h2><ul class="ticks"><li>Wash and Complete Grooming for dogs</li><li>Super Star Wash and Super Star Complete</li><li>Cat Wash and Cat Complete</li><li>Flea and tick, de-shedding and nail grinding extras</li></ul></div>
   <div><h2>When</h2><p class="muted">Every day: Monday to Friday 6:30 am to 8:30 pm, weekends 6:30 am to 8 pm.</p><h2 class="mt">Also nearby</h2><p class="muted">{e(near)}.</p></div>
@@ -290,11 +290,11 @@ def area_page(slug, name, county):
 
 def book():
     body = f"""
-<section class="page-head"><div class="wrap"><p class="kicker">Book</p><h1>Book your pet's makeover</h1><p class="lead">Build your message below, or call {PHONE_VANITY}. We'll confirm a time.</p><div class="status" id="status"><span class="dot"></span><span class="status-text"></span></div></div></section>
+<section class="page-head"><div class="wrap"><p class="kicker">Book</p><h1>Book your pet's makeover</h1><p class="lead">Build your message below, or call {PHONE_LABEL}. We'll confirm a time.</p><div class="status" id="status"><span class="dot"></span><span class="status-text"></span></div></div></section>
 <section class="book-band"><div class="wrap">{composer()}</div></section>
 <section class="wrap section two">
   <div><h2>Hours</h2><table class="hours" id="hours"></table></div>
-  <div><h2>Contact</h2><p><a href="tel:{PHONE}">{PHONE_VANITY} ({PHONE_LABEL})</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>{AREA_CHECK}</div>
+  <div><h2>Contact</h2><p><a href="tel:{PHONE}">{PHONE_LABEL} <small class="vanity">(305-836-WASH)</small></a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>{AREA_CHECK}</div>
 </section>
 {OFFER}"""
     return page("book/index.html", "Book a groom | Super Star Mobile Grooming", "Book mobile dog or cat grooming at your door in Miami-Dade and Broward.", body, "book/")

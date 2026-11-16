@@ -216,3 +216,4 @@ p { margin: 0; }
 .composer-out .btn-ghost { border-color: var(--line); }
 .nav-call { padding-inline: 1.1rem; }
 
+.vanity { opacity: .7; font-weight: 600; }
