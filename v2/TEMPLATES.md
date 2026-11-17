@@ -128,3 +128,12 @@ about 123. Think before spending: fix in post first (crop, re-encode, upscale), 
 cost 2.75 at high quality, video only after agreeing with the owner (Seedance 2.5:
 35 credits at 720p, 80 at 1080p). Reuse: `v2/assets/hero.*` (grooming van video),
 `maltese.jpg`, `cat.jpg`, `paw.jpg`, `vet-exam.jpg`, `salon-doodle.jpg`, `salon-towel.jpg`.
+
+## Short links in emails (owner, 2026-11-17)
+
+Emails never carry the long `/v2/s/<slug>/` address. Every preview gets a short
+name in `short-links.txt` (`<name> <path>`, lowercase letters and digits, 6–12
+characters, recognisable: `bowwow`, `goldenpaws`), and the email links
+`https://pawenn-previews.pages.dev/<name>`. The build turns the file into
+`dist/_redirects`; it fails on a repeated name or a missing preview. After the
+push, check the short link opens the preview before the email goes out.
