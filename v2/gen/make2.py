@@ -88,6 +88,31 @@ POOL = {
 USED = {}
 
 
+# Owner, 2026-11-17: a logo that spells the name replaces the name in the header.
+# A wordmark is a wide logo (trimmed width/height >= 1.7): the name is big enough
+# to read at header size. Square emblems and icon-only logos keep the text name.
+# Overrides when the shape misleads: WORDMARK_YES / WORDMARK_NO.
+WORDMARK_YES, WORDMARK_NO = set(), set()
+def wordmark(path, slug):
+    if slug in WORDMARK_YES: return True
+    if slug in WORDMARK_NO: return False
+    if path.endswith(".svg"):
+        m = re.search(r'viewBox="[\d.\-]+ [\d.\-]+ ([\d.]+) ([\d.]+)"', open(path, encoding="utf-8", errors="ignore").read())
+        return bool(m) and float(m.group(1)) / float(m.group(2)) >= 1.7
+    from PIL import Image, ImageOps
+    im = Image.open(path).convert("RGBA")
+    bg = Image.new("RGBA", im.size, (255, 255, 255, 255)); bg.alpha_composite(im)
+    box = ImageOps.invert(bg.convert("L")).point(lambda v: 255 if v > 20 else 0).getbbox()
+    if not box: return False
+    w, h = box[2] - box[0], box[3] - box[1]
+    if w / h < 1.7: return False
+    # Trim the white margin so the wordmark fills the header height.
+    pad = max(2, h // 20)
+    box = (max(0, box[0] - pad), max(0, box[1] - pad), min(im.width, box[2] + pad), min(im.height, box[3] + pad))
+    im.crop(box).save(path)
+    return True
+
+
 def auto_images(slug, cat, city, svc_ids):
     import hashlib as _h
     group = "care" if cat == "sitting" else cat if cat in POOL else "grooming"
@@ -422,12 +447,14 @@ def make(slug):
         hours_line = "Open every day." if not closed else "Closed " + " and ".join(closed) + "."
     # logo
     logo_ext = ""
+    logo_named = False
     if use_logo and r["logo_file"]:
         src = glob.glob(f"{LOGOS}/{city}/{r['logo_file']}")
         if src:
             logo_ext = src[0].rsplit(".", 1)[1]
             os.makedirs(os.path.join(OUT, slug), exist_ok=True)
             shutil.copy(src[0], os.path.join(OUT, slug, f"logo.{logo_ext}"))
+            logo_named = wordmark(os.path.join(OUT, slug, f"logo.{logo_ext}"), slug)
     pal = palette(main, second, night)
     css = " ".join(f"{k}: {v};" for k, v in pal.items())
     cfg = {"tz": tz, "hours": hours or {}, "phone": tel or "", "phoneLabel": tel_label, "email": email, "lat": lat, "lng": lng, "pin": sname,
@@ -453,7 +480,7 @@ def make(slug):
         tagline_small = locality
     c = dict(name=name, sname=sname, tel=tel, tel_label=tel_label, email=email, ig=r["instagram"], fb=r["facebook"], kind=kind, loc=loc,
              addr=r["address"], show_addr=show_addr, map=lat is not None, hours_line=hours_line, nav=nav, logo_ext=logo_ext, css=css, schema=schema,
-             cfg=cfg, times=times, logo_named=bool(logo_ext) and slug != "karas-k9-retreat", svcs=svcs, cards=cards, domain=domain, book_label=book_label, tagline_small=tagline_small)
+             cfg=cfg, times=times, logo_named=logo_named, svcs=svcs, cards=cards, domain=domain, book_label=book_label, tagline_small=tagline_small)
     directions = f'https://www.google.com/maps/dir/?api=1&destination={quote(name + ", " + r["address"])}' + (f'&destination_place_id={r["google_place_id"]}' if r.get("google_place_id") else "")
     rating_line = f'<p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> {e(rating)} on Google from {int(count):,} reviews</p>' if rating else ""
     lead = (r["short_description"] or desc).strip()
