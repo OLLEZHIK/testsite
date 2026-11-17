@@ -51,3 +51,20 @@ if (!single) {
     `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Website previews</title><body style="font-family:system-ui;padding:40px;color:#333">Website previews for local pet businesses.</body>`,
   );
 }
+
+// Short links for emails (short-links.txt): /<name> -> the preview.
+// A redirect, not a rewrite: the previews link their files relatively.
+if (!single && fs.existsSync(path.join(root, "short-links.txt"))) {
+  const lines = fs.readFileSync(path.join(root, "short-links.txt"), "utf8").split("\n").map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
+  const seen = new Set();
+  const rules = [];
+  for (const l of lines) {
+    const [name, target] = l.split(/\s+/);
+    if (!/^[a-z0-9]+$/.test(name) || !target || seen.has(name)) throw new Error(`short-links.txt: bad or repeated line "${l}"`);
+    if (!fs.existsSync(path.join(dist, target, "index.html"))) throw new Error(`short-links.txt: ${name} -> /${target} does not exist`);
+    seen.add(name);
+    rules.push(`/${name} /${target} 302`, `/${name}/ /${target} 302`);
+  }
+  fs.writeFileSync(path.join(dist, "_redirects"), rules.join("\n") + "\n");
+  console.log(`short links: ${seen.size}`);
+}
