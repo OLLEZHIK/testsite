@@ -93,6 +93,16 @@ USED = {}
 # to read at header size. Square emblems and icon-only logos keep the text name.
 # Overrides when the shape misleads: WORDMARK_YES / WORDMARK_NO.
 WORDMARK_YES, WORDMARK_NO = set(), set()
+# Owner, 2026-11-17: the hero picture comes alive. A looping clip made from the
+# same picture (assets/v/<picture name>.mp4/.webm, first frame = last frame) plays
+# over it; the picture stays as the poster and for reduced motion.
+def hero_video(img):
+    name = os.path.splitext(os.path.basename(img))[0]
+    here = os.path.dirname(os.path.abspath(__file__))
+    if not os.path.exists(os.path.join(here, "..", "assets", "v", name + ".mp4")): return ""
+    return (f'<video autoplay muted loop playsinline preload="metadata" poster="../../assets/{img}" aria-hidden="true">'
+            f'<source src="../../assets/v/{name}.webm" type="video/webm"><source src="../../assets/v/{name}.mp4" type="video/mp4"></video>')
+
 def wordmark(path, slug):
     if slug in WORDMARK_YES: return True
     if slug in WORDMARK_NO: return False
@@ -576,7 +586,7 @@ def make(slug):
       {status}
       <div class="hero-actions"><a class="btn btn-gold" href="book/">{e(book_label)}</a>{f'<a class="btn btn-ghost" href="tel:{tel}">Call {e(tel_label)}</a>' if tel else ''}</div>
     </div>
-    <figure class="hero2-photo"><img src="../../assets/{img}" alt="" width="{iw}" height="{ih}"><span class="illus">Illustration</span>
+    <figure class="hero2-photo">{hero_video(img)}<img src="../../assets/{img}" alt="" width="{iw}" height="{ih}"><span class="illus">Illustration</span>
       {f'<div class="float-card"><strong>{e(rating)} <span class="stars" aria-hidden="true">★★★★★</span></strong><span>{int(count):,} Google reviews</span></div>' if rating else ''}</figure>
   </div>
 </section>
