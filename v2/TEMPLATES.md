@@ -137,3 +137,19 @@ characters, recognisable: `bowwow`, `goldenpaws`), and the email links
 `https://pawenn-previews.pages.dev/<name>`. The build turns the file into
 `dist/_redirects`; it fails on a repeated name or a missing preview. After the
 push, check the short link opens the preview before the email goes out.
+
+## Hero videos (owner, 2026-11-17)
+
+The hero picture of a multi-page preview plays as a short loop, like Super Star.
+- Clip: Seedance 2.5, `omni_reference`, start_image = end_image = the hero picture,
+  4 s, 480p, no audio (12 credits). Prompt: the animal's small natural motion, locked-off
+  camera, no cuts, people only from the waist or shoulders down, no faces, no text.
+- Check every clip by frames (hands, faces, extra legs) and the loop seam (mean
+  difference of the first and last frame); where the ends differ, crossfade the end
+  into the start (0.5–0.9 s).
+- Files: `v2/assets/v/<picture name>.mp4` and `.webm` (final duplicate frame dropped,
+  no audio, faststart). `make2.py` adds the video by itself when the file exists; the
+  picture stays as the poster and for visitors who turn motion off.
+- Made so far (15): snip-hero, groom-h1, groom-h2, training-malinois, pet-sitter-visit,
+  el-hero, cat-sitting, daycare-play, bravo-hero, sugars-1, vet-h3, vet-h4, vet-h5, vet-h6,
+  karas-3.
