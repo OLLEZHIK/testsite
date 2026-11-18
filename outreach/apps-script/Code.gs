@@ -7,8 +7,10 @@
  * Sheet columns (row 1 = header):
  *   A mail_id | B send_at | C to | D subject | E body | F html | G status | H sent_at | I message_id
  *
- * Setup (once): Extensions > Apps Script > paste this file > Save >
- * run `setup` once and allow access > done (it adds a 5-minute trigger).
+ * Setup (once), signed in as pawenn.info@gmail.com: Extensions > Apps Script >
+ * paste this file > Save > run `setup` once and allow access > done (it adds a
+ * 5-minute trigger). Mail goes from the account that ran `setup`.
+ * Pause: write "pause" in cell K1; clear it to resume.
  */
 function setup() {
   ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
@@ -20,13 +22,14 @@ function sendDue() {
   if (!lock.tryLock(20000)) return;
   try {
     var sh = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+    if (String(sh.getRange('K1').getValue()).toLowerCase().trim() === 'pause') return;
     var rows = sh.getDataRange().getValues();
     var now = new Date();
     for (var i = 1; i < rows.length; i++) {
       var r = rows[i];
       var status = String(r[6] || '');
       if (status) continue;
-      var due = new Date(r[1]);
+      var due = r[1] instanceof Date ? r[1] : new Date(String(r[1]).trim());
       if (isNaN(due.getTime()) || due > now) continue;
       var to = String(r[2]).trim();
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to)) { sh.getRange(i + 1, 7).setValue('bad address'); continue; }
