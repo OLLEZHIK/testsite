@@ -35,7 +35,7 @@ def save(all_rows):
 
 def section(path, n):
     text = open(path, encoding="utf-8").read()
-    m = re.search(rf"^## {n}\. .*?(?=^---$|^## \d+\.|\Z)", text, re.S | re.M)
+    m = re.search(rf"^## {n}\. .*?(?=^---$|^## |\Z)", text, re.S | re.M)
     if not m:
         sys.exit(f"no section {n} in {path}")
     s = m.group(0)
